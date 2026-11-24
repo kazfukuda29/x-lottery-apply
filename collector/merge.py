@@ -8,6 +8,7 @@
 from __future__ import annotations
 
 import hashlib
+import re
 from datetime import datetime, timedelta
 from difflib import SequenceMatcher
 from typing import Any
@@ -56,6 +57,40 @@ def fields_from_ai(ai: dict, post: dict, retailers: RetailerMatcher) -> dict[str
         "same_as_item_id": ai.get("same_as_item_id") or "",
         "extracted_by": "ai",
     }
+
+
+# 「◯◯通販」「◯◯通販部」「◯◯オンラインショップ」は同じ店として照合する。
+# 「◯◯オンライン」（例：ポケモンセンターオンライン）は店頭とは別の抽選のことがあるので含めない
+SHOP_SUFFIX_RE = re.compile(r"(?:公式)?(?:通販(?:部|店|サイト|ショップ)?|オンライン(?:ショップ|ストア)|ウェブショップ|webショップ|webストア)$")
+
+
+def retailer_key(name: str) -> str:
+    key = norm_key(name)
+    stripped = SHOP_SUFFIX_RE.sub("", key)
+    return stripped if len(stripped) >= 2 else key
+
+
+def same_product_loose(a: str, b: str, generic: set[str] | None = None) -> bool:
+    """店と締切が同じときだけ使う、ゆるい商品名の照合（キーは norm_key 済み）。
+    共通の書き出し（シリーズ名など）を除いた残りが、もう一方に含まれていれば同じ商品とみなす。
+    例：「ポケモンカードゲーム エーフィ・ブラッキー」と「ポケモンカードゲーム 30th … エーフィ・ブラッキー」"""
+    generic = generic or set()
+    if not a or not b:
+        return False
+    if a == b:
+        return True
+    short, long_ = sorted((a, b), key=len)
+    if len(short) >= 5 and short not in generic and short in long_:
+        return True
+    i = 0
+    while i < len(short) and short[i] == long_[i]:
+        i += 1
+    rest = short[i:]
+    return len(rest) >= 4 and rest not in generic and rest in long_
+
+
+def same_minute(a: datetime | None, b: datetime | None) -> bool:
+    return bool(a and b and abs((a - b).total_seconds()) < 60)
 
 
 def source_of(post: dict) -> dict[str, Any]:
@@ -112,15 +147,21 @@ class ItemStore:
                 if item["id"] == same:
                     return item
         pkey = norm_key(fields["product"])
-        rkey = norm_key(fields["retailer"])
+        rkey = retailer_key(fields["retailer"])
+        end = fields.get("apply_end")
+        loose = None
         for item in self.items:
-            if item.get("product_key") != pkey or norm_key(item.get("retailer", "")) != rkey:
+            if retailer_key(item.get("retailer", "")) != rkey:
                 continue
-            a, b = parse_iso(item.get("apply_end")), fields.get("apply_end")
-            if a and b and abs((a - b).total_seconds()) > 36 * 3600:
-                continue  # 締切が大きく違えば別の抽選（第2弾など）
-            return item
-        return None
+            a = parse_iso(item.get("apply_end"))
+            if item.get("product_key") == pkey:
+                if a and end and abs((a - end).total_seconds()) > 36 * 3600:
+                    continue  # 締切が大きく違えば別の抽選（第2弾など）
+                return item
+            # 同じ店・同じ締切（分まで）なら、商品名の書き方が違っても同じ抽選とみなす
+            if loose is None and rkey and same_minute(a, end) and same_product_loose(pkey, item.get("product_key") or "", self.generic):
+                loose = item
+        return loose
 
     # ------------------------------------------------------------ 追加・更新
 
@@ -197,6 +238,45 @@ class ItemStore:
             item["extracted_by"] = "ai"
         item["buzz"] = max(s.get("likes", 0) + s.get("reposts", 0) for s in item["sources"])
         item["updated_at"] = iso(now)
+
+    def dedupe(self) -> int:
+        """登録済みのアイテムのうち、同じ抽選が別々に載っているもの（店名・商品名の書き方違い）をまとめる。"""
+        kept: list[dict] = []
+        removed = 0
+        for item in sorted(self.items, key=lambda i: i.get("first_seen") or ""):
+            rkey, end = retailer_key(item.get("retailer", "")), parse_iso(item.get("apply_end"))
+            twin = next(
+                (k for k in kept
+                 if rkey and retailer_key(k.get("retailer", "")) == rkey
+                 and same_minute(parse_iso(k.get("apply_end")), end)
+                 and same_product_loose(k.get("product_key") or "", item.get("product_key") or "", self.generic)),
+                None,
+            )
+            if twin is None:
+                kept.append(item)
+                continue
+            self._absorb(twin, item)
+            removed += 1
+        self.items = kept
+        return removed
+
+    @staticmethod
+    def _absorb(keep: dict, other: dict) -> None:
+        """other の情報を keep に移す（先に見つけた方を残す）。"""
+        seen = {s["post_id"] for s in keep["sources"]}
+        keep["sources"] = (keep["sources"] + [s for s in other["sources"] if s["post_id"] not in seen])[-8:]
+        for key in ("apply_start", "apply_url", "detail_url", "announce_date"):
+            if not keep.get(key) and other.get(key):
+                keep[key] = other[key]
+        if keep.get("channel") in (None, "unknown") and other.get("channel") in ("online", "store"):
+            keep["channel"] = other["channel"]
+        if keep.get("genre") in (None, "other") and other.get("genre"):
+            keep["genre"] = other["genre"]
+        for r in other.get("requirements") or []:
+            if r not in keep["requirements"]:
+                keep["requirements"].append(r)
+        keep["buzz"] = max(keep.get("buzz", 0), other.get("buzz", 0))
+        keep["updated_at"] = max(keep.get("updated_at") or "", other.get("updated_at") or "")
 
     def add_review(self, post: dict, reason: str, now: datetime) -> None:
         if any(r["post_id"] == post["id"] for r in self.review):

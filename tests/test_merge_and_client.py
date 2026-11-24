@@ -4,7 +4,7 @@ from types import SimpleNamespace
 from collector.extract import ClaudeExtractor
 from collector.merge import ItemStore, fields_from_ai
 from collector.rules import RetailerMatcher
-from collector.util import JST, load_yaml
+from collector.util import JST, load_yaml, norm_key
 from collector.x_client import Budget, XClient, build_watch_queries, normalize_response
 
 NOW = datetime(2026, 11, 24, 9, 0, tzinfo=JST)
@@ -29,6 +29,42 @@ def test_same_store_same_lottery_is_merged():
     b, new_b = store.upsert(fields(P, "ヨドバシカメラ", end), post("2"), NOW)
     assert new_a and not new_b and a is b
     assert len(a["sources"]) == 2
+
+
+def test_mail_order_suffix_and_wording_differences_are_the_same_lottery():
+    from collector.merge import retailer_key
+
+    assert retailer_key("Luruna Card通販") == retailer_key("Luruna Card")
+    assert retailer_key("ホビビ通販部") == retailer_key("ホビビ")
+    assert retailer_key("ポケモンセンターオンライン") != retailer_key("ポケモンセンター")
+    store = ItemStore({})
+    end = NOW + timedelta(days=2)
+    a, _ = store.upsert(fields("ポケモンカードゲーム 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー", "Luruna Card", end), post("1"), NOW)
+    b, new_b = store.upsert(fields("ポケモンカードゲーム エーフィ・ブラッキー", "Luruna Card通販", end), post("2"), NOW)
+    assert b is a and not new_b and len(store.items) == 1 and len(a["sources"]) == 2
+    # 同じ店・同じ締切でも、別の商品は別の抽選
+    store.upsert(fields("ワンピースカードゲーム スタートデッキ「砂漠の王女と海賊たち」【ST-37】", "イオン", end), post("3"), NOW)
+    store.upsert(fields("ワンピースカードゲーム スタートデッキ「バロックワークス」【ST-38】", "イオン", end), post("4"), NOW)
+    assert len(store.items) == 3
+    # 締切が違えば、書き方が似ていてもまとめない
+    store.upsert(fields("ポケモンカードゲーム エーフィ・ブラッキー", "Luruna Card通販", end + timedelta(hours=1)), post("5"), NOW)
+    assert len(store.items) == 4
+
+
+def test_dedupe_merges_items_already_registered_separately():
+    end = (NOW + timedelta(days=2)).isoformat()
+    def item(i, product, shop, first):
+        return {"id": i, "product": product, "product_key": norm_key(product), "retailer": shop, "channel": "online",
+                "apply_end": end, "requirements": [], "buzz": 1, "first_seen": first, "updated_at": first,
+                "sources": [{"post_id": i, "author": i}]}
+    store = ItemStore({"items": [
+        item("b", "ポケモンカードゲーム エーフィ・ブラッキー", "Luruna Card通販", "2026-11-24T22:00+09:00"),
+        item("a", "ポケモンカードゲーム 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー", "Luruna Card", "2026-11-24T21:00+09:00"),
+        item("c", "ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX", "Luruna Card", "2026-11-24T21:00+09:00"),
+    ]})
+    assert store.dedupe() == 1
+    assert sorted(i["id"] for i in store.items) == ["a", "c"]  # 先に見つけた方を残す
+    assert [s["post_id"] for s in next(i for i in store.items if i["id"] == "a")["sources"]] == ["a", "b"]
 
 
 def test_different_stores_stay_separate_but_share_product():

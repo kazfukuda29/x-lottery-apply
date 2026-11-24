@@ -433,6 +433,8 @@ class Runner:
     # ------------------------------------------------------------ 保存
 
     def save(self) -> None:
+        # 同じ抽選が別々に載っていればまとめる（店名・商品名の書き方違い。登録済みの分にも効く）
+        self.store.dedupe()
         self.store.cleanup(
             self.now,
             int(self.settings["items"]["keep_days_after_close"]),
