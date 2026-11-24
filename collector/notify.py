@@ -84,7 +84,8 @@ class Notifier:
             tags=["alarm_clock"],
         )
 
-    def digest(self, open_items: list[dict], stale_accounts: list[str], now: datetime) -> None:
+    def digest(self, open_items: list[dict], stale_accounts: list[str], now: datetime,
+               notes: list[str] | None = None) -> None:
         today = [i for i in open_items if (parse_iso(i.get("apply_end")) or now + timedelta(days=99)) <= now + timedelta(hours=24)]
         today.sort(key=lambda i: i.get("apply_end") or "")
         lines = [f"受付中 {len(open_items)}件 / 24時間以内に締切 {len(today)}件"]
@@ -92,6 +93,7 @@ class Notifier:
             lines.append(summarize(today, now))
         if stale_accounts:
             lines.append("⚠ しばらく投稿がない監視アカウント: " + ", ".join("@" + a for a in stale_accounts))
+        lines.extend(notes or [])
         self.send(f"抽選ダイジェスト {now:%m/%d}", "\n".join(lines), tags=["calendar"])
 
 

@@ -26,7 +26,8 @@ GitHub Actions（2時間ごと）
 | X API | 月$5〜7 | 1日40〜50件。返ってきた投稿1件ごとに課金（約$0.005/件とされるが、**Developer Consoleの表示が正**）。広告（#PR）と当選発表まとめはX側で除外して課金しない |
 | 発見モード（最初の2週間） | 計$3〜5 | 1日50件まで |
 | Claude API（Opus 5.5） | 月$8〜15 | 大半は @crashseq の大型まとめ（1投稿に数十〜100件超の抽選）の読み込み。店舗抽選は出力しないため出力の費用は小さい |
-| Claude API（Haiku 5.5） | 月$1未満 | 同じ処理をHaikuで行った場合 |
+| Claude API（Haiku 5.5） | 月$1〜2 | 同じ処理をHaikuで行った場合 |
+| モデル比較（最初の7日間） | 計$0.5未満 | Opusで読んだ投稿をHaikuにも読ませて比べる（下の「OpusとHaikuの比較」） |
 | GitHub / ntfy | 無料 | 公開リポジトリの場合 |
 
 「応募：〜〆 当選：〜 購入：〜」のような整った1件ずつの告知はルールで読み取るためAI費用はかかりません。AIに回るのは主に複数店舗のまとめ投稿です。
@@ -75,7 +76,7 @@ GitHub Actions（2時間ごと）
 | 名前 | 値 |
 |---|---|
 | `CLAUDE_MODEL` | 読み取りに使うモデル。未設定なら `claude-opus-5-5` |
-| `COMPARE_MODEL` | 比較用モデル（例：`claude-haiku-5-5`）。設定中は同じ投稿を両方で読み取り、一致率を `data/compare_report.json` に記録 |
+| `COMPARE_MODEL` | 比較用モデル。未設定なら `claude-haiku-5-5`（最初の7日間だけ自動で比較） |
 | `SITE_URL` | 一覧ページのURL。未設定なら `https://<ユーザー名>.github.io/<リポジトリ名>/` |
 
 ### 6. 監視アカウントを確認
@@ -117,10 +118,15 @@ GitHub Actions（2時間ごと）
 | 店名の表記ゆれ・公式ドメイン | `config/retailers.yml` |
 | AIモデルの切り替え | GitHub Variables の `CLAUDE_MODEL` |
 
-### Opus 5.5 と Haiku 5.5 の比較（2週間後の目安）
-1. Variables に `COMPARE_MODEL = claude-haiku-5-5` を設定して数日動かす。
-2. `data/compare_report.json` の `agreement`（店と締切の一致率）と `diffs` を確認。
-3. 差が小さければ `CLAUDE_MODEL = claude-haiku-5-5` に切り替え、`COMPARE_MODEL` を削除。
+### OpusとHaikuの比較（最初の7日間・自動）
+最初の7日間は、Opus 5.5で読み取った投稿をHaiku 5.5にも読ませて結果を比べます（一覧に載るのはOpusの結果です）。設定は不要です。
+
+1. 毎朝のダイジェストに「モデル比較中：claude-haiku-5-5 の一致率 ◯%（◯投稿）」と出ます。比較が終わった日から3日間は「モデル比較が終わりました」と出ます。
+2. 詳しくはリポジトリの `data/compare_report.json` を見ます。`diffs` に、結果が食い違った投稿のリンクと両モデルの読み取り結果（店・締切）が入っています。
+3. 一致率は「一覧に載る店と締切が完全に一致した投稿の割合」です。まとめ投稿は1件でも食い違うと不一致になるため、厳しめの数字になります。商品名と受取方法の印は比べていません。
+4. 判断の目安：一致率がおおむね9割以上で、`diffs` を数件開いてもHaiku側の取りこぼしや締切の誤りが目立たなければ、Variables に `CLAUDE_MODEL = claude-haiku-5-5` を設定して切り替えます（Claudeの費用は月$8〜15 → $1〜2）。Haikuは自動で effort `medium` で動きます（`config/settings.yml` の `effort_by_model`）。
+5. 差が大きければOpusのままにします。中間の Sonnet 5.5（費用はOpusの約半分）も試せます。Variables に `COMPARE_MODEL = claude-sonnet-5-5` を設定すると、その日から7日間、Opusと比べます。
+6. 同じ組み合わせでもう一度比べたいときは `data/compare_report.json` を削除します。比較をしないなら `config/settings.yml` の `compare_days` を `0` にします。
 
 ## 手元での動作確認（課金なし）
 

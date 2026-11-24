@@ -14,6 +14,15 @@ claude:
   # 使うモデル。GitHubの Variables に CLAUDE_MODEL を設定すると、そちらが優先されます。
   model: claude-opus-5-5
   effort: low
+  # モデルごとの effort（ここにないモデルは上の effort）。Haiku は標準の medium にする
+  effort_by_model:
+    claude-haiku-5-5: medium
+  # モデル比較：最初の compare_days 日間、同じ投稿を compare_model でも読み取り、
+  # 店と締切の一致率を data/compare_report.json と毎朝のダイジェストに出す（0で無効）。
+  # Variables の COMPARE_MODEL を設定すると、そちらが優先されます。
+  # もう一度比較したいときは data/compare_report.json を削除
+  compare_model: claude-haiku-5-5
+  compare_days: 7
   # 1回のリクエストにまとめる投稿数
   max_posts_per_request: 12
   # 1投稿あたり添付する画像の上限 / 1リクエストあたりの上限

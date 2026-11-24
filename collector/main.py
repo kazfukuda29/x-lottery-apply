@@ -11,7 +11,7 @@ import argparse
 import os
 import shutil
 import sys
-from datetime import timedelta
+from datetime import date, timedelta
 from pathlib import Path
 
 from .discover import update_candidates
@@ -95,14 +95,19 @@ class Runner:
                 self._x = XClient(os.environ.get("X_BEARER_TOKEN", ""), self.budget)
         return self._x
 
+    def effort_for(self, model: str) -> str:
+        """モデルごとの effort（effort_by_model になければ effort）。"""
+        cs = self.settings["claude"]
+        for prefix, effort in (cs.get("effort_by_model") or {}).items():
+            if model.startswith(prefix):
+                return effort
+        return cs.get("effort", "low")
+
     def extractor(self, model: str | None = None):
         if self.dry_run:
             return FixtureExtractor(FIXTURES / "ai_response.json")
-        return ClaudeExtractor(
-            model or self.model,
-            self.settings["claude"].get("effort", "low"),
-            skip_store="store" not in self.channels,
-        )
+        model = model or self.model
+        return ClaudeExtractor(model, self.effort_for(model), skip_store="store" not in self.channels)
 
     def add_item(self, fields: dict, post: dict) -> dict | None:
         """受取方法が対象外（店舗抽選など）なら登録しない。新規なら item を返す。"""
@@ -251,7 +256,7 @@ class Runner:
         self.stats["ai_posts"] = len(ai_posts)
         self.stats["ai_failed"] = len(outcome.failed_post_ids)
 
-        compare_model = os.environ.get("COMPARE_MODEL")
+        compare_model = self.compare_target()
         if compare_model and not self.dry_run and outcome.items_by_post:
             self.compare(ai_posts, existing, outcome, compare_model)
 
@@ -270,6 +275,38 @@ class Runner:
             self.store.add_review(by_id[pid], "自動で読み取れませんでした", self.now)
         return new_items
 
+    # ------------------------------------------------------------ モデル比較
+
+    @property
+    def compare_path(self) -> Path:
+        return self.data_dir / "compare_report.json"
+
+    def compare_days(self) -> int:
+        return int(self.settings["claude"].get("compare_days", 7))
+
+    def compare_target(self) -> str | None:
+        """比較に使うモデル。比較期間（最初の compare_days 日）を過ぎたら None。
+        data/compare_report.json を消すと、もう一度比較を始める。"""
+        model = os.environ.get("COMPARE_MODEL") or self.settings["claude"].get("compare_model")
+        if not model or model == self.model or self.compare_days() <= 0:
+            return None
+        report = load_json(self.compare_path, {})
+        if report.get("base_model") == self.model and report.get("compare_model") == model and report.get("started"):
+            end = date.fromisoformat(report["started"]) + timedelta(days=self.compare_days())
+            if self.now.date() >= end:
+                return None
+        return model
+
+    def compare_signature(self, items: list[dict]) -> list[tuple[str, str]]:
+        """一覧に載る抽選だけを (店, 締切) にして比べる（店名の表記ゆれはそろえる）。"""
+        sig = []
+        for i in items:
+            shop = self.engine.retailers.canonical(i.get("retailer") or "")
+            if self.engine.channel_of("", shop, hint=i.get("channel") or "unknown") not in self.channels:
+                continue
+            sig.append((shop, (i.get("apply_end") or "")[:16]))
+        return sorted(sig)
+
     def compare(self, posts: list[dict], existing: list[dict], base, compare_model: str) -> None:
         """同じ投稿を別モデルでも読み取り、結果の一致度を data/compare_report.json に記録する。"""
         cs = self.settings["claude"]
@@ -278,16 +315,18 @@ class Runner:
             max_posts=cs["max_posts_per_request"], max_images=cs["max_images_per_request"],
             max_images_per_post=cs["max_images_per_post"], max_calls=5, now=self.now,
         )
-        path = self.data_dir / "compare_report.json"
-        report = load_json(path, {"base_model": self.model, "compare_model": compare_model, "runs": []})
+        path = self.compare_path
+        report = load_json(path, {})
+        if report.get("base_model") != self.model or report.get("compare_model") != compare_model:
+            report = {"base_model": self.model, "compare_model": compare_model, "started": self.today, "runs": []}
         diffs = []
         same = 0
         for pid, a_items in base.items_by_post.items():
             b_items = other.items_by_post.get(pid)
             if b_items is None:
                 continue
-            a_sig = sorted((i.get("retailer", ""), (i.get("apply_end") or "")[:16]) for i in a_items)
-            b_sig = sorted((i.get("retailer", ""), (i.get("apply_end") or "")[:16]) for i in b_items)
+            a_sig = self.compare_signature(a_items)
+            b_sig = self.compare_signature(b_items)
             if a_sig == b_sig:
                 same += 1
             else:
@@ -298,6 +337,21 @@ class Runner:
         total = sum(r["posts"] for r in report["runs"])
         report["agreement"] = round(sum(r["same"] for r in report["runs"]) / total, 3) if total else None
         save_json(path, report)
+
+    def compare_note(self) -> str | None:
+        """毎朝のダイジェストに添える比較結果（比較中と、終わってから3日間）。"""
+        report = load_json(self.compare_path, {})
+        if report.get("base_model") != self.model or report.get("agreement") is None or not report.get("started"):
+            return None
+        posts = sum(r["posts"] for r in report.get("runs") or [])
+        label = f"{report['compare_model']} の一致率 {report['agreement']:.0%}（{posts}投稿）"
+        end = date.fromisoformat(report["started"]) + timedelta(days=self.compare_days())
+        today = self.now.date()
+        if today < end:
+            return f"モデル比較中（{end.month}/{end.day}まで）：{label}"
+        if today < end + timedelta(days=3):
+            return f"モデル比較が終わりました：{label}。切り替えるかは README の手順で判断してください"
+        return None
 
     # ------------------------------------------------------------ ダイジェスト・発見モード
 
@@ -320,7 +374,10 @@ class Runner:
         hour = int(self.settings["notify"].get("digest_hour", 7))
         if not force and (self.now.hour < hour or self.state.get("last_digest_date") == self.today):
             return
-        self.notifier.digest(open_items(self.store.items, self.now), self.stale_accounts(), self.now)
+        note = self.compare_note()
+        self.notifier.digest(
+            open_items(self.store.items, self.now), self.stale_accounts(), self.now, notes=[note] if note else None
+        )
         self.state["last_digest_date"] = self.today
 
     def maybe_discover(self, force: bool = False) -> None:
