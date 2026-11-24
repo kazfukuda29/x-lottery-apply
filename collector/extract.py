@@ -99,6 +99,8 @@ class ExtractOutcome:
     failed_post_ids: list[str] = field(default_factory=list)
     calls: int = 0
     usage: dict[str, int] = field(default_factory=lambda: {"input_tokens": 0, "output_tokens": 0})
+    # スマホに通知するエラー（APIキーの期限切れ・クレジット不足など、直さないと続くもの）
+    errors: list[str] = field(default_factory=list)
 
 
 def build_user_content(posts: list[dict], existing: list[dict], max_images: int, max_images_per_post: int, now) -> list[dict]:
@@ -206,9 +208,10 @@ class ClaudeExtractor:
         now = now or now_jst()
         out = ExtractOutcome()
         queue = make_batches(posts, max_posts)
+        stopped = False
         while queue:
             batch = queue.pop(0)
-            if out.calls >= max_calls:
+            if stopped or out.calls >= max_calls:
                 out.failed_post_ids.extend(p["id"] for p in batch)
                 continue
             content = build_user_content(batch, existing, max_images, max_images_per_post, now)
@@ -217,8 +220,13 @@ class ClaudeExtractor:
                 resp = self._call(content)
             except (self.anthropic.BadRequestError, self.anthropic.AuthenticationError,
                     self.anthropic.PermissionDeniedError, self.anthropic.NotFoundError) as e:
-                # 設定ミスは全件失敗にして知らせる（再試行しても直らない）
+                # 設定の問題（キーの期限切れ・削除、クレジット不足、モデル名の誤り）は再試行しても直らないので知らせる
                 print(f"[extract] リクエストエラー: {e}")
+                msg = f"Claude APIのエラー（APIキーの期限切れ・削除、クレジット不足など）: {type(e).__name__}: {str(e)[:200]}"
+                if msg not in out.errors:
+                    out.errors.append(msg)
+                # キー・権限・モデル名の誤りは残りも必ず失敗するので、以降は呼び出さない
+                stopped = not isinstance(e, self.anthropic.BadRequestError)
                 out.failed_post_ids.extend(p["id"] for p in batch)
                 continue
             except (self.anthropic.RateLimitError, self.anthropic.APIStatusError,

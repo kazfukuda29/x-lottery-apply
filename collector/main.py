@@ -250,6 +250,7 @@ class Runner:
             max_calls=remaining_calls,
             now=self.now,
         )
+        self.errors.extend(outcome.errors)
         usage["calls"] += outcome.calls
         usage["input_tokens"] += outcome.usage.get("input_tokens", 0)
         usage["output_tokens"] += outcome.usage.get("output_tokens", 0)

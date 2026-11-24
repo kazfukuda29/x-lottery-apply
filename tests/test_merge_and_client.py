@@ -198,7 +198,10 @@ class FakeAnthropicClient:
 
     def _stream(self, **kwargs):
         self.requests.append(kwargs)
-        return FakeStream(self.responses.pop(0))
+        r = self.responses.pop(0)
+        if isinstance(r, Exception):
+            raise r
+        return FakeStream(r)
 
 
 def resp(text, stop="end_turn"):
@@ -244,6 +247,31 @@ def test_claude_extractor_respects_daily_call_limit():
     ex = ClaudeExtractor("claude-opus-5-5", "low", client=fake)
     out = ex.extract([{"id": "1", "text": "a"}], [], max_posts=10, max_images=8, max_images_per_post=2, max_calls=0, now=NOW)
     assert fake.requests == [] and out.failed_post_ids == ["1"]
+
+
+def api_error(cls, status, message):
+    import anthropic
+
+    response = SimpleNamespace(status_code=status, headers={}, request=SimpleNamespace(method="POST", url="https://api.anthropic.com/v1/messages"))
+    return getattr(anthropic, cls)(message, response=response, body=None)
+
+
+def test_invalid_api_key_is_reported_and_stops_further_calls():
+    fake = FakeAnthropicClient([api_error("AuthenticationError", 401, "invalid x-api-key")])
+    ex = ClaudeExtractor("claude-opus-5-5", "low", client=fake)
+    posts = [{"id": "1", "text": "a" * 7000}, {"id": "2", "text": "b" * 7000}]  # 長いので別々のリクエストになる
+    out = ex.extract(posts, [], max_posts=10, max_images=8, max_images_per_post=2, max_calls=5, now=NOW)
+    assert len(fake.requests) == 1  # 2件目は呼ばない
+    assert out.failed_post_ids == ["1", "2"]
+    assert len(out.errors) == 1 and "AuthenticationError" in out.errors[0]
+
+
+def test_credit_shortage_is_reported_once():
+    fake = FakeAnthropicClient([api_error("BadRequestError", 400, "Your credit balance is too low")] * 2)
+    ex = ClaudeExtractor("claude-opus-5-5", "low", client=fake)
+    posts = [{"id": "1", "text": "a" * 7000}, {"id": "2", "text": "b" * 7000}]
+    out = ex.extract(posts, [], max_posts=10, max_images=8, max_images_per_post=2, max_calls=5, now=NOW)
+    assert out.failed_post_ids == ["1", "2"] and len(out.errors) == 1
 
 
 def test_entry_platform_link_is_treated_as_apply_page():
