@@ -33,6 +33,10 @@ def test_dry_run_end_to_end(tmp_path):
         "chusen_matome_demo": {"items": 3, "only": 3},
         "hobby_lottery_demo": {"items": 3, "only": 3},
     }
+    # アカウントの評価（ネット抽選を伝えた数と、少数で網羅する組み合わせ）
+    ev = items["meta"]["account_eval"]
+    assert ev["total"] >= 1 and ev["keep"]
+    assert (data / "account_log.json").exists()
     # 公開ページには投稿本文を載せない
     assert all("text" not in i and all("text" not in s for s in i["sources"]) for i in items["items"])
 

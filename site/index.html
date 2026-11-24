@@ -645,7 +645,7 @@
   function renderCandidates() {
     const list = cands.candidates || [];
     const repo = data.meta?.repo;
-    view.append($("p", { class: "note", text: "監視していないのに抽選情報をよく流しているアカウントです（発見モードで集計）。良さそうなら監視リストに追加してください。" }));
+    view.append($("p", { class: "note", text: "監視していないのに抽選情報をよく流しているアカウントです（発見モードで集計）。ネット抽選の投稿が多い順に並べています。良さそうなら監視リストに追加してください。" }));
     if (repo) view.append($("p", { class: "note" }, extLink(`https://github.com/${repo}/edit/main/config/accounts.yml`, "監視リスト（accounts.yml）を編集する")));
     if (!list.length) {
       view.append($("div", { class: "empty" }, $("strong", { text: "候補はまだありません" }), "発見モードが動くと、ここに候補が並びます。"));
@@ -653,7 +653,7 @@
     }
     for (const c of list) {
       view.append($("div", { class: "row" },
-        $("div", { class: "hits", text: c.hits }, $("small", { text: "件" })),
+        $("div", { class: "hits", text: c.online_hits || 0 }, $("small", { text: `ネット／${c.hits}件` })),
         $("div", { class: "grow" },
           $("div", { class: "name", text: `${c.name || ""} @${c.handle}` }),
           $("div", { class: "sub", text: `フォロワー ${compact(c.followers || 0)}` + (c.description ? ` ・ ${c.description}` : "") })),
@@ -718,15 +718,29 @@
       $("div", { class: "item" }, $("span", { class: "grow", text: k }), $("span", { class: "val", text: v })))));
 
     const accounts = meta.accounts || [];
+    const ev = meta.account_eval || {};
+    const evs = ev.accounts || {};
     body.append($("div", { class: "group-title", text: `監視アカウント（${accounts.length}）` }));
-    const astats = meta.account_stats || {};
-    body.append($("p", { class: "note", text: "掲載中の抽選のうち、各アカウントが伝えた件数（そのアカウントだけが伝えた件数）。0件が続くアカウントは入れ替えの候補です。" }));
-    body.append($("div", { class: "group" }, accounts.length ? accounts.map((h) =>
-      $("div", { class: "item" },
-        $("span", { class: "grow", text: "@" + h }),
-        astats[h] ? $("span", { class: "val", text: `${astats[h].items}件（単独 ${astats[h].only}）` }) : null,
-        extLink(`https://x.com/${encodeURIComponent(h)}`, "見る"))) :
-      $("div", { class: "item" }, $("span", { class: "grow val", text: "未設定" }))));
+    if (ev.total) {
+      const keepCov = ev.keep?.length ? ev.cover[ev.keep.length - 1].coverage : 0;
+      body.append($("p", { class: "note", text:
+        `直近${ev.days_observed}日のネット抽選 ${ev.total}件で評価。` +
+        `${ev.keep.map((h) => "@" + h).join("・")} の${ev.keep.length}つで${Math.round(keepCov * 100)}%を網羅しています。` +
+        (ev.drop?.length ? "「外す候補」は、外しても網羅率がほとんど下がらないアカウントです。" : "") +
+        (ev.days_observed < 7 ? "（7日未満なので参考値）" : "") }));
+    } else {
+      body.append($("p", { class: "note", text: "ネット抽選がたまると、アカウントごとの件数と、少ないアカウントで網羅できる組み合わせをここに出します。" }));
+    }
+    const order = [...(ev.keep || []), ...accounts.filter((h) => !(ev.keep || []).includes(h))];
+    body.append($("div", { class: "group" }, order.length ? order.map((h) => {
+      const st = evs[h];
+      const verdict = !ev.total ? null : (ev.keep || []).includes(h) ? ["残す", "chan online"] : ["外す候補", "chan store"];
+      return $("div", { class: "item" },
+        $("span", { class: "grow" }, "@" + h, $("br"),
+          $("small", { class: "val", text: st ? `ネット抽選 ${st.online}件（単独 ${st.only}）・取得 ${st.posts_per_day}件/日` : "集計中" })),
+        verdict ? $("span", { class: verdict[1], text: verdict[0] }) : null,
+        extLink(`https://x.com/${encodeURIComponent(h)}`, "見る"));
+    }) : $("div", { class: "item" }, $("span", { class: "grow val", text: "未設定" }))));
     if (typeof sheet.showModal === "function") sheet.showModal(); else sheet.setAttribute("open", "");
   }
 

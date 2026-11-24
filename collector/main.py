@@ -15,6 +15,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 from .discover import update_candidates
+from .evaluate import evaluate, record_fetch, summary_line, update_log
 from .extract import ClaudeExtractor, FixtureExtractor, existing_summary
 from .merge import ItemStore, fields_from_ai, open_items
 from .notify import Notifier, due_soon, urgent_new
@@ -65,6 +66,7 @@ class Runner:
         self.state = load_json(self.data_dir / "state.json", {})
         self.items_data = load_json(self.data_dir / "items.json", {})
         self.cand_data = load_json(self.data_dir / "candidates.json", {})
+        self.account_log = load_json(self.data_dir / "account_log.json", {})
         genre_words = [w for ws in (self.keywords.get("genres") or {}).values() for w in ws]
         self.store = ItemStore(self.items_data, generic_words=genre_words)
         self.engine = RuleEngine(self.keywords, self.retailers, self.entry_platforms)
@@ -169,6 +171,7 @@ class Runner:
         except XApiError as e:
             self.errors.append(str(e))
             return
+        record_fetch(self.account_log, posts, self.today)
         processed = set(self.state.get("processed_ids") or [])
         unique: dict[str, dict] = {}
         for p in posts:
@@ -384,17 +387,34 @@ class Runner:
         hour = int(self.settings["notify"].get("digest_hour", 7))
         if not force and (self.now.hour < hour or self.state.get("last_digest_date") == self.today):
             return
-        note = self.compare_note()
+        notes = [n for n in (self.compare_note(), self.weekly_account_note()) if n]
         items = open_items(self.store.items, self.now)
         # 前回のダイジェスト以降に載った新着の数（初回は過去24時間）
         since = parse_iso(self.state.get("last_digest_at")) or self.now - timedelta(hours=24)
         new_count = sum(1 for i in items if (parse_iso(i.get("first_seen")) or since) > since)
         self.notifier.digest(
-            items, self.stale_accounts(), self.now, notes=[note] if note else None,
+            items, self.stale_accounts(), self.now, notes=notes,
             days=int(self.settings["notify"].get("digest_days", 3)), new_count=new_count,
         )
         self.state["last_digest_date"] = self.today
         self.state["last_digest_at"] = iso(self.now)
+
+    # ------------------------------------------------------------ アカウントの評価
+
+    def account_eval(self) -> dict:
+        es = self.settings.get("evaluate") or {}
+        update_log(self.account_log, self.store.items, self.store.merged, self.now)
+        return evaluate(
+            self.account_log, [a["handle"] for a in self.accounts], self.now,
+            window_days=int(es.get("window_days", 14)), target=float(es.get("coverage_target", 0.95)),
+        )
+
+    def weekly_account_note(self) -> str | None:
+        """週に1回（evaluate.weekday の曜日）、ダイジェストにアカウント評価を添える。"""
+        weekday = (self.settings.get("evaluate") or {}).get("weekday", 0)
+        if weekday is None or self.now.weekday() != int(weekday):
+            return None
+        return summary_line(self.account_eval())
 
     def maybe_discover(self, force: bool = False) -> None:
         ds = self.settings.get("discover") or {}
@@ -435,6 +455,7 @@ class Runner:
     def save(self) -> None:
         # 同じ抽選が別々に載っていればまとめる（店名・商品名の書き方違い。登録済みの分にも効く）
         self.store.dedupe()
+        account_eval = self.account_eval()
         self.store.cleanup(
             self.now,
             int(self.settings["items"]["keep_days_after_close"]),
@@ -453,9 +474,11 @@ class Runner:
             "ai_usage_today": self.state.get("ai_usage"),
             "accounts": [a["handle"] for a in self.accounts],
             "account_stats": self.account_stats(),
+            "account_eval": account_eval,
         }
         save_json(self.data_dir / "items.json", out)
         save_json(self.data_dir / "state.json", self.state)
+        save_json(self.data_dir / "account_log.json", self.account_log)
         if self.cand_data:
             save_json(self.data_dir / "candidates.json", self.cand_data)
 

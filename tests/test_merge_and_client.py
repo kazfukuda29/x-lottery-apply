@@ -64,6 +64,7 @@ def test_dedupe_merges_items_already_registered_separately():
     ]})
     assert store.dedupe() == 1
     assert sorted(i["id"] for i in store.items) == ["a", "c"]  # 先に見つけた方を残す
+    assert store.merged == {"b": "a"}  # アカウント評価の記録を寄せるため
     assert [s["post_id"] for s in next(i for i in store.items if i["id"] == "a")["sources"]] == ["a", "b"]
 
 

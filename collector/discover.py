@@ -1,11 +1,24 @@
-"""発見モード：監視していないのに抽選情報をよく流すアカウントを集計する。"""
+"""発見モード：監視していないのに抽選情報をよく流すアカウントを集計する。
+
+ネット抽選（通販・オンライン・配送の語や、ネット専業の店名があるもの）の件数を優先して並べる。
+"""
 
 from __future__ import annotations
 
 from datetime import datetime
 
 from .rules import RuleEngine
-from .util import iso
+from .util import iso, normalize, strip_urls
+
+
+def is_online_post(post: dict, engine: RuleEngine) -> bool:
+    """本文からネット抽選と判断できるか（店頭の語があれば違う）。AIは使わない。"""
+    text_norm = normalize(strip_urls(post.get("text", "")))
+    channel = engine.channel_of(text_norm)
+    if channel != "unknown":
+        return channel == "online"
+    shops = engine.retailers.find(text_norm, post.get("urls") or [])
+    return any(s in engine.retailers.online_only for s in shops)
 
 
 def update_candidates(
@@ -32,6 +45,8 @@ def update_candidates(
             {"handle": post["author"], "name": user.get("name", ""), "hits": 0, "first_seen": iso(now)},
         )
         cand["hits"] += 1
+        if is_online_post(post, engine):
+            cand["online_hits"] = cand.get("online_hits", 0) + 1
         cand["last_seen"] = iso(now)
         cand["sample_url"] = post.get("url")
         cand["followers"] = (user.get("public_metrics") or {}).get("followers_count", cand.get("followers", 0))
@@ -40,7 +55,7 @@ def update_candidates(
         counted += 1
     # 監視に追加済みのアカウントは候補から外す
     candidates = [c for h, c in by_handle.items() if h not in watched]
-    candidates.sort(key=lambda c: (-c["hits"], -c.get("followers", 0)))
+    candidates.sort(key=lambda c: (-c.get("online_hits", 0), -c["hits"], -c.get("followers", 0)))
     data["candidates"] = candidates[:50]
     data["counted_post_ids"] = sorted(counted_ids, key=int)[-1000:]
     data["updated_at"] = iso(now)

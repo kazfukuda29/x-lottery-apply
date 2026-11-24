@@ -109,6 +109,8 @@ class ItemStore:
         self.items: list[dict] = data.get("items") or []
         self.review: list[dict] = data.get("review") or []
         self.generic = {norm_key(w) for w in generic_words or []}
+        # dedupe でまとめたアイテム（消えた id → 残した id）
+        self.merged: dict[str, str] = {}
 
     # ------------------------------------------------------------ 照合
 
@@ -256,6 +258,7 @@ class ItemStore:
                 kept.append(item)
                 continue
             self._absorb(twin, item)
+            self.merged[item["id"]] = twin["id"]
             removed += 1
         self.items = kept
         return removed
