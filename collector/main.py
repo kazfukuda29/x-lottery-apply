@@ -17,7 +17,7 @@ from pathlib import Path
 from .discover import update_candidates
 from .extract import ClaudeExtractor, FixtureExtractor, existing_summary
 from .merge import ItemStore, fields_from_ai, open_items
-from .notify import Notifier, due_soon
+from .notify import Notifier, due_soon, urgent_new
 from .rules import RuleEngine
 from .util import ROOT, iso, load_json, load_yaml, now_jst, parse_iso, save_json
 from .x_client import (
@@ -214,7 +214,12 @@ class Runner:
         self.state["processed_ids"] = sorted(processed, key=int)[-3000:]
         self.stats["new_items"] = len(new_items)
 
-        self.notifier.new_items(new_items, self.now)
+        # 新着は翌朝のダイジェストにまとめ、締切が迫っているものだけすぐ知らせる
+        urgent_hours = int(self.settings["notify"].get("urgent_new_hours", 36))
+        if urgent_hours < 0:
+            self.notifier.new_items(new_items, self.now)
+        elif urgent_hours > 0:
+            self.notifier.urgent_new_items(urgent_new(new_items, self.now, urgent_hours), self.now)
         hours = int(self.settings["notify"].get("closing_soon_hours", 0))
         alerted = set(self.state.get("alerted_soon") or [])
         soon = due_soon(self.store.items, self.now, hours, alerted)
@@ -380,10 +385,16 @@ class Runner:
         if not force and (self.now.hour < hour or self.state.get("last_digest_date") == self.today):
             return
         note = self.compare_note()
+        items = open_items(self.store.items, self.now)
+        # 前回のダイジェスト以降に載った新着の数（初回は過去24時間）
+        since = parse_iso(self.state.get("last_digest_at")) or self.now - timedelta(hours=24)
+        new_count = sum(1 for i in items if (parse_iso(i.get("first_seen")) or since) > since)
         self.notifier.digest(
-            open_items(self.store.items, self.now), self.stale_accounts(), self.now, notes=[note] if note else None
+            items, self.stale_accounts(), self.now, notes=[note] if note else None,
+            days=int(self.settings["notify"].get("digest_days", 3)), new_count=new_count,
         )
         self.state["last_digest_date"] = self.today
+        self.state["last_digest_at"] = iso(self.now)
 
     def maybe_discover(self, force: bool = False) -> None:
         ds = self.settings.get("discover") or {}

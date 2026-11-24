@@ -27,6 +27,8 @@
     --urgent-soft: #fbe7e5;
     --soon: #a25a00;
     --soon-soft: #fbeed9;
+    --near: #7a6400;
+    --near-soft: #fff4c2;
     --ok: #217a4b;
     --ok-soft: #e1f2e8;
     --radius: 14px;
@@ -48,6 +50,8 @@
       --urgent-soft: #3d2322;
       --soon: #f0b25a;
       --soon-soft: #3a2e1c;
+      --near: #e6cf6e;
+      --near-soft: #33301a;
       --ok: #5fd197;
       --ok-soft: #1c3428;
       --shadow: none;
@@ -127,6 +131,30 @@
   }
   .due.urgent { background: var(--urgent-soft); color: var(--urgent); }
   .due.soon { background: var(--soon-soft); color: var(--soon); }
+  .due.near { background: var(--near-soft); color: var(--near); }
+  .store.urgent { box-shadow: inset 4px 0 0 var(--urgent); background: color-mix(in srgb, var(--urgent-soft) 45%, transparent); }
+  .store.soon { box-shadow: inset 4px 0 0 var(--soon); }
+  .store.near { box-shadow: inset 4px 0 0 var(--near); }
+  .due.urgent { font-size: 13px; }
+
+  /* ---------- 締切が近い抽選のまとめ ---------- */
+  .due-summary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 2px 0 6px; }
+  .due-tile {
+    border: 0; border-radius: var(--radius); padding: 10px 6px 8px; cursor: pointer; text-align: center;
+    background: var(--surface-2); color: var(--muted);
+  }
+  .due-tile b { display: block; font-size: 26px; line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .due-tile span { font-size: 12px; font-weight: 700; }
+  .due-tile.urgent.has { background: var(--urgent); color: #fff; }
+  .due-tile.soon.has { background: var(--soon-soft); color: var(--soon); }
+  .due-tile.near.has { background: var(--near-soft); color: var(--near); }
+  .due-tile:active { transform: scale(.97); }
+  .bucket-title { font-size: 15px; font-weight: 800; margin: 18px 4px 8px; display: flex; align-items: center; gap: 6px; scroll-margin-top: 110px; }
+  .bucket-title.urgent { color: var(--urgent); }
+  .bucket-title.soon { color: var(--soon); }
+  .bucket-title.near { color: var(--near); }
+  .bucket-title.plain { color: var(--muted); font-size: 13px; font-weight: 600; }
+  .bucket-title .n { font-weight: 600; font-size: 12px; opacity: .8; }
   .due.upcoming { background: var(--accent-soft); color: var(--accent); }
   .due.applied { background: var(--ok-soft); color: var(--ok); }
   .store-sub { font-size: 12px; color: var(--muted); margin-top: 2px; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; }
@@ -351,6 +379,21 @@
     if (start && start > now) return "upcoming";
     return "open";
   }
+  // 締切が今日・明日・2〜3日後…のどれか（日本時間の日付で数える）
+  const dayNo = (d) => Math.floor((d.getTime() + 9 * 3600000) / 86400000);
+  function bucketOf(item, now = new Date()) {
+    const end = toDate(item.apply_end);
+    if (!end) return "none";
+    const d = dayNo(end) - dayNo(now);
+    return d <= 0 ? "today" : d === 1 ? "tomorrow" : d <= 3 ? "near" : "later";
+  }
+  const BUCKETS = {
+    today: { title: "🔥 今日締切", tile: "今日締切", cls: "urgent" },
+    tomorrow: { title: "⚠️ 明日締切", tile: "明日締切", cls: "soon" },
+    near: { title: "📅 2〜3日後に締切", tile: "2〜3日後", cls: "near" },
+    later: { title: "それ以降", cls: "plain" },
+    none: { title: "締切不明", cls: "plain" },
+  };
   function dueBadge(item, now = new Date()) {
     const start = toDate(item.apply_start), end = toDate(item.apply_end);
     const p = phase(item, now);
@@ -359,11 +402,11 @@
     const ms = end - now;
     if (ms < 0) return { cls: "", label: "締切済み", sub: `${fmtDate(end)}まで` };
     const h = ms / 3600000;
-    let label;
-    if (h < 1) label = `あと${Math.max(1, Math.floor(ms / 60000))}分`;
-    else if (h < 24) label = `あと${Math.floor(h)}時間`;
-    else label = `あと${Math.floor(h / 24)}日`;
-    return { cls: h < 6 ? "urgent" : h < 24 ? "soon" : "", label, sub: `${fmtDate(end)}まで` };
+    const left = h < 1 ? `あと${Math.max(1, Math.floor(ms / 60000))}分` : `あと${Math.floor(h)}時間`;
+    const b = bucketOf(item, now);
+    const days = dayNo(end) - dayNo(now);
+    const label = b === "today" ? `今日まで・${left}` : b === "tomorrow" ? "明日まで" : b === "near" ? (days === 2 ? "あさってまで" : "3日後まで") : `あと${days}日`;
+    return { cls: BUCKETS[b].cls === "plain" ? "" : BUCKETS[b].cls, label, sub: `${fmtDate(end)}まで` };
   }
   const statusOf = (id) => prefs.status[id]?.s || null;
 
@@ -459,8 +502,31 @@
         $("strong", { text: data.items.length ? "表示できる抽選はありません" : "まだ抽選情報がありません" }),
         data.items.length ? "ジャンルの絞り込みや、スキップ・非表示の設定を確認してください。" : "収集が動くと、ここに受付中の抽選が並びます。"));
     }
-    for (const group of groupByProduct(items)) view.append(productCard(group));
+    if (items.length) view.append(dueSummary(items));
+    let current = null;
+    for (const group of groupByProduct(items)) {
+      const b = bucketOf(group[0]);
+      if (b !== current) {
+        current = b;
+        const n = items.filter((i) => bucketOf(i) === b).length;
+        view.append($("h2", { class: `bucket-title ${BUCKETS[b].cls}`, id: `sec-${b}` }, BUCKETS[b].title, $("span", { class: "n", text: `${n}件` })));
+      }
+      view.append(productCard(group));
+    }
     renderReview();
+  }
+
+  // 「今日締切／明日締切／2〜3日後」の件数。押すとその見出しまで移動
+  function dueSummary(items) {
+    const box = $("div", { class: "due-summary", role: "navigation", "aria-label": "締切が近い抽選" });
+    for (const b of ["today", "tomorrow", "near"]) {
+      const n = items.filter((i) => bucketOf(i) === b).length;
+      box.append($("button", {
+        class: `due-tile ${BUCKETS[b].cls}${n ? " has" : ""}`,
+        onclick: () => document.getElementById(`sec-${b}`)?.scrollIntoView({ behavior: "smooth", block: "start" }),
+      }, $("b", { text: n }), $("span", { text: BUCKETS[b].tile })));
+    }
+    return box;
   }
 
   function productCard(group) {
@@ -490,7 +556,7 @@
   function storeRow(item) {
     const s = statusOf(item.id);
     const due = dueBadge(item);
-    const li = $("li", { class: "store" + (s === "skipped" ? " is-skipped" : "") });
+    const li = $("li", { class: "store" + (s === "skipped" ? " is-skipped" : "") + (due.cls && due.cls !== "upcoming" ? ` ${due.cls}` : "") });
     li.append($("div", { class: "store-top" },
       $("span", { class: "shop", text: item.retailer || "店舗不明" }),
       $("span", { class: `due ${due.cls}`, text: due.label })));
