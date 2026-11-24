@@ -7,10 +7,10 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "実行モード"
+        description: "実行モード（build は収集せずにページだけ作り直す。費用なし）"
         type: choice
         default: auto
-        options: [auto, collect, digest, discover]
+        options: [auto, collect, digest, discover, build]
 
 permissions:
   contents: write
@@ -25,13 +25,10 @@ jobs:
   collect:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-    environment:
-      name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: pip
@@ -40,6 +37,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Collect
+        if: ${{ inputs.mode != 'build' }}
         env:
           X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -50,6 +48,7 @@ jobs:
         run: python -m collector.main --mode "${{ inputs.mode || 'auto' }}"
 
       - name: Save data
+        if: ${{ inputs.mode != 'build' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -65,11 +64,21 @@ jobs:
       - name: Build site
         run: python -m collector.main --mode build
 
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
+  # 公開は別のジョブにする。同じジョブだと、アップロード直後にGitHub側でまだ見つからず
+  # 失敗することがあるため。失敗しても「Re-run failed jobs」で公開だけをやり直せる（収集し直さない）
+  deploy:
+    needs: collect
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
       - id: deploy
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
