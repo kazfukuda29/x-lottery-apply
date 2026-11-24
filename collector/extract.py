@@ -22,6 +22,7 @@ ITEM_SCHEMA = {
         "product": {"type": "string"},
         "retailer": {"type": "string"},
         "genre": {"type": "string", "enum": GENRES},
+        "channel": {"type": "string", "enum": ["online", "store", "unknown"]},
         "apply_start": {"type": "string"},
         "apply_end": {"type": "string"},
         "apply_url_index": {"type": "integer"},
@@ -34,6 +35,7 @@ ITEM_SCHEMA = {
         "product",
         "retailer",
         "genre",
+        "channel",
         "apply_start",
         "apply_end",
         "apply_url_index",
@@ -81,6 +83,7 @@ SYSTEM_PROMPT = """あなたは X（旧Twitter）の投稿から、日本の「�
 - retailer: 抽選を行う店の名前（例: ヨドバシカメラ、ポケモンセンターオンライン）。わからなければ空文字。
 - apply_url_index: 投稿の urls の番号のうち、その店の応募・抽選ページのもの（livepocket.jp や Google フォームなどの応募受付ページも含む）。なければ -1。
 - detail_url_index: 店のページではない詳細リンク（まとめ記事など）の番号。なければ -1。
+- channel: 受取方法。online＝応募も受け取りもネット・郵送で完結（通販・配送）。store＝店頭での応募、店頭受取、入店抽選、整理券など、店に行く手順が1つでもあるもの。書かれていなければ unknown。
 - requirements: 応募条件を短いラベルで（会員登録、アプリ会員、購入履歴、店頭受取、本人確認、クレジットカード、抽選券、招待制 など）。なければ空配列。
 - same_as_item_id: existing_items の中に「同じ店・同じ商品の同じ抽選」（締切のリマインド投稿や、別のまとめアカウントによる同じ情報）があれば、その id。なければ空文字。
 - 画像が添付されている投稿は、画像の中の文字も読む。
@@ -157,21 +160,32 @@ def make_batches(posts: list[dict], max_posts: int, max_chars: int = 6000) -> li
     return batches
 
 
+STORE_SKIP_RULE = (
+    "\n- このユーザーはネットで完結する抽選だけを求めています。channel が store になる抽選"
+    "（店頭応募・店頭受取・入店抽選・整理券）は items に出力しないでください。"
+)
+
+
+def system_prompt(skip_store: bool) -> str:
+    return SYSTEM_PROMPT + (STORE_SKIP_RULE if skip_store else "")
+
+
 class ClaudeExtractor:
-    def __init__(self, model: str, effort: str = "low", client: Any = None):
+    def __init__(self, model: str, effort: str = "low", client: Any = None, skip_store: bool = False):
         import anthropic
 
         self.anthropic = anthropic
         self.client = client or anthropic.Anthropic()
         self.model = model
         self.effort = effort
+        self.system = system_prompt(skip_store)
 
     def _call(self, content: list[dict]) -> Any:
         # まとめ投稿は1件に100件以上の抽選が載ることがあるため、出力上限を大きくしてストリーミングで受け取る
         kwargs: dict[str, Any] = dict(
             model=self.model,
             max_tokens=48000,
-            system=SYSTEM_PROMPT,
+            system=self.system,
             messages=[{"role": "user", "content": content}],
             output_config={
                 "effort": self.effort,

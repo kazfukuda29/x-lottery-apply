@@ -38,6 +38,9 @@ notify:
   stale_days: 3
 
 items:
+  # 一覧に載せる受取方法：online（ネットで完結）/ unknown（判断できない）/ store（店頭応募・店頭受取・入店抽選）
+  # 店舗抽選も見たいときは store を追加
+  channels: [online, unknown]
   # 締切（または当選発表日）を過ぎてから保持する日数
   keep_days_after_close: 3
   # 締切が読み取れなかったアイテムを保持する日数

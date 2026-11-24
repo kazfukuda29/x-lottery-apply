@@ -212,12 +212,15 @@ class RetailerMatcher:
         self.domains: list[tuple[str, str]] = []
         # 店ではないが応募の受付窓口になるサービス（例: livepocket.jp, docs.google.com/forms）
         self.platforms = [p.lower() for p in entry_platforms or []]
+        # ネット専業の店（店頭での応募・受取がない）
+        self.online_only = {r["name"] for r in retailers if r.get("online")}
         for r in retailers:
             name = r["name"]
             for alias in [name, *(r.get("aliases") or [])]:
                 self.entries.append((normalize(alias), name))
             for d in r.get("domains") or []:
-                self.domains.append((d.lower(), name))
+                if d:
+                    self.domains.append((d.lower(), name))
         # 長い別名から先に照合（「ヨドバシ.com」を「ヨドバシ」より優先）
         self.entries.sort(key=lambda e: -len(e[0]))
 
@@ -347,6 +350,21 @@ class RuleEngine:
     def _any(self, key: str, text_norm: str) -> bool:
         return any(keyword_in(w, text_norm) for w in self.kw.get(key) or [])
 
+    def channel_of(self, text_norm: str, retailer: str = "", hint: str = "unknown") -> str:
+        """受取方法：online（ネットで完結）/ store（店頭応募・店頭受取・入店抽選）/ unknown。
+
+        店に行く手順が1つでもあれば store。hint はAIの判断で、文面から決まらないときに使う。
+        """
+        if text_norm and self._any("store_markers", text_norm):
+            return "store"
+        if hint in ("online", "store"):
+            return hint
+        if text_norm and self._any("online_markers", text_norm):
+            return "online"
+        if retailer in self.retailers.online_only:
+            return "online"
+        return "unknown"
+
     def classify(self, post: dict, now: datetime) -> RuleResult:
         text = post.get("text", "")
         text_norm = normalize(strip_urls(text))
@@ -391,6 +409,7 @@ class RuleEngine:
             item = {
                 "product": product,
                 "retailer": retailer,
+                "channel": self.channel_of(text_norm, retailer),
                 "genre": detect_genre(text_norm, self.kw.get("genres") or {}),
                 "apply_start": w.start,
                 "apply_end": w.end,

@@ -1,8 +1,10 @@
 # 店名の辞書。投稿内の表記ゆれ（aliases）を正式名（name）にそろえ、
 # 公式ドメイン（domains）のURLを「応募ページ」として扱います。
+# online: true はネット専業（店頭での応募・受取がない）の店。受取方法が書かれていなくてもネット抽選とみなします。
 retailers:
   # --- 公式・家電量販 ---
   - name: ポケモンセンターオンライン
+    online: true
     aliases: [ポケモンセンター, ポケセン, ポケセンオンライン, ポケモンセンター・オンライン, Pokémon Center Online]
     domains: [pokemoncenter-online.com]
   - name: ポケモンカードラウンジ
@@ -36,12 +38,14 @@ retailers:
     aliases: [ヤマダ, ヤマダ電機, YAMADA, ヤマダウェブコム, ヤマダデジタル会員]
     domains: [yamada-denki.jp, yamada-denkiweb.com]
   - name: Nintendo Store
+    online: true
     aliases: [マイニンテンドーストア, My Nintendo Store, ニンテンドーストア, マイニン, 任天堂公式ストア]
     domains: [store-jp.nintendo.com]
   - name: ソニーストア
     aliases: [Sony Store, ソニスト, PlayStation Direct, プレイステーションダイレクト]
     domains: [sony.jp, direct.playstation.com]
   - name: プレミアムバンダイ
+    online: true
     aliases: [プレバン, P-BANDAI, バンダイホビーオンラインショップ, ホビーオンラインショップ]
     domains: [p-bandai.jp]
   - name: ガンダムベース
@@ -50,12 +54,15 @@ retailers:
 
   # --- 総合・EC ---
   - name: Amazon
+    online: true
     aliases: [アマゾン, Amazon.co.jp]
     domains: [amazon.co.jp, amzn.asia, amzn.to]
   - name: 楽天ブックス
+    online: true
     aliases: [Rakuten Books, 楽天]
     domains: [books.rakuten.co.jp]
   - name: セブンネットショッピング
+    online: true
     aliases: [セブンネット, 7net, セブンイレブン, セブン-イレブン]
     domains: [7net.omni7.jp]
   - name: イオン
@@ -77,6 +84,7 @@ retailers:
     aliases: [ファミマ, ファミリーマート, FamilyMart]
     domains: [famima-online.family.co.jp, family.co.jp]
   - name: DMM通販
+    online: true
     aliases: [DMM, DMM.com]
     domains: [dmm.com]
   - name: ロフト
@@ -103,6 +111,7 @@ retailers:
     aliases: [駿河屋通販, suruga-ya]
     domains: [suruga-ya.jp]
   - name: あみあみ
+    online: true
     aliases: [AmiAmi]
     domains: [amiami.jp, amiami.com]
   - name: カードラボ
@@ -121,6 +130,7 @@ retailers:
     aliases: [ホビステ]
     domains: [hbst.net]
   - name: ホビーサーチ
+    online: true
     aliases: [ホビサ]
     domains: [1999.co.jp]
   - name: トイザらス
@@ -136,8 +146,12 @@ retailers:
     aliases: [gamers]
     domains: [gamers.co.jp]
   - name: ちいかわマーケット
-    aliases: [ちいかわらんど, ちいかわぽけっとグッズストア]
+    online: true
+    aliases: [ちいかわぽけっとグッズストア]
     domains: [chiikawamarket.jp]
+  - name: ちいかわらんど
+    aliases: [ちいかわらんど各店]
+    domains: []
 
 # 店ではないが「応募の受付窓口」として使われるサービス。
 # ここへのリンクは、店の公式ドメインのURLがないときに応募ページとして扱います。

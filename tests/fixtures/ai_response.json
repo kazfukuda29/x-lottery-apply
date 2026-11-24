@@ -12,7 +12,8 @@
     "ゴールドポイントカード会員"
    ],
    "announce_date": "2026-11-28",
-   "same_as_item_id": ""
+   "same_as_item_id": "",
+   "channel": "online"
   },
   {
    "product": "ポケモンカードゲーム MEGA 拡張パック『ネオンストーム』BOX",
@@ -26,7 +27,8 @@
     "アプリ会員"
    ],
    "announce_date": "",
-   "same_as_item_id": ""
+   "same_as_item_id": "",
+   "channel": "unknown"
   },
   {
    "product": "ポケモンカードゲーム MEGA 拡張パック『ネオンストーム』BOX",
@@ -38,7 +40,8 @@
    "detail_url_index": 0,
    "requirements": [],
    "announce_date": "",
-   "same_as_item_id": ""
+   "same_as_item_id": "",
+   "channel": "store"
   }
  ],
  "1990000000000000005": [
@@ -54,7 +57,8 @@
     "Nintendo Switch Online加入"
    ],
    "announce_date": "",
-   "same_as_item_id": ""
+   "same_as_item_id": "",
+   "channel": "online"
   },
   {
    "product": "PlayStation 5 Pro",
@@ -68,7 +72,8 @@
     "My Sony ID"
    ],
    "announce_date": "2026-11-28",
-   "same_as_item_id": ""
+   "same_as_item_id": "",
+   "channel": "online"
   }
  ],
  "1990000000000000008": [
@@ -84,7 +89,8 @@
     "店頭受取"
    ],
    "announce_date": "",
-   "same_as_item_id": ""
+   "same_as_item_id": "",
+   "channel": "store"
   }
  ],
  "1990000000000000010": [
@@ -98,7 +104,8 @@
    "detail_url_index": -1,
    "requirements": [],
    "announce_date": "",
-   "same_as_item_id": ""
+   "same_as_item_id": "",
+   "channel": "online"
   }
  ]
 }

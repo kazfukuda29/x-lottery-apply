@@ -131,6 +131,10 @@
   .due.applied { background: var(--ok-soft); color: var(--ok); }
   .store-sub { font-size: 12px; color: var(--muted); margin-top: 2px; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; }
   .req { font-size: 11px; border: 1px solid var(--line); border-radius: 6px; padding: 0 6px; color: var(--text); }
+  .chan { font-size: 11px; font-weight: 700; border-radius: 6px; padding: 0 6px; }
+  .chan.online { background: var(--ok-soft); color: var(--ok); }
+  .chan.unknown { background: var(--surface-2); color: var(--muted); }
+  .chan.store { background: var(--soon-soft); color: var(--soon); }
   .actions { display: flex; gap: 6px; margin-top: 8px; align-items: stretch; }
   .actions .btn.small { flex: none; min-height: 40px; padding: 0 10px; }
   .btn {
@@ -268,7 +272,8 @@
   const WEEK = "日月火水木金土";
 
   // ------------------------------------------------------------ 保存（このスマホの中だけ）
-  const defaults = () => ({ status: {}, muted: {}, dismissed: {}, showSkipped: false, genre: "all", tab: "open", pending: null });
+  const defaults = () => ({ status: {}, muted: {}, dismissed: {}, showSkipped: false, showUnknown: true, genre: "all", tab: "open", pending: null });
+  const CHANNEL = { online: ["online", "ネット"], unknown: ["unknown", "受取方法は要確認"], store: ["store", "店頭"] };
   let prefs = load();
   function load() {
     try { return Object.assign(defaults(), JSON.parse(localStorage.getItem(STORE_KEY) || "{}")); }
@@ -413,6 +418,7 @@
       const s = statusOf(i.id);
       if (s === "applied") return false;
       if (s === "skipped" && !prefs.showSkipped) return false;
+      if ((i.channel || "unknown") === "unknown" && !prefs.showUnknown) return false;
       return genre === "all" || (i.genre || "other") === genre;
     });
   }
@@ -444,6 +450,8 @@
   }
 
   function renderOpen() {
+    // 選んでいたジャンルの抽選がなくなったら「すべて」に戻す
+    if (prefs.genre !== "all" && !visibleOpenItems(prefs.genre).length) { prefs.genre = "all"; save(); }
     renderGenres();
     const items = visibleOpenItems(prefs.genre);
     if (!items.length) {
@@ -486,7 +494,8 @@
     li.append($("div", { class: "store-top" },
       $("span", { class: "shop", text: item.retailer || "店舗不明" }),
       $("span", { class: `due ${due.cls}`, text: due.label })));
-    const sub = $("div", { class: "store-sub" }, $("span", { text: due.sub }));
+    const [chCls, chLabel] = CHANNEL[item.channel] || CHANNEL.unknown;
+    const sub = $("div", { class: "store-sub" }, $("span", { class: `chan ${chCls}`, text: chLabel }), $("span", { text: due.sub }));
     for (const r of item.requirements || []) sub.append($("span", { class: "req", text: r }));
     if (item.announce_date) sub.append($("span", { text: `当選発表 ${fmtDate(new Date(item.announce_date + "T00:00:00+09:00"), false)}` }));
     li.append(sub);
@@ -604,8 +613,15 @@
     const toggle = $("input", { type: "checkbox", class: "switch", id: "optSkipped" });
     toggle.checked = !!prefs.showSkipped;
     toggle.addEventListener("change", () => { prefs.showSkipped = toggle.checked; save(); render(); });
+    const toggleUnknown = $("input", { type: "checkbox", class: "switch", id: "optUnknown" });
+    toggleUnknown.checked = prefs.showUnknown !== false;
+    toggleUnknown.addEventListener("change", () => { prefs.showUnknown = toggleUnknown.checked; save(); render(); });
     body.append($("div", { class: "group" },
-      $("label", { class: "item", for: "optSkipped" }, $("span", { class: "grow", text: "スキップした抽選も表示する" }), toggle)));
+      $("label", { class: "item", for: "optSkipped" }, $("span", { class: "grow", text: "スキップした抽選も表示する" }), toggle),
+      $("label", { class: "item", for: "optUnknown" },
+        $("span", { class: "grow" }, "受取方法が書かれていない抽選も表示する", $("br"),
+          $("small", { class: "val", text: "店頭応募・店頭受取の抽選は収集の段階で除外しています" })),
+        toggleUnknown)));
 
     const muted = Object.entries(prefs.muted);
     body.append($("div", { class: "group-title", text: `非表示にした商品（${muted.length}）` }));
@@ -637,8 +653,13 @@
 
     const accounts = meta.accounts || [];
     body.append($("div", { class: "group-title", text: `監視アカウント（${accounts.length}）` }));
+    const astats = meta.account_stats || {};
+    body.append($("p", { class: "note", text: "掲載中の抽選のうち、各アカウントが伝えた件数（そのアカウントだけが伝えた件数）。0件が続くアカウントは入れ替えの候補です。" }));
     body.append($("div", { class: "group" }, accounts.length ? accounts.map((h) =>
-      $("div", { class: "item" }, $("span", { class: "grow", text: "@" + h }), extLink(`https://x.com/${encodeURIComponent(h)}`, "見る"))) :
+      $("div", { class: "item" },
+        $("span", { class: "grow", text: "@" + h }),
+        astats[h] ? $("span", { class: "val", text: `${astats[h].items}件（単独 ${astats[h].only}）` }) : null,
+        extLink(`https://x.com/${encodeURIComponent(h)}`, "見る"))) :
       $("div", { class: "item" }, $("span", { class: "grow val", text: "未設定" }))));
     if (typeof sheet.showModal === "function") sheet.showModal(); else sheet.setAttribute("open", "");
   }

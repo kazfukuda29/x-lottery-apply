@@ -76,7 +76,11 @@ class Runner:
             dry_run=self.dry_run,
         )
         self.model = os.environ.get("CLAUDE_MODEL") or self.settings["claude"]["model"]
-        self.stats: dict[str, int] = {"fetched": 0, "dropped": 0, "rule": 0, "ai_posts": 0, "ai_failed": 0, "new_items": 0}
+        # 一覧に載せる受取方法（既定はネット抽選と判断できないもの。店舗抽選は載せない）
+        self.channels = set(self.settings["items"].get("channels") or ["online", "unknown", "store"])
+        self.stats: dict[str, int] = {
+            "fetched": 0, "dropped": 0, "rule": 0, "ai_posts": 0, "ai_failed": 0, "store_skipped": 0, "new_items": 0,
+        }
         self.errors: list[str] = []
         self._x = None
 
@@ -94,7 +98,19 @@ class Runner:
     def extractor(self, model: str | None = None):
         if self.dry_run:
             return FixtureExtractor(FIXTURES / "ai_response.json")
-        return ClaudeExtractor(model or self.model, self.settings["claude"].get("effort", "low"))
+        return ClaudeExtractor(
+            model or self.model,
+            self.settings["claude"].get("effort", "low"),
+            skip_store="store" not in self.channels,
+        )
+
+    def add_item(self, fields: dict, post: dict) -> dict | None:
+        """受取方法が対象外（店舗抽選など）なら登録しない。新規なら item を返す。"""
+        if fields.get("channel", "unknown") not in self.channels:
+            self.stats["store_skipped"] += 1
+            return None
+        item, is_new = self.store.upsert(fields, post, self.now)
+        return item if item and is_new else None
 
     # ------------------------------------------------------------ 収集
 
@@ -166,9 +182,9 @@ class Runner:
             elif result.kind == "simple":
                 if result.item["genre"] == "other":
                     result.item["genre"] = self.account_genre(p["author"])
-                item, is_new = self.store.upsert(result.item, p, self.now)
                 self.stats["rule"] += 1
-                if item and is_new:
+                item = self.add_item(result.item, p)
+                if item:
                     new_items.append(item)
             else:
                 p["_attach_images"] = p.get("images") if result.attach_images else []
@@ -176,6 +192,12 @@ class Runner:
 
         if ai_posts:
             new_items += self.run_ai(ai_posts)
+
+        # 後から「店頭受取」とわかったものなど、対象外になったアイテムを外す
+        excluded = {i["id"] for i in self.store.items if i.get("channel", "unknown") not in self.channels}
+        if excluded:
+            self.store.items = [i for i in self.store.items if i["id"] not in excluded]
+            new_items = [i for i in new_items if i["id"] not in excluded]
 
         for p in posts:
             processed.add(p["id"])
@@ -239,8 +261,10 @@ class Runner:
             post = by_id[pid]
             for ai in ai_items:
                 fields = fields_from_ai(ai, post, self.engine.retailers)
-                item, is_new = self.store.upsert(fields, post, self.now)
-                if item and is_new:
+                # まとめ投稿は他の店の「店頭受取」も含むため、本文ではなくAIの判断と店の種類で決める
+                fields["channel"] = self.engine.channel_of("", fields["retailer"], hint=fields["channel"])
+                item = self.add_item(fields, post)
+                if item:
                     new_items.append(item)
         for pid in outcome.failed_post_ids:
             self.store.add_review(by_id[pid], "自動で読み取れませんでした", self.now)
@@ -353,11 +377,23 @@ class Runner:
             "x_usage_today": self.state.get("x_usage"),
             "ai_usage_today": self.state.get("ai_usage"),
             "accounts": [a["handle"] for a in self.accounts],
+            "account_stats": self.account_stats(),
         }
         save_json(self.data_dir / "items.json", out)
         save_json(self.data_dir / "state.json", self.state)
         if self.cand_data:
             save_json(self.data_dir / "candidates.json", self.cand_data)
+
+    def account_stats(self) -> dict[str, dict[str, int]]:
+        """監視アカウントごとの貢献度：掲載中の抽選のうち、そのアカウントが伝えた件数と、そのアカウントだけが伝えた件数。"""
+        stats = {a["handle"].lower(): {"items": 0, "only": 0} for a in self.accounts}
+        for item in self.store.items:
+            authors = {(s.get("author") or "").lower() for s in item.get("sources") or []}
+            for h in authors & stats.keys():
+                stats[h]["items"] += 1
+                if len(authors) == 1:
+                    stats[h]["only"] += 1
+        return {a["handle"]: stats[a["handle"].lower()] for a in self.accounts}
 
     def report_errors(self) -> None:
         if not self.errors:

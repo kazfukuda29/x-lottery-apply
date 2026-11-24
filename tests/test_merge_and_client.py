@@ -265,3 +265,14 @@ def test_long_posts_get_their_own_batch():
     posts = [{"id": "1", "text": "a" * 100}, {"id": "2", "text": "b" * 7000}, {"id": "3", "text": "c" * 100}]
     assert [[p["id"] for p in b] for b in make_batches(posts, 12)] == [["1"], ["2"], ["3"]]
     assert len(make_batches([{"id": str(i), "text": "x"} for i in range(25)], 12)) == 3
+
+
+def test_store_skip_instruction_is_sent_when_store_is_excluded():
+    fake = FakeAnthropicClient([resp('{"results": []}'), resp('{"results": []}')])
+    ClaudeExtractor("claude-haiku-5-5", "low", client=fake, skip_store=True).extract(
+        [{"id": "1", "text": "a"}], [], max_posts=10, max_images=8, max_images_per_post=2, max_calls=5, now=NOW)
+    assert "ネットで完結する抽選だけ" in fake.requests[0]["system"]
+    ClaudeExtractor("claude-haiku-5-5", "low", client=fake, skip_store=False).extract(
+        [{"id": "1", "text": "a"}], [], max_posts=10, max_images=8, max_images_per_post=2, max_calls=5, now=NOW)
+    assert "ネットで完結する抽選だけ" not in fake.requests[1]["system"]
+    assert '"channel"' in str(fake.requests[1]["output_config"]["format"]["schema"]).replace("'", '"')

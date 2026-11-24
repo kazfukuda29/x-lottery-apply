@@ -142,3 +142,24 @@ def test_colon_style_post(engine):
     assert r.item["apply_end"] == dt(11, 25)
     assert r.item["announce_date"] == "2026-12-09"
     assert "店頭受取" in r.item["requirements"]
+
+
+def test_channel_detection(engine):
+    n = normalize
+    assert engine.channel_of(n("応募：11/25〆 ※店頭受取")) == "store"
+    assert engine.channel_of(n("ジョーシンの店頭レジで申込み")) == "store"
+    assert engine.channel_of(n("入店抽選の受付を開始")) == "store"
+    assert engine.channel_of(n("※郵送受取／送料別途")) == "online"
+    assert engine.channel_of(n("（通販・全国）")) == "online"
+    # 文面に手がかりがなければ、ネット専業の店はネット、それ以外は不明
+    assert engine.channel_of(n("抽選受付中"), "プレミアムバンダイ") == "online"
+    assert engine.channel_of(n("抽選受付中"), "ヨドバシカメラ") == "unknown"
+    # まとめ投稿ではAIの判断を使う（本文全体の手がかりは使わない）
+    assert engine.channel_of("", "ヨドバシカメラ", hint="store") == "store"
+    assert engine.channel_of("", "Amazon", hint="unknown") == "online"
+
+
+def test_store_pickup_post_is_marked_store(engine):
+    text = ("【抽選受付中‼️】ポケカ🔥 ヤマダデンキで 「MEGA 30th CELEBRATION カードセット（9種セット）」の抽選販売受付中！ "
+            "応募：11/25(水)23:59〆 ※店頭受取")
+    assert engine.classify(post(text), BASE).item["channel"] == "store"

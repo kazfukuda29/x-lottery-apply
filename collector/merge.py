@@ -32,6 +32,7 @@ def _url_at(urls: list[str], index: int) -> str | None:
 
 
 def fields_from_ai(ai: dict, post: dict, retailers: RetailerMatcher) -> dict[str, Any]:
+    """AIの出力を item の形に。channel は後で RuleEngine.channel_of で確定する。"""
     urls = post.get("urls") or []
     retailer = retailers.canonical(ai.get("retailer", ""))
     apply_url = _url_at(urls, ai.get("apply_url_index", -1))
@@ -45,6 +46,7 @@ def fields_from_ai(ai: dict, post: dict, retailers: RetailerMatcher) -> dict[str
         "product": (ai.get("product") or "").strip(),
         "retailer": retailer,
         "genre": ai.get("genre") or "other",
+        "channel": ai.get("channel") or "unknown",
         "apply_start": parse_ai_datetime(ai.get("apply_start", ""), end=False),
         "apply_end": parse_ai_datetime(ai.get("apply_end", ""), end=True),
         "apply_url": apply_url,
@@ -158,6 +160,7 @@ class ItemStore:
             "product": f["product"],
             "product_key": pkey,
             "genre": f.get("genre") or "other",
+            "channel": f.get("channel") or "unknown",
             "retailer": f["retailer"],
             "apply_start": iso(f.get("apply_start")),
             "apply_end": iso(f.get("apply_end")),
@@ -185,6 +188,8 @@ class ItemStore:
                 item[key] = f[key]
         if item.get("genre") in (None, "other") and f.get("genre"):
             item["genre"] = f["genre"]
+        if item.get("channel") in (None, "unknown") and f.get("channel") in ("online", "store"):
+            item["channel"] = f["channel"]
         for r in f.get("requirements") or []:
             if r not in item["requirements"]:
                 item["requirements"].append(r)

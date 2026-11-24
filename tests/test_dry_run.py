@@ -13,7 +13,13 @@ def test_dry_run_end_to_end(tmp_path):
 
     # まとめ投稿は店ごとに分かれ、商品名は1つにそろう
     neon = [i for i in items["items"] if "ネオンストーム" in i["product"]]
-    assert {i["retailer"] for i in neon} == {"ヨドバシカメラ", "ビックカメラ", "ジョーシン", "ポケモンセンターオンライン"}
+    assert {i["retailer"] for i in neon} == {"ヨドバシカメラ", "ビックカメラ", "ポケモンセンターオンライン"}
+    # 店舗抽選（ジョーシンの店頭抽選、HMVの店頭受取）は載せない
+    assert "ジョーシン" not in by_store and "HMV&BOOKS online" not in by_store
+    assert items["meta"]["last_run"]["store_skipped"] == 2
+    assert by_store["ポケモンセンターオンライン"]["channel"] == "online"
+    assert by_store["プレミアムバンダイ"]["channel"] == "online"
+    assert by_store["ビックカメラ"]["channel"] == "unknown"
     assert len({i["product_key"] for i in neon}) == 1
     # リマインド投稿は同じ抽選に統合される
     assert len(by_store["ヨドバシカメラ"]["sources"]) == 2
@@ -22,6 +28,11 @@ def test_dry_run_end_to_end(tmp_path):
     assert items["meta"]["last_run"]["fetched"] == 9
     # 読み取れなかった投稿は「要確認」に
     assert [r["post_id"] for r in items["review"]] == ["1990000000000000009"]
+    # アカウントごとの貢献度
+    assert items["meta"]["account_stats"] == {
+        "chusen_matome_demo": {"items": 3, "only": 3},
+        "hobby_lottery_demo": {"items": 3, "only": 3},
+    }
     # 公開ページには投稿本文を載せない
     assert all("text" not in i and all("text" not in s for s in i["sources"]) for i in items["items"])
 
