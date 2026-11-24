@@ -119,34 +119,6 @@
    "updated_at": "2026-11-24T22:46+09:00"
   },
   {
-   "id": "id6e0015bfc",
-   "product": "ポケモンカードゲーム 30th CELEBRATION カードセット 9種コンプセット",
-   "product_key": "ポケモンカードゲーム30thcelebrationカードセット9種コンプセット",
-   "genre": "tcg",
-   "channel": "unknown",
-   "retailer": "ウェルプレイド天満屋ハピーズ西大寺モール店",
-   "apply_start": null,
-   "apply_end": "2026-11-24T23:59+09:00",
-   "apply_url": "https://livepocket.jp/e/aacsb",
-   "detail_url": null,
-   "requirements": [],
-   "announce_date": null,
-   "sources": [
-    {
-     "post_id": "2125152446343504234",
-     "author": "crashseq",
-     "url": "https://x.com/crashseq/status/2125152446343504234",
-     "created_at": "2026-11-24T18:00+09:00",
-     "likes": 0,
-     "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
-  },
-  {
    "id": "ibf7dd54f53",
    "product": "ポケモンカードゲーム 30th CELEBRATION カードセット 9種コンプセット",
    "product_key": "ポケモンカードゲーム30thcelebrationカードセット9種コンプセット",
@@ -295,118 +267,6 @@
    "updated_at": "2026-11-24T22:46+09:00"
   },
   {
-   "id": "iecfb0feef2",
-   "product": "ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX",
-   "product_key": "ポケモンカードゲーム拡張パックハドウシーカーbox",
-   "genre": "tcg",
-   "channel": "unknown",
-   "retailer": "MINT吉祥寺店",
-   "apply_start": null,
-   "apply_end": "2026-11-24T23:59+09:00",
-   "apply_url": "https://docs.google.com/forms/d/e/1FAIpQLSc9U7eM5lhk8aIj5oQpZFalGaCOnzn7x_TmHo8I-uXg68GXwQ/viewform",
-   "detail_url": null,
-   "requirements": [],
-   "announce_date": null,
-   "sources": [
-    {
-     "post_id": "2125152446343504234",
-     "author": "crashseq",
-     "url": "https://x.com/crashseq/status/2125152446343504234",
-     "created_at": "2026-11-24T18:00+09:00",
-     "likes": 0,
-     "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
-  },
-  {
-   "id": "i8d3a3d385e",
-   "product": "ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX",
-   "product_key": "ポケモンカードゲーム拡張パックハドウシーカーbox",
-   "genre": "tcg",
-   "channel": "unknown",
-   "retailer": "カードボックス船橋駅前店",
-   "apply_start": null,
-   "apply_end": "2026-11-24T23:59+09:00",
-   "apply_url": "https://shoplottery.e-starbox.com/lottery/entry?code=fDpanULBgX",
-   "detail_url": null,
-   "requirements": [],
-   "announce_date": null,
-   "sources": [
-    {
-     "post_id": "2125152446343504234",
-     "author": "crashseq",
-     "url": "https://x.com/crashseq/status/2125152446343504234",
-     "created_at": "2026-11-24T18:00+09:00",
-     "likes": 0,
-     "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
-  },
-  {
-   "id": "i838e51354f",
-   "product": "ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX",
-   "product_key": "ポケモンカードゲーム拡張パックハドウシーカーbox",
-   "genre": "tcg",
-   "channel": "unknown",
-   "retailer": "ときわ書房本八幡スクエア店",
-   "apply_start": null,
-   "apply_end": "2026-11-24T23:59+09:00",
-   "apply_url": "https://shoplottery.e-starbox.com/lottery/entry?code=kQaYCudvyG",
-   "detail_url": null,
-   "requirements": [],
-   "announce_date": null,
-   "sources": [
-    {
-     "post_id": "2125152446343504234",
-     "author": "crashseq",
-     "url": "https://x.com/crashseq/status/2125152446343504234",
-     "created_at": "2026-11-24T18:00+09:00",
-     "likes": 0,
-     "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
-  },
-  {
-   "id": "iedd5aed4f4",
-   "product": "ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX",
-   "product_key": "ポケモンカードゲーム拡張パックハドウシーカーbox",
-   "genre": "tcg",
-   "channel": "unknown",
-   "retailer": "バトロコ藤沢駅北口店",
-   "apply_start": null,
-   "apply_end": "2026-11-24T23:59+09:00",
-   "apply_url": "https://docs.google.com/forms/d/e/1FAIpQLSezdyR6YUusIi8Gdiw0VVaROPq4nji-KCqHI_FXz8k3EMl5-w/viewform",
-   "detail_url": null,
-   "requirements": [],
-   "announce_date": null,
-   "sources": [
-    {
-     "post_id": "2125152446343504234",
-     "author": "crashseq",
-     "url": "https://x.com/crashseq/status/2125152446343504234",
-     "created_at": "2026-11-24T18:00+09:00",
-     "likes": 0,
-     "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
-  },
-  {
    "id": "i07b05412ad",
    "product": "ポケモンカードゲーム 拡張パック「メガシンフォニア」",
    "product_key": "ポケモンカードゲーム拡張パックメガシンフォニア",
@@ -535,8 +395,10 @@
    "apply_end": "2026-11-24T23:59+09:00",
    "apply_url": "https://docs.google.com/forms/d/e/1FAIpQLSfobacDXwVcvGKIG_hJbOgEnCEQjPLt9xs_mljVO4iZ6nY_xQ/viewform",
    "detail_url": null,
-   "requirements": [],
-   "announce_date": null,
+   "requirements": [
+    "会員登録"
+   ],
+   "announce_date": "2026-11-30",
    "sources": [
     {
      "post_id": "2125152446343504234",
@@ -545,29 +407,7 @@
      "created_at": "2026-11-24T18:00+09:00",
      "likes": 0,
      "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
-  },
-  {
-   "id": "ib591f8930c",
-   "product": "遊戯王 Yu-Gi-Oh! THE DARK SIDE OF DIMENSIONS 10th ANNIVERSARY MOVIE BOX",
-   "product_key": "遊戯王yugiohthedarksideofdimensions10thanniversarymoviebox",
-   "genre": "tcg",
-   "channel": "online",
-   "retailer": "コナミスタイル",
-   "apply_start": null,
-   "apply_end": "2026-11-24T23:59+09:00",
-   "apply_url": "https://www.konamistyle.jp/products/detail.php?product_id=114061",
-   "detail_url": null,
-   "requirements": [
-    "会員登録"
-   ],
-   "announce_date": "2026-11-30",
-   "sources": [
+    },
     {
      "post_id": "2124867483433885860",
      "author": "SelectInfoDeals",
@@ -591,6 +431,36 @@
    "updated_at": "2026-11-24T22:46+09:00"
   },
   {
+   "id": "i8a56839fc1",
+   "product": "ポケモンカードゲーム 30th CELEBRATION カードセット 9種コンプセット",
+   "product_key": "ポケモンカードゲーム30thcelebrationカードセット9種コンプセット",
+   "genre": "tcg",
+   "channel": "unknown",
+   "retailer": "ヤマダデンキ",
+   "apply_start": null,
+   "apply_end": "2026-11-25T23:59+09:00",
+   "apply_url": "https://docs.google.com/forms/d/1nnyUeBR9mfh7kNLZrXHJLKO4WoOWzTGtXHoVLLeY5uw/edit",
+   "detail_url": null,
+   "requirements": [
+    "アプリ会員"
+   ],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2125363846915178987",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2125363846915178987",
+     "created_at": "2026-11-25T08:00+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-25T08:25+09:00",
+   "updated_at": "2026-11-25T08:25+09:00"
+  },
+  {
    "id": "iedbaac2fa2",
    "product": "ポケモンカードゲーム ソード&シールド ハイクラスパック「VSTARユニバース」 BOX",
    "product_key": "ポケモンカードゲームソード&シールドハイクラスパックvstarユニバースbox",
@@ -605,7 +475,8 @@
     "会員登録",
     "フォロー",
     "リポスト",
-    "Xフォロー・リポスト"
+    "Xフォロー・リポスト",
+    "Xフォロー・RP"
    ],
    "announce_date": null,
    "sources": [
@@ -624,12 +495,28 @@
      "created_at": "2026-11-24T22:33+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125174629774069761",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2125174629774069761",
+     "created_at": "2026-11-24T19:28+09:00",
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "post_id": "2125363846915178987",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2125363846915178987",
+     "created_at": "2026-11-25T08:00+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-25T08:25+09:00"
   },
   {
    "id": "iccbd90a64e",
@@ -680,7 +567,7 @@
    "apply_start": "2026-11-24T00:00+09:00",
    "apply_end": "2026-11-25T23:59+09:00",
    "apply_url": "https://pokemon.fukufukutoreka.com/lottery/32",
-   "detail_url": null,
+   "detail_url": "https://muse.ai/s/zai-ku-tong-zhi-rabo-chou-xuan-ru-he-xaxs6xcaoxkxjxwm6/CqyItlzZS4GrQe4uYHrpmI5dqong_82bMDjh_cOpjZ0",
    "requirements": [
     "会員登録",
     "購入履歴"
@@ -694,12 +581,56 @@
      "created_at": "2026-11-24T22:33+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125309431621783751",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2125309431621783751",
+     "created_at": "2026-11-25T04:23+09:00",
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "post_id": "2125363846915178987",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2125363846915178987",
+     "created_at": "2026-11-25T08:00+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-25T08:25+09:00"
+  },
+  {
+   "id": "i873fe07225",
+   "product": "ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX",
+   "product_key": "ポケモンカードゲーム拡張パックハドウシーカーbox",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "秋葉原チェルモ",
+   "apply_start": null,
+   "apply_end": "2026-11-25T23:59+09:00",
+   "apply_url": "https://docs.google.com/forms/d/1nnyUeBR9mfh7kNLZrXHJLKO4WoOWzTGtXHoVLLeY5uw/edit",
+   "detail_url": null,
+   "requirements": [],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2125363846915178987",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2125363846915178987",
+     "created_at": "2026-11-25T08:00+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-25T08:25+09:00",
+   "updated_at": "2026-11-25T08:25+09:00"
   },
   {
    "id": "i35a72ff2bc",
@@ -762,27 +693,7 @@
      "created_at": "2026-11-24T22:33+09:00",
      "likes": 0,
      "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
-  },
-  {
-   "id": "i251f6946fa",
-   "product": "ポケモンカードゲーム エーフィ・ブラッキー",
-   "product_key": "ポケモンカードゲームエーフィブラッキー",
-   "genre": "tcg",
-   "channel": "online",
-   "retailer": "Luruna Card通販",
-   "apply_start": null,
-   "apply_end": "2026-11-26T23:45+09:00",
-   "apply_url": "https://card.luruna.jp/items/164362360",
-   "detail_url": null,
-   "requirements": [],
-   "announce_date": null,
-   "sources": [
+    },
     {
      "post_id": "2125001453509177756",
      "author": "crashseq",
@@ -790,12 +701,20 @@
      "created_at": "2026-11-24T08:00+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125363846915178987",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2125363846915178987",
+     "created_at": "2026-11-25T08:00+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-25T08:25+09:00"
   },
   {
    "id": "iebeb290c63",
@@ -898,7 +817,8 @@
    "detail_url": null,
    "requirements": [
     "会員登録",
-    "クレジットカード"
+    "クレジットカード",
+    "イオンカード"
    ],
    "announce_date": "2026-12-02",
    "sources": [
@@ -909,12 +829,28 @@
      "created_at": "2026-11-24T22:34+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125103993785606337",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2125103993785606337",
+     "created_at": "2026-11-24T14:47+09:00",
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "post_id": "2125366352206606699",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2125366352206606699",
+     "created_at": "2026-11-25T08:10+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-25T08:25+09:00"
   },
   {
    "id": "i4959150f12",
@@ -929,7 +865,8 @@
    "detail_url": null,
    "requirements": [
     "会員登録",
-    "クレジットカード"
+    "クレジットカード",
+    "イオンカード"
    ],
    "announce_date": "2026-12-02",
    "sources": [
@@ -940,12 +877,86 @@
      "created_at": "2026-11-24T22:34+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125103993785606337",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2125103993785606337",
+     "created_at": "2026-11-24T14:47+09:00",
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "post_id": "2125366352206606699",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2125366352206606699",
+     "created_at": "2026-11-25T08:10+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-25T08:25+09:00"
+  },
+  {
+   "id": "i8ad660d9c9",
+   "product": "ワンピースカードゲーム ブースターパック「神の支配」【OP-18】 BOX",
+   "product_key": "ワンピースカードゲームブースターパック神の支配op18box",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "DMM通販",
+   "apply_start": null,
+   "apply_end": "2026-11-26T23:59+09:00",
+   "apply_url": "https://myca.dmm.com/campaign/7b-9x-4m1",
+   "detail_url": null,
+   "requirements": [
+    "購入履歴"
+   ],
+   "announce_date": "2026-11-30",
+   "sources": [
+    {
+     "post_id": "2125282935955956073",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2125282935955956073",
+     "created_at": "2026-11-25T02:38+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-25T08:25+09:00",
+   "updated_at": "2026-11-25T08:25+09:00"
+  },
+  {
+   "id": "i5b709323c4",
+   "product": "ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX",
+   "product_key": "ポケモンカードゲーム拡張パックハドウシーカーbox",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "トレカポート通販",
+   "apply_start": "2026-11-24T20:00+09:00",
+   "apply_end": "2026-11-27T10:00+09:00",
+   "apply_url": "https://www.toreca-port.com/items/166900843",
+   "detail_url": null,
+   "requirements": [],
+   "announce_date": "2026-11-27",
+   "sources": [
+    {
+     "post_id": "2125300615991726360",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2125300615991726360",
+     "created_at": "2026-11-25T03:48+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-25T08:25+09:00",
+   "updated_at": "2026-11-25T08:25+09:00"
   },
   {
    "id": "id7b2b6a809",
@@ -988,6 +999,66 @@
    "updated_at": "2026-11-24T22:46+09:00"
   },
   {
+   "id": "i28aa6b5063",
+   "product": "ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX",
+   "product_key": "ポケモンカードゲーム拡張パックハドウシーカーbox",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "カーナベル",
+   "apply_start": null,
+   "apply_end": "2026-11-27T23:59+09:00",
+   "apply_url": "https://www.ka-nabell.com/ec/sell/pokemon/topics/rv4711onx",
+   "detail_url": null,
+   "requirements": [
+    "まとめ買取申込"
+   ],
+   "announce_date": "2026-11-30",
+   "sources": [
+    {
+     "post_id": "2125026241724268990",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2125026241724268990",
+     "created_at": "2026-11-24T09:38+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-25T08:25+09:00",
+   "updated_at": "2026-11-25T08:25+09:00"
+  },
+  {
+   "id": "i2e381225bd",
+   "product": "ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX",
+   "product_key": "ポケモンカードゲーム拡張パックハドウシーカーbox",
+   "genre": "tcg",
+   "channel": "unknown",
+   "retailer": "ブックオフ",
+   "apply_start": "2026-11-27T00:00+09:00",
+   "apply_end": "2026-11-29T23:59+09:00",
+   "apply_url": "https://docs.google.com/forms/d/e/1FAIpQLSfpabDuksB0Esqt7ChvLCERN6MfYAesK3TPPITOoAqRCq6mxw/viewform",
+   "detail_url": null,
+   "requirements": [
+    "店頭"
+   ],
+   "announce_date": "2026-11-25",
+   "sources": [
+    {
+     "post_id": "2125134568458186864",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2125134568458186864",
+     "created_at": "2026-11-24T16:48+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "rule",
+   "first_seen": "2026-11-25T08:25+09:00",
+   "updated_at": "2026-11-25T08:25+09:00"
+  },
+  {
    "id": "i79e3e98254",
    "product": "ポケモンカードゲーム 拡張パック「ロケット団の栄光」",
    "product_key": "ポケモンカードゲーム拡張パックロケット団の栄光",
@@ -1018,12 +1089,20 @@
      "created_at": "2026-11-24T22:33+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125363846915178987",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2125363846915178987",
+     "created_at": "2026-11-25T08:00+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-25T08:25+09:00"
   },
   {
    "id": "i6d9432eccb",
@@ -1065,12 +1144,36 @@
      "created_at": "2026-11-24T22:33+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125073260010418425",
+     "author": "datto_TCG",
+     "url": "https://x.com/datto_TCG/status/2125073260010418425",
+     "created_at": "2026-11-24T12:45+09:00",
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "post_id": "2125209365405974909",
+     "author": "datto_TCG",
+     "url": "https://x.com/datto_TCG/status/2125209365405974909",
+     "created_at": "2026-11-24T21:46+09:00",
+     "likes": 1,
+     "reposts": 0
+    },
+    {
+     "post_id": "2125363846915178987",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2125363846915178987",
+     "created_at": "2026-11-25T08:00+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
-   "buzz": 0,
+   "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-25T08:25+09:00"
   },
   {
    "id": "ie14fc07a70",
@@ -1103,12 +1206,20 @@
      "created_at": "2026-11-24T22:33+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125363846915178987",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2125363846915178987",
+     "created_at": "2026-11-25T08:00+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-25T08:25+09:00"
   },
   {
    "id": "i758cf42ca1",
@@ -1177,6 +1288,62 @@
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
    "updated_at": "2026-11-24T22:46+09:00"
+  },
+  {
+   "id": "i5c285341a9",
+   "product": "UNION ARENA ブースターパック D.Gray-man【UA58BT】 BOX",
+   "product_key": "unionarenaブースターパックdgraymanua58btbox",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "トレカプラザ55通販",
+   "apply_start": null,
+   "apply_end": null,
+   "apply_url": "https://docs.google.com/forms/d/e/1FAIpQLSdj8ZhORDGjvZyZjA4pHL9itDHa3leUkcbh1XGBETQsJA9kcg/viewform",
+   "detail_url": null,
+   "requirements": [],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2125366352206606699",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2125366352206606699",
+     "created_at": "2026-11-25T08:10+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-25T08:25+09:00",
+   "updated_at": "2026-11-25T08:25+09:00"
+  },
+  {
+   "id": "i5afba57d83",
+   "product": "UNION ARENA ブースターパック 〈物語〉シリーズ Vol.2【EX18BT】 BOX",
+   "product_key": "unionarenaブースターパック物語シリーズvol2ex18btbox",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "トレカプラザ55通販",
+   "apply_start": null,
+   "apply_end": null,
+   "apply_url": "https://docs.google.com/forms/d/e/1FAIpQLSdj8ZhORDGjvZyZjA4pHL9itDHa3leUkcbh1XGBETQsJA9kcg/viewform",
+   "detail_url": null,
+   "requirements": [],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2125366352206606699",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2125366352206606699",
+     "created_at": "2026-11-25T08:10+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-25T08:25+09:00",
+   "updated_at": "2026-11-25T08:25+09:00"
   },
   {
    "id": "i1a4a15e2dc",
@@ -1256,6 +1423,34 @@
    "updated_at": "2026-11-24T22:46+09:00"
   },
   {
+   "id": "i821e83d945",
+   "product": "ポケモンカードゲーム 拡張パック「インフェルノX」",
+   "product_key": "ポケモンカードゲーム拡張パックインフェルノx",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "福福トレカ",
+   "apply_start": null,
+   "apply_end": null,
+   "apply_url": "https://pokemon.fukufukutoreka.com/lottery",
+   "detail_url": null,
+   "requirements": [],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2125363846915178987",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2125363846915178987",
+     "created_at": "2026-11-25T08:00+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-25T08:25+09:00",
+   "updated_at": "2026-11-25T08:25+09:00"
+  },
+  {
    "id": "i3e288cf2b8",
    "product": "ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX",
    "product_key": "ポケモンカードゲーム拡張パックハドウシーカーbox",
@@ -1292,6 +1487,34 @@
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
    "updated_at": "2026-11-24T22:46+09:00"
+  },
+  {
+   "id": "idb6854821b",
+   "product": "ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX",
+   "product_key": "ポケモンカードゲーム拡張パックハドウシーカーbox",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "プラネットポケット",
+   "apply_start": null,
+   "apply_end": null,
+   "apply_url": "https://planetpocket.shop-pro.jp",
+   "detail_url": null,
+   "requirements": [],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2125363846915178987",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2125363846915178987",
+     "created_at": "2026-11-25T08:00+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-25T08:25+09:00",
+   "updated_at": "2026-11-25T08:25+09:00"
   },
   {
    "id": "i88ff0066a5",
@@ -1690,46 +1913,43 @@
  ],
  "review": [],
  "meta": {
-  "generated_at": "2026-11-24T22:46+09:00",
+  "generated_at": "2026-11-25T08:25+09:00",
   "site_url": "https://kazfukuda29.github.io/x-lottery-apply/",
   "repo": "kazfukuda29/x-lottery-apply",
   "model": "claude-opus-5-5",
   "last_run": {
    "fetched": 42,
-   "dropped": 12,
+   "dropped": 9,
    "rule": 1,
-   "ai_posts": 29,
+   "ai_posts": 32,
    "ai_failed": 0,
    "store_skipped": 0,
-   "new_items": 51
+   "new_items": 10
   },
   "errors": [],
   "x_usage_today": {
-   "date": "2026-11-24",
-   "posts": 92,
-   "requests": 2
+   "date": "2026-11-25",
+   "posts": 109,
+   "requests": 3
   },
   "ai_usage_today": {
-   "date": "2026-11-24",
-   "calls": 10,
-   "input_tokens": 96696,
-   "output_tokens": 15776
+   "date": "2026-11-25",
+   "calls": 4,
+   "input_tokens": 37313,
+   "output_tokens": 5807
   },
   "accounts": [
    "crashseq",
-   "pokecayoyaku",
    "premium_kakaku",
    "SelectInfoDeals",
-   "phu_dp"
+   "stock_alertv2",
+   "p_bandai",
+   "datto_TCG"
   ],
   "account_stats": {
    "crashseq": {
-    "items": 10,
-    "only": 9
-   },
-   "pokecayoyaku": {
-    "items": 0,
-    "only": 0
+    "items": 17,
+    "only": 8
    },
    "premium_kakaku": {
     "items": 3,
@@ -1737,12 +1957,91 @@
    },
    "SelectInfoDeals": {
     "items": 39,
-    "only": 38
+    "only": 30
    },
-   "phu_dp": {
+   "stock_alertv2": {
+    "items": 8,
+    "only": 4
+   },
+   "p_bandai": {
     "items": 0,
     "only": 0
+   },
+   "datto_TCG": {
+    "items": 1,
+    "only": 0
    }
+  },
+  "account_eval": {
+   "window_days": 14,
+   "days_observed": 1,
+   "target": 0.95,
+   "total": 50,
+   "accounts": {
+    "crashseq": {
+     "online": 14,
+     "only": 5,
+     "posts_per_day": 4.0
+    },
+    "premium_kakaku": {
+     "online": 3,
+     "only": 3,
+     "posts_per_day": 13.0
+    },
+    "SelectInfoDeals": {
+     "online": 39,
+     "only": 30,
+     "posts_per_day": 4.0
+    },
+    "stock_alertv2": {
+     "online": 7,
+     "only": 3,
+     "posts_per_day": 34.0
+    },
+    "p_bandai": {
+     "online": 0,
+     "only": 0,
+     "posts_per_day": 0.0
+    },
+    "datto_TCG": {
+     "online": 1,
+     "only": 0,
+     "posts_per_day": 4.0
+    }
+   },
+   "cover": [
+    {
+     "handle": "SelectInfoDeals",
+     "adds": 39,
+     "coverage": 0.78
+    },
+    {
+     "handle": "crashseq",
+     "adds": 5,
+     "coverage": 0.88
+    },
+    {
+     "handle": "premium_kakaku",
+     "adds": 3,
+     "coverage": 0.94
+    },
+    {
+     "handle": "stock_alertv2",
+     "adds": 3,
+     "coverage": 1.0
+    }
+   ],
+   "keep": [
+    "SelectInfoDeals",
+    "crashseq",
+    "premium_kakaku",
+    "stock_alertv2"
+   ],
+   "drop": [
+    "p_bandai",
+    "datto_TCG"
+   ],
+   "evaluated_at": "2026-11-25T08:25+09:00"
   }
  }
 }

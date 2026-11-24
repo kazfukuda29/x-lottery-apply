@@ -1,0 +1,428 @@
+{
+ "fetched": {
+  "2026-11-25": {
+   "crashseq": 4,
+   "stock_alertv2": 34,
+   "premium_kakaku": 13,
+   "selectinfodeals": 4,
+   "datto_tcg": 4
+  }
+ },
+ "items": {
+  "idb0696ab68": {
+   "authors": [
+    "premium_kakaku"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-24T23:45+09:00",
+   "label": "九重本舗玉澤｜九重本舗玉澤 霜ばしら 2缶入"
+  },
+  "i7e281202af": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-24T23:59+09:00",
+   "label": "ホビビ通販部｜UNION ARENA ブースターパック シュタインズ・ゲート BOX"
+  },
+  "i68e6a1fe68": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-24T23:59+09:00",
+   "label": "ホビビ通販部｜ガンダムカードゲーム ブースターパック Freedom Ascension[GD05] BOX"
+  },
+  "i14403a6576": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-24T23:59+09:00",
+   "label": "ホビビ通販部｜ドラゴンボールスーパーカードゲーム フュージョンワールド STORY BOOSTER 01 BOX"
+  },
+  "ibf7dd54f53": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-24T23:59+09:00",
+   "label": "ホビビ通販部｜ポケモンカードゲーム 30th CELEBRATION カードセット 9種コンプセット"
+  },
+  "if7ed65fdaa": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-24T23:59+09:00",
+   "label": "ホビビ通販部｜ポケモンカードゲーム スターターセットex ニャオハ＆マスカーニャex"
+  },
+  "i5fb1571ea1": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-24T23:59+09:00",
+   "label": "ホビビ通販部｜ポケモンカードゲーム プレミアムデッキセット エーフィ・ブラッキー"
+  },
+  "id9a1ff556f": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-24T23:59+09:00",
+   "label": "ホビビ通販部｜ポケモンカードゲーム 拡張パック「30th CELEBRATION」"
+  },
+  "i07b05412ad": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-24T23:59+09:00",
+   "label": "ホビビ通販部｜ポケモンカードゲーム 拡張パック「メガシンフォニア」"
+  },
+  "iafa15fd3ad": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-24T23:59+09:00",
+   "label": "ホビビ通販部｜ポケモンカードゲーム 拡張パック「メガブレイブ」"
+  },
+  "i2016dbcbe9": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-24T23:59+09:00",
+   "label": "ホビビ通販部｜ワンピースカードゲーム ブースターパック「世界最強の戦士」【OP-17】（キャンセル分再抽選）"
+  },
+  "i410cde5158": {
+   "authors": [
+    "crashseq",
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-24T23:59+09:00",
+   "label": "コナミスタイル｜遊戯王 MOVIE BOX"
+  },
+  "iedbaac2fa2": {
+   "authors": [
+    "crashseq",
+    "selectinfodeals",
+    "stock_alertv2"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-25T23:59+09:00",
+   "label": "ガンギHOBBYSHOP｜ポケモンカードゲーム ソード&シールド ハイクラスパック「VSTARユニバース」 BOX"
+  },
+  "iccbd90a64e": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-25T23:59+09:00",
+   "label": "ギアコロ｜ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX"
+  },
+  "i6641e1dead": {
+   "authors": [
+    "crashseq",
+    "selectinfodeals",
+    "stock_alertv2"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-25T23:59+09:00",
+   "label": "福福トレカ｜ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX"
+  },
+  "i35a72ff2bc": {
+   "authors": [
+    "premium_kakaku"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-26T12:00+09:00",
+   "label": "キャリル｜KTFネオスプール「KAHEN」Daiwa Ver2"
+  },
+  "ibcc4915369": {
+   "authors": [
+    "crashseq",
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-26T23:45+09:00",
+   "label": "Luruna Card｜ポケモンカードゲーム 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッ"
+  },
+  "iebeb290c63": {
+   "authors": [
+    "premium_kakaku"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-26T23:59+09:00",
+   "label": "ドラゴンスター｜Heroines Edition【EB-03】"
+  },
+  "i9ef4832478": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-26T23:59+09:00",
+   "label": "CARD CREW｜UNION ARENA ブースターパック D.Gray-man【UA58BT】 BOX"
+  },
+  "i46ee35dc86": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-26T23:59+09:00",
+   "label": "CARD CREW｜UNION ARENA ブースターパック 〈物語〉シリーズ Vol.2【EX18BT】 BOX"
+  },
+  "iee524cf242": {
+   "authors": [
+    "crashseq",
+    "selectinfodeals",
+    "stock_alertv2"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-26T23:59+09:00",
+   "label": "イオン｜ワンピースカードゲーム スタートデッキ「バロックワークス」【ST-38】"
+  },
+  "i4959150f12": {
+   "authors": [
+    "crashseq",
+    "selectinfodeals",
+    "stock_alertv2"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-26T23:59+09:00",
+   "label": "イオン｜ワンピースカードゲーム スタートデッキ「砂漠の王女と海賊たち」【ST-37】"
+  },
+  "id7b2b6a809": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-27T23:45+09:00",
+   "label": "Luruna Card｜ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX"
+  },
+  "i79e3e98254": {
+   "authors": [
+    "crashseq",
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-29T23:59+09:00",
+   "label": "福福トレカ｜ポケモンカードゲーム 拡張パック「ロケット団の栄光」"
+  },
+  "i6d9432eccb": {
+   "authors": [
+    "crashseq",
+    "datto_tcg",
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-30T16:59+09:00",
+   "label": "ポケモンセンターオンライン｜ポケモンカードゲーム カードイラストフィギュアコレクション 30th CELEBRATION"
+  },
+  "ie14fc07a70": {
+   "authors": [
+    "crashseq",
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-30T23:59+09:00",
+   "label": "トレカプラザ55通販｜ポケモンカードゲーム 30th CELEBRATION カードセット 9種コンプセット"
+  },
+  "i758cf42ca1": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-11-30T23:59+09:00",
+   "label": "トレカプラザ55通販｜ポケモンカードゲーム スターターセットex（イーブイex／ゾロア＆ゾロアークex／ニャオハ＆マスカ"
+  },
+  "ib5d3e0e632": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": "2026-12-01T23:59+09:00",
+   "label": "トレコロ｜ポケモンカードゲーム 拡張パック「30th CELEBRATION」"
+  },
+  "i1a4a15e2dc": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": null,
+   "label": "カードラボ｜ディズニー・ロルカナ・TCG 日本語版 ブースターパック「ヴァインズアタック！」 BOX"
+  },
+  "icd1a06b5e1": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": null,
+   "label": "ノジマ｜ポケモンカードゲーム 30th CELEBRATION BOXなど関連商品（招待制販売）"
+  },
+  "i3e288cf2b8": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": null,
+   "label": "カードラボ｜ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX"
+  },
+  "i88ff0066a5": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ワンピースカードゲーム エクストラブースター「EAST BLUE」【EB-06】 BOX"
+  },
+  "i4756704112": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ワンピースカードゲーム エクストラブースター「ONE PIECE Heroines Edition vol"
+  },
+  "i2d6b5db1b6": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ワンピースカードゲーム スタートデッキEX ルフィ＆エース【ST-30】"
+  },
+  "id46c7ccb57": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": null,
+   "label": "ノジマ｜ワンピースカードゲーム ブースターパック「世界最強の戦士」【OP-17】 BOX"
+  },
+  "ifbeefa5494": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ワンピースカードゲーム ブースターパック「世界最強の戦士」【OP-17】 BOX"
+  },
+  "i54d51f09b0": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ワンピースカードゲーム ブースターパック「受け継がれる意志」【OP-13】 BOX"
+  },
+  "i7b2d5c06f7": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": null,
+   "label": "CARD CREW｜ワンピースカードゲーム ブースターパック「神の島の冒険」【OP-15】 BOX"
+  },
+  "i64c08672f4": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ワンピースカードゲーム ブースターパック「神の島の冒険」【OP-15】 BOX"
+  },
+  "icac25789b0": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": null,
+   "label": "CARD CREW｜ワンピースカードゲーム ブースターパック「神の支配」【OP-18】 BOX"
+  },
+  "i73eca1d0fd": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ワンピースカードゲーム ブースターパック「神の支配」【OP-18】 BOX"
+  },
+  "i59033e8d67": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-24T22:46+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ワンピースカードゲーム ブースターパック「蒼海の七傑」【OP-14】 BOX"
+  },
+  "i28aa6b5063": {
+   "authors": [
+    "stock_alertv2"
+   ],
+   "first_seen": "2026-11-25T08:25+09:00",
+   "apply_end": "2026-11-27T23:59+09:00",
+   "label": "カーナベル｜ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX"
+  },
+  "i8ad660d9c9": {
+   "authors": [
+    "stock_alertv2"
+   ],
+   "first_seen": "2026-11-25T08:25+09:00",
+   "apply_end": "2026-11-26T23:59+09:00",
+   "label": "DMM通販｜ワンピースカードゲーム ブースターパック「神の支配」【OP-18】 BOX"
+  },
+  "i5b709323c4": {
+   "authors": [
+    "stock_alertv2"
+   ],
+   "first_seen": "2026-11-25T08:25+09:00",
+   "apply_end": "2026-11-27T10:00+09:00",
+   "label": "トレカポート通販｜ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX"
+  },
+  "i873fe07225": {
+   "authors": [
+    "crashseq"
+   ],
+   "first_seen": "2026-11-25T08:25+09:00",
+   "apply_end": "2026-11-25T23:59+09:00",
+   "label": "秋葉原チェルモ｜ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX"
+  },
+  "idb6854821b": {
+   "authors": [
+    "crashseq"
+   ],
+   "first_seen": "2026-11-25T08:25+09:00",
+   "apply_end": null,
+   "label": "プラネットポケット｜ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX"
+  },
+  "i821e83d945": {
+   "authors": [
+    "crashseq"
+   ],
+   "first_seen": "2026-11-25T08:25+09:00",
+   "apply_end": null,
+   "label": "福福トレカ｜ポケモンカードゲーム 拡張パック「インフェルノX」"
+  },
+  "i5afba57d83": {
+   "authors": [
+    "crashseq"
+   ],
+   "first_seen": "2026-11-25T08:25+09:00",
+   "apply_end": null,
+   "label": "トレカプラザ55通販｜UNION ARENA ブースターパック 〈物語〉シリーズ Vol.2【EX18BT】 BOX"
+  },
+  "i5c285341a9": {
+   "authors": [
+    "crashseq"
+   ],
+   "first_seen": "2026-11-25T08:25+09:00",
+   "apply_end": null,
+   "label": "トレカプラザ55通販｜UNION ARENA ブースターパック D.Gray-man【UA58BT】 BOX"
+  }
+ },
+ "started": "2026-11-25T08:25+09:00"
+}
