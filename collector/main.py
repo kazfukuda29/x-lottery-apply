@@ -15,7 +15,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 from .discover import update_candidates
-from .evaluate import evaluate, record_fetch, summary_line, update_log
+from .evaluate import evaluate, record_fetch, summary_line, update_log, weekly_review
 from .extract import ClaudeExtractor, FixtureExtractor, existing_summary
 from .merge import ItemStore, fields_from_ai, open_items
 from .notify import Notifier, due_soon, urgent_new
@@ -387,7 +387,8 @@ class Runner:
         hour = int(self.settings["notify"].get("digest_hour", 7))
         if not force and (self.now.hour < hour or self.state.get("last_digest_date") == self.today):
             return
-        notes = [n for n in (self.compare_note(), self.weekly_account_note()) if n]
+        ev = self.weekly_eval()
+        notes = [n for n in (self.compare_note(), summary_line(ev) if ev else None) if n]
         items = open_items(self.store.items, self.now)
         # 前回のダイジェスト以降に載った新着の数（初回は過去24時間）
         since = parse_iso(self.state.get("last_digest_at")) or self.now - timedelta(hours=24)
@@ -398,6 +399,11 @@ class Runner:
         )
         self.state["last_digest_date"] = self.today
         self.state["last_digest_at"] = iso(self.now)
+        # アカウントを見直すタイミングなら、ダイジェストとは別に知らせる
+        notice = weekly_review(ev, self.state.setdefault("account_review", {})) if ev else None
+        if notice:
+            title, body, priority = notice
+            self.notifier.send(title, body, priority=priority, tags=["bell"])
 
     # ------------------------------------------------------------ アカウントの評価
 
@@ -409,12 +415,12 @@ class Runner:
             window_days=int(es.get("window_days", 14)), target=float(es.get("coverage_target", 0.95)),
         )
 
-    def weekly_account_note(self) -> str | None:
-        """週に1回（evaluate.weekday の曜日）、ダイジェストにアカウント評価を添える。"""
+    def weekly_eval(self) -> dict | None:
+        """週に1回（evaluate.weekday の曜日）の評価。ダイジェストに添え、見直しのタイミングなら別に通知する。"""
         weekday = (self.settings.get("evaluate") or {}).get("weekday", 0)
         if weekday is None or self.now.weekday() != int(weekday):
             return None
-        return summary_line(self.account_eval())
+        return self.account_eval()
 
     def maybe_discover(self, force: bool = False) -> None:
         ds = self.settings.get("discover") or {}

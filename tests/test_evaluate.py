@@ -1,9 +1,10 @@
 """監視アカウントの評価と、発見モードのネット抽選の数え方。"""
 
+import argparse
 from datetime import datetime, timedelta
 
 from collector.discover import is_online_post
-from collector.evaluate import evaluate, record_fetch, summary_line, update_log
+from collector.evaluate import evaluate, record_fetch, summary_line, update_log, weekly_review
 from collector.rules import RuleEngine
 from collector.util import JST, iso, load_yaml
 
@@ -67,3 +68,62 @@ def test_discover_counts_online_lottery_posts():
     assert is_online_post({"text": "プレミアムバンダイで抽選販売"}, engine)
     assert not is_online_post({"text": "店頭で抽選受付、店頭受取のみ"}, engine)
     assert not is_online_post({"text": "抽選受付中"}, engine)
+
+
+def week_eval(days: int, drop: list[str]) -> dict:
+    accounts = {h: {"online": 5, "only": 0, "posts_per_day": 1.0} for h in ["A", "B", *drop]}
+    return {"total": 10, "days_observed": days, "keep": ["A", "B"], "drop": drop, "accounts": accounts,
+            "cover": [{"handle": "A", "adds": 8, "coverage": 0.8}, {"handle": "B", "adds": 2, "coverage": 1.0}]}
+
+
+def test_review_notice_when_drop_candidate_two_weeks_in_a_row():
+    history: dict = {}
+    # 1週目（6日分）は参考値なので知らせない
+    assert weekly_review(week_eval(6, ["C"]), history) is None
+    # 2週目（13日分）も外す候補 → 見直しのタイミング
+    title, body, priority = weekly_review(week_eval(13, ["C"]), history)
+    assert "見直しのタイミング" in title and priority == 4
+    assert "@C（ネット抽選5件・単独0件）" in body and "アカウントを見直して" in body
+    assert "@A・@B の2つで100%網羅" in body
+    # 同じアカウントで毎週は鳴らさない
+    assert weekly_review(week_eval(14, ["C"]), history) is None
+    # 外す候補から外れて、また2週続いたら知らせる
+    assert weekly_review(week_eval(14, []), history) is None
+    assert weekly_review(week_eval(14, ["C"]), history) is None
+    assert weekly_review(week_eval(14, ["C"]), history) is not None
+
+
+def test_first_full_week_is_reported_even_without_drop_candidates():
+    history: dict = {"last_drop": ["c"]}
+    title, body, priority = weekly_review(week_eval(13, []), history)
+    assert "そろいました" in title and priority == 3 and "外す候補はありません" in body
+    assert weekly_review(week_eval(14, []), history) is None  # 2回目以降は、2週続いたときだけ
+    # データがない週は判断しない
+    assert weekly_review({"total": 0, "drop": ["A"]}, history) is None and history["last_drop"] == []
+
+
+def test_first_full_week_with_new_drop_candidate_says_it_will_follow_up():
+    title, body, _ = weekly_review(week_eval(13, ["C"]), {})
+    assert "そろいました" in title and "@C（1週目）" in body
+
+
+def test_monday_digest_sends_review_notice(tmp_path, monkeypatch):
+    from collector.main import Runner
+
+    monkeypatch.delenv("CLAUDE_MODEL", raising=False)
+    args = argparse.Namespace(dry_run=True, data_dir=str(tmp_path / "data"), now="2026-12-07T07:30",
+                              mode="auto", out=str(tmp_path / "_site"))
+    r = Runner(args)
+    handles = [a["handle"] for a in r.accounts]
+    first, closed = iso(r.now - timedelta(days=5)), iso(r.now - timedelta(days=1))
+    # 先頭のアカウントだけで全部を伝えている（ほかは外す候補）
+    r.account_log = {
+        "started": iso(r.now - timedelta(days=12)),
+        "items": {str(n): {"authors": [handles[0].lower()], "first_seen": first, "apply_end": closed} for n in range(5)},
+    }
+    r.state["account_review"] = {"last_drop": [h.lower() for h in handles[1:]]}
+    r.maybe_digest(force=True)
+    titles = [m["title"] for m in r.notifier.sent]
+    assert any("見直しのタイミング" in t for t in titles)
+    notice = next(m for m in r.notifier.sent if "見直しのタイミング" in m["title"])
+    assert f"@{handles[1]}" in notice["message"] and notice["priority"] == 4

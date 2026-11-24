@@ -13,6 +13,9 @@ from datetime import datetime, timedelta
 
 from .util import iso, parse_iso
 
+# これ未満の日数の評価は参考値（見直しの通知もしない）
+REVIEW_MIN_DAYS = 7
+
 
 def update_log(log: dict, items: list[dict], merged: dict[str, str], now: datetime, keep_days: int = 30) -> None:
     """掲載中のアイテムから「ネット抽選ごとに伝えたアカウント」を足し込む。"""
@@ -134,6 +137,52 @@ def summary_line(ev: dict) -> str | None:
     if ev["drop"]:
         drops = "、".join(f"@{h}（単独{ev['accounts'][h]['only']}件）" for h in ev["drop"])
         line += f"。外す候補：{drops}"
-    if ev["days_observed"] < 7:
+    if ev["days_observed"] < REVIEW_MIN_DAYS:
         line += "（7日未満なので参考値）"
     return line
+
+
+def weekly_review(ev: dict, history: dict) -> tuple[str, str, int] | None:
+    """週1回の評価のあとに、アカウントを見直すタイミングかを判断し、通知（件名・本文・優先度）を返す。
+
+    history は state に保存する記録（前週の外す候補、通知済みのアカウント、初回の通知済みか）。
+    - 7日分以上そろった週に、前週に続いて「外す候補」になったアカウントがあれば「見直しのタイミング」。
+      同じアカウントで毎週は鳴らさない（外す候補から外れたら、また数え直す）
+    - 初めて7日分以上そろった週は、外す候補がなくても結果を知らせる
+    """
+    if not ev or not ev.get("total"):
+        return None  # データがない週は判断しない（全アカウントが外す候補に見えてしまうため）
+    drop = list(ev["drop"])
+    drop_l = {h.lower() for h in drop}
+    prev = set(history.get("last_drop") or [])
+    notified = {h for h in history.get("notified") or [] if h in drop_l}
+    history["last_drop"] = sorted(drop_l)
+    ready = ev["days_observed"] >= REVIEW_MIN_DAYS
+
+    repeat = [h for h in drop if h.lower() in prev]
+    keep_line = summary_keep(ev)
+    notice = None
+    if ready and any(h.lower() not in notified for h in repeat):
+        stats = ev["accounts"]
+        lines = ["2週続けて「外す候補」になったアカウントがあります。"]
+        lines += [f"・@{h}（ネット抽選{stats[h]['online']}件・単独{stats[h]['only']}件）" for h in repeat]
+        lines += [keep_line, "", "Claudeに「アカウントを見直して」と伝えると、入れ替え案を出して反映します。"]
+        notice = ("🔔アカウント見直しのタイミングです", "\n".join(lines), 4)
+        notified |= {h.lower() for h in repeat}
+    elif ready and not history.get("ready_notified"):
+        lines = [keep_line]
+        if drop:
+            lines.append("外す候補：" + "、".join(f"@{h}" for h in drop) + "（1週目）。来週も候補なら、見直しのタイミングとしてお知らせします。")
+        else:
+            lines.append("外す候補はありません。今の組み合わせのままで大丈夫です。")
+        notice = ("📊アカウント評価のデータがそろいました", "\n".join(lines), 3)
+    if ready:
+        history["ready_notified"] = True
+    history["notified"] = sorted(notified)
+    return notice
+
+
+def summary_keep(ev: dict) -> str:
+    cov = ev["cover"][len(ev["keep"]) - 1]["coverage"] if ev["keep"] else 0
+    keep = "・".join("@" + h for h in ev["keep"])
+    return f"直近{ev['days_observed']}日のネット抽選{ev['total']}件を、{keep} の{len(ev['keep'])}つで{cov:.0%}網羅。"
