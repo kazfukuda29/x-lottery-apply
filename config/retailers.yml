@@ -1,0 +1,148 @@
+# 店名の辞書。投稿内の表記ゆれ（aliases）を正式名（name）にそろえ、
+# 公式ドメイン（domains）のURLを「応募ページ」として扱います。
+retailers:
+  # --- 公式・家電量販 ---
+  - name: ポケモンセンターオンライン
+    aliases: [ポケモンセンター, ポケセン, ポケセンオンライン, ポケモンセンター・オンライン, Pokémon Center Online]
+    domains: [pokemoncenter-online.com]
+  - name: ポケモンカードラウンジ
+    aliases: [ポケカラウンジ, POKÉMON CARD LOUNGE]
+    domains: [shibuyatsutaya.tsite.jp]
+  - name: ヨドバシカメラ
+    aliases: [ヨドバシ, ヨドバシ.com, ヨドバシドットコム, ヨドバシ・ドット・コム, Yodobashi]
+    domains: [yodobashi.com]
+  - name: ビックカメラ
+    aliases: [ビック, ビックカメラ.com, ビックカメラドットコム, ビックドットコム, BicCamera, ビッグカメラ]
+    domains: [biccamera.com]
+  - name: コジマ
+    aliases: [コジマ×ビックカメラ, Kojima]
+    domains: [kojima.net]
+  - name: ソフマップ
+    aliases: [Sofmap, ソフマップ・ドットコム]
+    domains: [sofmap.com]
+  - name: ジョーシン
+    aliases: [Joshin, 上新電機, ジョーシンweb, Joshin web, ジョーシンアプリ]
+    domains: [joshinweb.jp, joshin.co.jp]
+  - name: エディオン
+    aliases: [EDION, エディオンネットショップ, 100満ボルト]
+    domains: [edion.com]
+  - name: ノジマ
+    aliases: [Nojima, ノジマオンライン]
+    domains: [nojima.co.jp]
+  - name: ケーズデンキ
+    aliases: [ケーズ, K's, ケーズデンキオンラインショップ]
+    domains: [ksdenki.com]
+  - name: ヤマダデンキ
+    aliases: [ヤマダ, ヤマダ電機, YAMADA, ヤマダウェブコム, ヤマダデジタル会員]
+    domains: [yamada-denki.jp, yamada-denkiweb.com]
+  - name: Nintendo Store
+    aliases: [マイニンテンドーストア, My Nintendo Store, ニンテンドーストア, マイニン, 任天堂公式ストア]
+    domains: [store-jp.nintendo.com]
+  - name: ソニーストア
+    aliases: [Sony Store, ソニスト, PlayStation Direct, プレイステーションダイレクト]
+    domains: [sony.jp, direct.playstation.com]
+  - name: プレミアムバンダイ
+    aliases: [プレバン, P-BANDAI, バンダイホビーオンラインショップ, ホビーオンラインショップ]
+    domains: [p-bandai.jp]
+  - name: ガンダムベース
+    aliases: [THE GUNDAM BASE, ガンベ]
+    domains: [gundam-base.net]
+
+  # --- 総合・EC ---
+  - name: Amazon
+    aliases: [アマゾン, Amazon.co.jp]
+    domains: [amazon.co.jp, amzn.asia, amzn.to]
+  - name: 楽天ブックス
+    aliases: [Rakuten Books, 楽天]
+    domains: [books.rakuten.co.jp]
+  - name: セブンネットショッピング
+    aliases: [セブンネット, 7net, セブンイレブン, セブン-イレブン]
+    domains: [7net.omni7.jp]
+  - name: イオン
+    aliases: [AEON, イオンスタイルオンライン, イオンスタイル, キッズリパブリック, iAEON]
+    domains: [aeonretail.com, aeon.com, kidsrepublic.jp]
+  - name: イトーヨーカドー
+    aliases: [ヨーカドー, イトーヨーカ堂, イトーヨーカドーネット通販]
+    domains: [itoyokado.co.jp]
+  - name: ローソン
+    aliases: [LAWSON, ローソン店頭, Loppi, ロッピー]
+    domains: [lawson.co.jp]
+  - name: ローチケ
+    aliases: [ローソンチケット, ローチケHMV]
+    domains: [l-tike.com]
+  - name: HMV&BOOKS online
+    aliases: [HMV, HMV&BOOKS, HMVオンライン, ローソンHMV]
+    domains: [hmv.co.jp]
+  - name: ファミマオンライン
+    aliases: [ファミマ, ファミリーマート, FamilyMart]
+    domains: [famima-online.family.co.jp, family.co.jp]
+  - name: DMM通販
+    aliases: [DMM, DMM.com]
+    domains: [dmm.com]
+  - name: ロフト
+    aliases: [LOFT, ロフトネットストア]
+    domains: [loft.co.jp]
+  - name: ドン・キホーテ
+    aliases: [ドンキ, ドンキホーテ, majica]
+    domains: [donki.com]
+
+  # --- ゲーム・ホビー・トレカ専門 ---
+  - name: ゲオ
+    aliases: [GEO, ゲオショップ, ゲオオンラインストア, ゲオアプリ, ゲオモバイル]
+    domains: [geo-online.co.jp]
+  - name: TSUTAYA
+    aliases: [ツタヤ, 蔦屋書店, TSUTAYA Trading Card, TSUTAYAトレカ]
+    domains: [tsutaya.co.jp, tsite.jp]
+  - name: 古本市場
+    aliases: [ふるいち, ふるいちオンライン, ふるいちトレカパーク]
+    domains: [furu1.net]
+  - name: ブックオフ
+    aliases: [BOOKOFF, ブックオフプラス, BOOKOFF SUPER BAZAAR]
+    domains: [bookoff.co.jp]
+  - name: 駿河屋
+    aliases: [駿河屋通販, suruga-ya]
+    domains: [suruga-ya.jp]
+  - name: あみあみ
+    aliases: [AmiAmi]
+    domains: [amiami.jp, amiami.com]
+  - name: カードラボ
+    aliases: [c-labo, カーラボ]
+    domains: [c-labo.jp, c-labo-online.jp]
+  - name: イエローサブマリン
+    aliases: [イエサブ, Yellow Submarine]
+    domains: [yellowsubmarine.co.jp]
+  - name: ドラゴンスター
+    aliases: [ドラスタ]
+    domains: [dorasuta.jp]
+  - name: 晴れる屋2
+    aliases: [晴れる屋, hareruya2]
+    domains: [hareruya2.com]
+  - name: ホビーステーション
+    aliases: [ホビステ]
+    domains: [hbst.net]
+  - name: ホビーサーチ
+    aliases: [ホビサ]
+    domains: [1999.co.jp]
+  - name: トイザらス
+    aliases: [トイザラス, Toys"R"Us, Toys R Us, トイザらス・ベビーザらス]
+    domains: [toysrus.co.jp]
+  - name: キデイランド
+    aliases: [キディランド, KIDDY LAND]
+    domains: [kiddyland.co.jp]
+  - name: アニメイト
+    aliases: [animate, アニメイト通販]
+    domains: [animate-onlineshop.jp, animate.co.jp]
+  - name: ゲーマーズ
+    aliases: [gamers]
+    domains: [gamers.co.jp]
+  - name: ちいかわマーケット
+    aliases: [ちいかわらんど, ちいかわぽけっとグッズストア]
+    domains: [chiikawamarket.jp]
+
+# 店ではないが「応募の受付窓口」として使われるサービス。
+# ここへのリンクは、店の公式ドメインのURLがないときに応募ページとして扱います。
+entry_platforms:
+  - livepocket.jp
+  - docs.google.com/forms
+  - forms.gle
+  - shoplottery.e-starbox.com

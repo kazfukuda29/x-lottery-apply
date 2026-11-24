@@ -1,0 +1,289 @@
+{
+ "accounts": [
+  {
+   "handle": "chusen_matome_demo",
+   "type": "aggregator",
+   "genres": [
+    "tcg",
+    "game"
+   ]
+  },
+  {
+   "handle": "hobby_lottery_demo",
+   "type": "aggregator",
+   "genres": [
+    "hobby",
+    "goods"
+   ]
+  }
+ ],
+ "watch": {
+  "data": [
+   {
+    "id": "1990000000000000001",
+    "author_id": "u1",
+    "created_at": "2026-11-23T21:10:00.000Z",
+    "text": "【ポケカ抽選情報】\nポケモンカードゲーム MEGA 拡張パック『ネオンストーム』BOX\n・ヨドバシ.com 〜11/26(水)23:59（ゴールドポイントカード会員）\n・ビックカメラ 〜11/25(火)10:00 アプリ会員\n・ジョーシン 本日23:59まで\n詳細→ https://t.co/x0",
+    "public_metrics": {
+     "like_count": 1840,
+     "retweet_count": 920,
+     "quote_count": 0,
+     "reply_count": 0
+    },
+    "entities": {
+     "urls": [
+      {
+       "url": "https://t.co/x0",
+       "expanded_url": "https://matome-demo.example.com/pokeca/neonstorm",
+       "display_url": "matome-demo.example."
+      }
+     ]
+    }
+   },
+   {
+    "id": "1990000000000000002",
+    "author_id": "u1",
+    "created_at": "2026-11-23T21:20:00.000Z",
+    "text": "【抽選販売】ポケモンセンターオンラインにて『ネオンストーム』BOXの抽選受付中！ 11/27(木)23:59まで #ポケカ https://t.co/x0",
+    "public_metrics": {
+     "like_count": 3200,
+     "retweet_count": 1500,
+     "quote_count": 0,
+     "reply_count": 0
+    },
+    "entities": {
+     "urls": [
+      {
+       "url": "https://t.co/x0",
+       "expanded_url": "https://www.pokemoncenter-online.com/lottery/demo",
+       "display_url": "www.pokemoncenter-on"
+      }
+     ]
+    }
+   },
+   {
+    "id": "1990000000000000003",
+    "author_id": "u1",
+    "created_at": "2026-11-23T21:30:00.000Z",
+    "text": "フォロー&リポストで『ネオンストーム』BOXを抽選で3名様にプレゼント！締切11/30",
+    "public_metrics": {
+     "like_count": 0,
+     "retweet_count": 0,
+     "quote_count": 0,
+     "reply_count": 0
+    }
+   },
+   {
+    "id": "1990000000000000004",
+    "author_id": "u1",
+    "created_at": "2026-11-23T21:40:00.000Z",
+    "text": "ビックカメラのネオンストーム抽選受付は終了しました。ご応募ありがとうございました",
+    "public_metrics": {
+     "like_count": 0,
+     "retweet_count": 0,
+     "quote_count": 0,
+     "reply_count": 0
+    }
+   },
+   {
+    "id": "1990000000000000005",
+    "author_id": "u2",
+    "created_at": "2026-11-23T22:00:00.000Z",
+    "text": "本日の抽選情報まとめ（Switch 2 / PS5）画像をご確認ください #抽選",
+    "public_metrics": {
+     "like_count": 640,
+     "retweet_count": 300,
+     "quote_count": 0,
+     "reply_count": 0
+    },
+    "attachments": {
+     "media_keys": [
+      "3_1"
+     ]
+    }
+   },
+   {
+    "id": "1990000000000000006",
+    "author_id": "u2",
+    "created_at": "2026-11-23T22:10:00.000Z",
+    "text": "【抽選】プレミアムバンダイ『METAL BUILD ドラグーン』受付期間 11/24(月)12:00~12/01(月)23:59 https://t.co/x0",
+    "public_metrics": {
+     "like_count": 410,
+     "retweet_count": 150,
+     "quote_count": 0,
+     "reply_count": 0
+    },
+    "entities": {
+     "urls": [
+      {
+       "url": "https://t.co/x0",
+       "expanded_url": "https://p-bandai.jp/item/demo-dragoon/",
+       "display_url": "p-bandai.jp/item/dem"
+      }
+     ]
+    }
+   },
+   {
+    "id": "1990000000000000007",
+    "author_id": "u9",
+    "created_at": "2026-11-23T22:20:00.000Z",
+    "text": "@chusen_matome_demo 抽選情報ありがとうございます！",
+    "public_metrics": {
+     "like_count": 0,
+     "retweet_count": 0,
+     "quote_count": 0,
+     "reply_count": 0
+    },
+    "in_reply_to_user_id": "u1"
+   },
+   {
+    "id": "1990000000000000008",
+    "author_id": "u2",
+    "created_at": "2026-11-23T22:30:00.000Z",
+    "text": "【抽選販売】ローソン×人気アニメ コラボ限定フィギュア 11/28(金)まで HMV&BOOKS online・ローソン店頭受取 https://t.co/x0",
+    "public_metrics": {
+     "like_count": 980,
+     "retweet_count": 410,
+     "quote_count": 0,
+     "reply_count": 0
+    },
+    "entities": {
+     "urls": [
+      {
+       "url": "https://t.co/x0",
+       "expanded_url": "https://www.hmv.co.jp/demo/collab-figure",
+       "display_url": "www.hmv.co.jp/demo/c"
+      }
+     ]
+    }
+   },
+   {
+    "id": "1990000000000000009",
+    "author_id": "u2",
+    "created_at": "2026-11-23T22:40:00.000Z",
+    "text": "抽選情報 第2弾もまもなく！詳細はリプ欄で",
+    "public_metrics": {
+     "like_count": 0,
+     "retweet_count": 0,
+     "quote_count": 0,
+     "reply_count": 0
+    }
+   },
+   {
+    "id": "1990000000000000010",
+    "author_id": "u1",
+    "created_at": "2026-11-23T23:00:00.000Z",
+    "text": "【リマインド】ヨドバシ.comのネオンストームBOX抽選、締切は11/26(水)23:59です。お忘れなく",
+    "public_metrics": {
+     "like_count": 500,
+     "retweet_count": 210,
+     "quote_count": 0,
+     "reply_count": 0
+    }
+   }
+  ],
+  "includes": {
+   "users": [
+    {
+     "id": "u1",
+     "username": "chusen_matome_demo",
+     "name": "抽選情報まとめ（デモ）",
+     "public_metrics": {
+      "followers_count": 52000
+     }
+    },
+    {
+     "id": "u2",
+     "username": "hobby_lottery_demo",
+     "name": "ホビー抽選速報（デモ）",
+     "public_metrics": {
+      "followers_count": 18000
+     }
+    },
+    {
+     "id": "u9",
+     "username": "someone_else",
+     "name": "一般ユーザー",
+     "public_metrics": {
+      "followers_count": 30
+     }
+    }
+   ],
+   "media": [
+    {
+     "media_key": "3_1",
+     "type": "photo",
+     "url": "https://pbs.twimg.com/media/demo.jpg"
+    }
+   ]
+  },
+  "meta": {
+   "newest_id": "1990000000000000010",
+   "result_count": 10
+  }
+ },
+ "discover": {
+  "data": [
+   {
+    "id": "1990000000000000101",
+    "author_id": "u5",
+    "created_at": "2026-11-23T20:00:00.000Z",
+    "text": "【抽選受付】ゲオ Switch 2 本体 11/30(日)23:59まで #抽選販売",
+    "public_metrics": {
+     "like_count": 0,
+     "retweet_count": 0,
+     "quote_count": 0,
+     "reply_count": 0
+    }
+   },
+   {
+    "id": "1990000000000000102",
+    "author_id": "u5",
+    "created_at": "2026-11-23T20:30:00.000Z",
+    "text": "【抽選情報】ノジマ PS5 Pro 抽選販売 12/2(火)まで",
+    "public_metrics": {
+     "like_count": 0,
+     "retweet_count": 0,
+     "quote_count": 0,
+     "reply_count": 0
+    }
+   },
+   {
+    "id": "1990000000000000103",
+    "author_id": "u6",
+    "created_at": "2026-11-23T20:40:00.000Z",
+    "text": "フォロー&RTで抽選で1名様にPS5プレゼント",
+    "public_metrics": {
+     "like_count": 0,
+     "retweet_count": 0,
+     "quote_count": 0,
+     "reply_count": 0
+    }
+   }
+  ],
+  "includes": {
+   "users": [
+    {
+     "id": "u5",
+     "username": "game_chusen_demo",
+     "name": "ゲーム機抽選ナビ（デモ）",
+     "description": "ゲーム機の抽選販売情報をお届け",
+     "public_metrics": {
+      "followers_count": 23000
+     }
+    },
+    {
+     "id": "u6",
+     "username": "kensho_demo",
+     "name": "懸賞アカウント",
+     "public_metrics": {
+      "followers_count": 900
+     }
+    }
+   ]
+  },
+  "meta": {
+   "newest_id": "1990000000000000103"
+  }
+ }
+}

@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f6f5f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16171a" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="抽選ウォッチ">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>抽選ウォッチ</title>
+<style>
+  :root {
+    --bg: #f6f5f2;
+    --surface: #ffffff;
+    --surface-2: #f0efeb;
+    --text: #1c1d20;
+    --muted: #6b6d73;
+    --line: #e3e1db;
+    --accent: #2f5bd3;
+    --accent-ink: #ffffff;
+    --accent-soft: #e6ecfb;
+    --urgent: #c8312b;
+    --urgent-soft: #fbe7e5;
+    --soon: #a25a00;
+    --soon-soft: #fbeed9;
+    --ok: #217a4b;
+    --ok-soft: #e1f2e8;
+    --radius: 14px;
+    --shadow: 0 1px 2px rgba(20, 20, 30, .06), 0 2px 10px rgba(20, 20, 30, .04);
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16171a;
+      --surface: #1f2125;
+      --surface-2: #272a2f;
+      --text: #ececee;
+      --muted: #9a9ca3;
+      --line: #32353b;
+      --accent: #7c9cff;
+      --accent-ink: #0d1430;
+      --accent-soft: #232c47;
+      --urgent: #ff7a70;
+      --urgent-soft: #3d2322;
+      --soon: #f0b25a;
+      --soon-soft: #3a2e1c;
+      --ok: #5fd197;
+      --ok-soft: #1c3428;
+      --shadow: none;
+    }
+  }
+  * { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 15px/1.5 -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic UI", sans-serif;
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  }
+  button, input { font: inherit; color: inherit; }
+  a { color: var(--accent); }
+
+  /* ---------- header ---------- */
+  .top {
+    position: sticky; top: 0; z-index: 5;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    padding: calc(10px + env(safe-area-inset-top)) 16px 8px;
+    border-bottom: 1px solid var(--line);
+  }
+  .top-row { display: flex; align-items: center; gap: 8px; }
+  .top h1 { font-size: 18px; margin: 0; letter-spacing: .02em; flex: 1; }
+  .updated { font-size: 12px; color: var(--muted); }
+  .icon-btn {
+    width: 40px; height: 40px; border-radius: 12px; border: 0; background: transparent;
+    display: grid; place-items: center; cursor: pointer;
+  }
+  .icon-btn:active { background: var(--surface-2); }
+  .icon-btn svg { width: 22px; height: 22px; }
+  .chips { display: flex; gap: 6px; overflow-x: auto; padding: 8px 0 2px; scrollbar-width: none; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: none; border: 1px solid var(--line); background: var(--surface); border-radius: 999px;
+    padding: 6px 12px; font-size: 13px; cursor: pointer;
+  }
+  .chip[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+  .chip .n { opacity: .6; margin-left: 4px; font-variant-numeric: tabular-nums; }
+
+  main { padding: 12px 12px 24px; max-width: 640px; margin: 0 auto; }
+  .banner {
+    background: var(--soon-soft); color: var(--soon); border-radius: var(--radius);
+    padding: 10px 12px; font-size: 13px; margin-bottom: 12px;
+  }
+  .section-title { font-size: 13px; color: var(--muted); margin: 18px 4px 8px; font-weight: 600; }
+  .empty { text-align: center; color: var(--muted); padding: 48px 16px; }
+  .empty strong { display: block; color: var(--text); font-size: 16px; margin-bottom: 6px; }
+
+  /* ---------- product card ---------- */
+  .card {
+    background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow);
+    border: 1px solid var(--line); margin-bottom: 12px; overflow: hidden;
+  }
+  .card-head { display: flex; gap: 8px; align-items: flex-start; padding: 12px 8px 4px 14px; }
+  .card-head .titles { flex: 1; min-width: 0; }
+  .product { font-size: 16px; font-weight: 700; margin: 2px 0 0; line-height: 1.4; word-break: break-word; }
+  .card-meta { font-size: 12px; color: var(--muted); display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .genre {
+    font-size: 11px; font-weight: 700; padding: 1px 7px; border-radius: 6px;
+    background: var(--surface-2); color: var(--muted);
+  }
+  .hide-btn { font-size: 12px; color: var(--muted); border: 0; background: transparent; padding: 8px; cursor: pointer; }
+
+  .stores { list-style: none; margin: 0; padding: 0; }
+  .store { padding: 10px 14px 12px; border-top: 1px solid var(--line); }
+  .store.is-skipped { opacity: .55; }
+  .store-top { display: flex; align-items: center; gap: 8px; }
+  .shop { font-weight: 600; flex: 1; min-width: 0; overflow-wrap: anywhere; }
+  .due {
+    font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 999px; white-space: nowrap;
+    background: var(--surface-2); color: var(--muted); font-variant-numeric: tabular-nums;
+  }
+  .due.urgent { background: var(--urgent-soft); color: var(--urgent); }
+  .due.soon { background: var(--soon-soft); color: var(--soon); }
+  .due.upcoming { background: var(--accent-soft); color: var(--accent); }
+  .due.applied { background: var(--ok-soft); color: var(--ok); }
+  .store-sub { font-size: 12px; color: var(--muted); margin-top: 2px; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; }
+  .req { font-size: 11px; border: 1px solid var(--line); border-radius: 6px; padding: 0 6px; color: var(--text); }
+  .actions { display: flex; gap: 6px; margin-top: 8px; align-items: stretch; }
+  .actions .btn.small { flex: none; min-height: 40px; padding: 0 10px; }
+  .btn {
+    min-height: 40px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface);
+    padding: 0 14px; display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+    text-decoration: none; color: var(--text); font-size: 14px; font-weight: 600; cursor: pointer;
+  }
+  .btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); flex: 1 1 auto; min-width: 0; padding: 0 10px; }
+  .btn.small { min-height: 34px; padding: 0 12px; font-size: 13px; }
+  .btn.done { background: var(--ok-soft); color: var(--ok); border-color: transparent; }
+  .btn:active { transform: scale(.98); }
+  .links { margin-left: auto; display: flex; gap: 12px; font-size: 13px; }
+  .links a { text-decoration: none; }
+
+  /* ---------- review & candidates ---------- */
+  .row {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 12px 14px; margin-bottom: 8px; display: flex; gap: 10px; align-items: center;
+  }
+  .row .grow { flex: 1; min-width: 0; }
+  .row .sub { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+  .row .name { font-weight: 600; overflow-wrap: anywhere; }
+  .hits { font-size: 20px; font-weight: 800; font-variant-numeric: tabular-nums; min-width: 2.2em; text-align: center; }
+  .hits small { display: block; font-size: 10px; font-weight: 600; color: var(--muted); }
+  .note { font-size: 13px; color: var(--muted); margin: 4px 4px 12px; }
+
+  /* ---------- bottom nav ---------- */
+  .nav {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 6;
+    background: var(--surface); border-top: 1px solid var(--line);
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .nav button {
+    border: 0; background: transparent; padding: 8px 0 10px; display: grid; justify-items: center; gap: 2px;
+    font-size: 11px; color: var(--muted); cursor: pointer; position: relative;
+  }
+  .nav button svg { width: 24px; height: 24px; }
+  .nav button[aria-selected="true"] { color: var(--accent); font-weight: 700; }
+  .badge {
+    position: absolute; top: 4px; left: calc(50% + 8px); min-width: 18px; height: 18px; padding: 0 5px;
+    border-radius: 9px; background: var(--urgent); color: #fff; font-size: 11px; font-weight: 700;
+    display: grid; place-items: center; font-variant-numeric: tabular-nums;
+  }
+  .badge.plain { background: var(--surface-2); color: var(--muted); }
+
+  /* ---------- toast & sheet ---------- */
+  .toast {
+    position: fixed; left: 12px; right: 12px; bottom: calc(84px + env(safe-area-inset-bottom)); z-index: 9;
+    max-width: 616px; margin: 0 auto; background: var(--text); color: var(--bg);
+    border-radius: 12px; padding: 10px 10px 10px 14px; display: none; align-items: center; gap: 10px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, .25); font-size: 14px;
+  }
+  .toast.show { display: flex; }
+  .toast .grow { flex: 1; }
+  .toast button { border: 0; border-radius: 8px; padding: 8px 12px; font-weight: 700; background: var(--bg); color: var(--text); cursor: pointer; }
+  .toast button.x { background: transparent; color: var(--bg); padding: 8px; }
+
+  dialog.sheet {
+    border: 0; padding: 0; margin: auto auto 0; width: 100%; max-width: 640px; max-height: 88vh;
+    border-radius: 18px 18px 0 0; background: var(--bg); color: var(--text);
+  }
+  dialog.sheet::backdrop { background: rgba(0, 0, 0, .35); }
+  .sheet-head { position: sticky; top: 0; background: var(--bg); display: flex; align-items: center; padding: 14px 8px 8px 16px; }
+  .sheet-head h2 { flex: 1; margin: 0; font-size: 17px; }
+  .sheet-body { padding: 0 16px calc(24px + env(safe-area-inset-bottom)); }
+  .group { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); margin-bottom: 14px; }
+  .group > * + * { border-top: 1px solid var(--line); }
+  .item { padding: 12px 14px; display: flex; align-items: center; gap: 10px; font-size: 14px; }
+  .item .grow { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+  .item .val { color: var(--muted); font-variant-numeric: tabular-nums; text-align: right; }
+  .switch { width: 22px; height: 22px; accent-color: var(--accent); }
+  .group-title { font-size: 12px; color: var(--muted); margin: 0 4px 6px; font-weight: 600; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-row">
+    <h1>抽選ウォッチ</h1>
+    <span class="updated" id="updated">読み込み中…</span>
+    <button class="icon-btn" id="btnReload" aria-label="再読み込み">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
+    </button>
+    <button class="icon-btn" id="btnSettings" aria-label="設定">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </button>
+  </div>
+  <div class="chips" id="genres" role="toolbar" aria-label="ジャンルで絞り込み"></div>
+</header>
+
+<main id="view" aria-live="polite"></main>
+
+<nav class="nav" role="tablist" aria-label="表示の切り替え">
+  <button role="tab" data-tab="open" aria-selected="true">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9a2 2 0 0 0 0 6v3a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-3a2 2 0 0 0 0-6V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1z"/><path d="M13 5v2M13 11v2M13 17v2"/></svg>
+    受付中<span class="badge plain" id="countOpen" hidden></span>
+  </button>
+  <button role="tab" data-tab="applied" aria-selected="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+    応募済み<span class="badge plain" id="countApplied" hidden></span>
+  </button>
+  <button role="tab" data-tab="candidates" aria-selected="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+    候補アカウント<span class="badge plain" id="countCand" hidden></span>
+  </button>
+</nav>
+
+<div class="toast" id="toast" role="status">
+  <span class="grow" id="toastText"></span>
+  <button id="toastAction" hidden></button>
+  <button class="x" id="toastClose" aria-label="閉じる">✕</button>
+</div>
+
+<dialog class="sheet" id="settings" aria-labelledby="settingsTitle">
+  <div class="sheet-head">
+    <h2 id="settingsTitle">設定と状況</h2>
+    <button class="icon-btn" id="btnCloseSettings" aria-label="閉じる">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="sheet-body" id="settingsBody"></div>
+</dialog>
+
+<input type="file" id="importFile" accept="application/json,.json" class="sr-only" aria-hidden="true" tabindex="-1">
+
+<script>
+"use strict";
+(() => {
+  const STORE_KEY = "xlot.v1";
+  const GENRES = [
+    ["all", "すべて"], ["tcg", "TCG"], ["game", "ゲーム"], ["hobby", "ホビー"], ["goods", "グッズ"], ["other", "その他"],
+  ];
+  const GENRE_LABEL = Object.fromEntries(GENRES);
+  const WEEK = "日月火水木金土";
+
+  // ------------------------------------------------------------ 保存（このスマホの中だけ）
+  const defaults = () => ({ status: {}, muted: {}, dismissed: {}, showSkipped: false, genre: "all", tab: "open", pending: null });
+  let prefs = load();
+  function load() {
+    try { return Object.assign(defaults(), JSON.parse(localStorage.getItem(STORE_KEY) || "{}")); }
+    catch { return defaults(); }
+  }
+  function save() { localStorage.setItem(STORE_KEY, JSON.stringify(prefs)); }
+
+  // ------------------------------------------------------------ データ
+  let data = { items: [], review: [], meta: {} };
+  let cands = { candidates: [] };
+
+  async function fetchJson(path, fallback) {
+    try {
+      const r = await fetch(`${path}?t=${Date.now()}`, { cache: "no-store" });
+      if (!r.ok) return fallback;
+      return await r.json();
+    } catch { return fallback; }
+  }
+  async function refresh() {
+    document.getElementById("updated").textContent = "読み込み中…";
+    const [d, c] = await Promise.all([
+      fetchJson("data/items.json", null),
+      fetchJson("data/candidates.json", { candidates: [] }),
+    ]);
+    if (d) data = { items: d.items || [], review: d.review || [], meta: d.meta || {} };
+    cands = c || { candidates: [] };
+    pruneHistory();
+    render();
+    if (!d) toast("データを読み込めませんでした。通信状況を確認してください。");
+  }
+
+  // ------------------------------------------------------------ 小道具
+  const $ = (tag, attrs = {}, ...children) => {
+    const el = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) {
+      if (v == null || v === false) continue;
+      if (k === "class") el.className = v;
+      else if (k === "text") el.textContent = v;
+      else if (k.startsWith("on")) el.addEventListener(k.slice(2), v);
+      else el.setAttribute(k, v === true ? "" : v);
+    }
+    for (const c of children.flat()) if (c != null && c !== false) el.append(c instanceof Node ? c : String(c));
+    return el;
+  };
+  // 投稿由来のURLは http/https だけを許可する
+  function safeUrl(u) {
+    try { const url = new URL(u); return ["http:", "https:"].includes(url.protocol) ? url.href : null; }
+    catch { return null; }
+  }
+  const extLink = (href, text, cls) => {
+    const u = safeUrl(href);
+    return u ? $("a", { href: u, target: "_blank", rel: "noopener noreferrer", class: cls, text }) : null;
+  };
+  const toDate = (s) => (s ? new Date(s) : null);
+  function fmtDate(d, withTime = true) {
+    const md = `${d.getMonth() + 1}/${d.getDate()}(${WEEK[d.getDay()]})`;
+    return withTime ? `${md} ${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}` : md;
+  }
+  function compact(n) {
+    if (!n) return "0";
+    return n >= 10000 ? `${(n / 10000).toFixed(1).replace(/\.0$/, "")}万` : n >= 1000 ? `${(n / 1000).toFixed(1).replace(/\.0$/, "")}k` : String(n);
+  }
+  function ago(iso) {
+    const d = toDate(iso); if (!d) return "";
+    const m = Math.round((Date.now() - d) / 60000);
+    if (m < 1) return "たった今更新";
+    if (m < 60) return `${m}分前に更新`;
+    if (m < 60 * 24) return `${Math.floor(m / 60)}時間前に更新`;
+    return `${fmtDate(d)} に更新`;
+  }
+
+  function phase(item, now = new Date()) {
+    const start = toDate(item.apply_start), end = toDate(item.apply_end);
+    if (end && end < now) return "closed";
+    if (start && start > now) return "upcoming";
+    return "open";
+  }
+  function dueBadge(item, now = new Date()) {
+    const start = toDate(item.apply_start), end = toDate(item.apply_end);
+    const p = phase(item, now);
+    if (p === "upcoming") return { cls: "upcoming", label: "受付前", sub: `${fmtDate(start)}から` + (end ? ` 〜 ${fmtDate(end)}` : "") };
+    if (!end) return { cls: "", label: "締切不明", sub: "元投稿で締切を確認してください" };
+    const ms = end - now;
+    if (ms < 0) return { cls: "", label: "締切済み", sub: `${fmtDate(end)}まで` };
+    const h = ms / 3600000;
+    let label;
+    if (h < 1) label = `あと${Math.max(1, Math.floor(ms / 60000))}分`;
+    else if (h < 24) label = `あと${Math.floor(h)}時間`;
+    else label = `あと${Math.floor(h / 24)}日`;
+    return { cls: h < 6 ? "urgent" : h < 24 ? "soon" : "", label, sub: `${fmtDate(end)}まで` };
+  }
+  const statusOf = (id) => prefs.status[id]?.s || null;
+
+  function setStatus(item, s) {
+    if (!s) { delete prefs.status[item.id]; }
+    else {
+      prefs.status[item.id] = {
+        s, at: new Date().toISOString(),
+        snap: { product: item.product, retailer: item.retailer, apply_end: item.apply_end, announce_date: item.announce_date,
+                apply_url: item.apply_url, detail_url: item.detail_url, genre: item.genre, source: item.sources?.[0]?.url },
+      };
+    }
+    save();
+  }
+  // 応募履歴は60日で片付ける
+  function pruneHistory() {
+    const limit = Date.now() - 60 * 86400000;
+    for (const [id, v] of Object.entries(prefs.status)) if (new Date(v.at) < limit) delete prefs.status[id];
+    save();
+  }
+
+  // ------------------------------------------------------------ 描画
+  const view = document.getElementById("view");
+
+  function render() {
+    const meta = data.meta || {};
+    document.getElementById("updated").textContent = ago(meta.generated_at);
+    document.querySelectorAll(".nav button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === prefs.tab)));
+    document.getElementById("genres").hidden = prefs.tab !== "open";
+    const openList = visibleOpenItems("all");
+    setBadge("countOpen", openList.length, openList.some((i) => dueBadge(i).cls === "urgent"));
+    setBadge("countApplied", appliedEntries().filter((e) => !e.closedLongAgo).length, false);
+    setBadge("countCand", (cands.candidates || []).length, false);
+    view.replaceChildren();
+    if (meta.errors?.length) view.append($("div", { class: "banner", text: "前回の収集で問題がありました: " + meta.errors.join(" / ") }));
+    if (prefs.tab === "open") renderOpen();
+    else if (prefs.tab === "applied") renderApplied();
+    else renderCandidates();
+  }
+  function setBadge(id, n, urgent) {
+    const el = document.getElementById(id);
+    el.hidden = !n;
+    el.textContent = n > 99 ? "99+" : String(n);
+    el.className = "badge" + (urgent ? "" : " plain");
+  }
+
+  function visibleOpenItems(genre) {
+    const now = new Date();
+    return data.items.filter((i) => {
+      if (phase(i, now) === "closed") return false;
+      if (prefs.muted[i.product_key]) return false;
+      const s = statusOf(i.id);
+      if (s === "applied") return false;
+      if (s === "skipped" && !prefs.showSkipped) return false;
+      return genre === "all" || (i.genre || "other") === genre;
+    });
+  }
+
+  function renderGenres() {
+    const box = document.getElementById("genres");
+    box.replaceChildren();
+    const all = visibleOpenItems("all");
+    for (const [g, label] of GENRES) {
+      const n = g === "all" ? all.length : all.filter((i) => (i.genre || "other") === g).length;
+      if (g !== "all" && !n && prefs.genre !== g) continue;
+      box.append($("button", {
+        class: "chip", "aria-pressed": String(prefs.genre === g),
+        onclick: () => { prefs.genre = g; save(); render(); },
+      }, label, $("span", { class: "n", text: n })));
+    }
+  }
+
+  function groupByProduct(items) {
+    const groups = new Map();
+    for (const i of items) {
+      const k = i.product_key || i.product;
+      if (!groups.has(k)) groups.set(k, []);
+      groups.get(k).push(i);
+    }
+    const endKey = (i) => (toDate(i.apply_end)?.getTime() ?? Infinity);
+    const list = [...groups.values()].map((g) => g.sort((a, b) => endKey(a) - endKey(b)));
+    return list.sort((a, b) => endKey(a[0]) - endKey(b[0]));
+  }
+
+  function renderOpen() {
+    renderGenres();
+    const items = visibleOpenItems(prefs.genre);
+    if (!items.length) {
+      view.append($("div", { class: "empty" },
+        $("strong", { text: data.items.length ? "表示できる抽選はありません" : "まだ抽選情報がありません" }),
+        data.items.length ? "ジャンルの絞り込みや、スキップ・非表示の設定を確認してください。" : "収集が動くと、ここに受付中の抽選が並びます。"));
+    }
+    for (const group of groupByProduct(items)) view.append(productCard(group));
+    renderReview();
+  }
+
+  function productCard(group) {
+    const first = group[0];
+    const buzz = Math.max(...group.map((i) => i.buzz || 0));
+    const card = $("article", { class: "card" });
+    card.append($("div", { class: "card-head" },
+      $("div", { class: "titles" },
+        $("div", { class: "card-meta" },
+          $("span", { class: "genre", text: GENRE_LABEL[first.genre] || "その他" }),
+          $("span", { text: `${group.length}店舗` }),
+          buzz ? $("span", { title: "元投稿のいいね・リポスト数", text: `♡ ${compact(buzz)}` }) : null),
+        $("h2", { class: "product", text: first.product })),
+      $("button", {
+        class: "hide-btn", text: "非表示",
+        onclick: () => {
+          prefs.muted[first.product_key] = first.product; save(); render();
+          toast(`「${first.product}」を非表示にしました`, "元に戻す", () => { delete prefs.muted[first.product_key]; save(); render(); });
+        },
+      })));
+    const ul = $("ul", { class: "stores" });
+    for (const item of group) ul.append(storeRow(item));
+    card.append(ul);
+    return card;
+  }
+
+  function storeRow(item) {
+    const s = statusOf(item.id);
+    const due = dueBadge(item);
+    const li = $("li", { class: "store" + (s === "skipped" ? " is-skipped" : "") });
+    li.append($("div", { class: "store-top" },
+      $("span", { class: "shop", text: item.retailer || "店舗不明" }),
+      $("span", { class: `due ${due.cls}`, text: due.label })));
+    const sub = $("div", { class: "store-sub" }, $("span", { text: due.sub }));
+    for (const r of item.requirements || []) sub.append($("span", { class: "req", text: r }));
+    if (item.announce_date) sub.append($("span", { text: `当選発表 ${fmtDate(new Date(item.announce_date + "T00:00:00+09:00"), false)}` }));
+    li.append(sub);
+
+    const actions = $("div", { class: "actions" });
+    const applyHref = safeUrl(item.apply_url) || safeUrl(item.detail_url) || safeUrl(item.sources?.[0]?.url);
+    const links = $("span", { class: "links" });
+    const src = item.sources?.[item.sources.length - 1]?.url;
+    if (safeUrl(item.apply_url) && safeUrl(item.detail_url)) links.append(extLink(item.detail_url, "詳細"));
+    if (src && applyHref !== safeUrl(src)) links.append(extLink(src, item.sources.length > 1 ? `元投稿(${item.sources.length})` : "元投稿"));
+    if (links.childNodes.length) sub.append(links);
+    if (applyHref) {
+      const label = safeUrl(item.apply_url) ? "応募ページへ" : safeUrl(item.detail_url) ? "詳細ページへ" : "元投稿へ";
+      actions.append($("a", {
+        class: "btn primary", href: applyHref, target: "_blank", rel: "noopener noreferrer", text: label,
+        onclick: () => { prefs.pending = item.id; save(); },
+      }));
+    }
+    actions.append(
+      $("button", {
+        class: "btn small" + (s === "applied" ? " done" : ""), text: s === "applied" ? "✓ 応募済み" : "応募した",
+        onclick: () => { setStatus(item, s === "applied" ? null : "applied"); render(); if (s !== "applied") toast(`${item.retailer || "この抽選"}を応募済みにしました`, "取り消す", () => { setStatus(item, null); render(); }); },
+      }),
+      $("button", {
+        class: "btn small", text: s === "skipped" ? "スキップ解除" : "スキップ",
+        onclick: () => { setStatus(item, s === "skipped" ? null : "skipped"); render(); },
+      }));
+    li.append(actions);
+    return li;
+  }
+
+  function renderReview() {
+    const list = (data.review || []).filter((r) => !prefs.dismissed[r.post_id]);
+    if (!list.length) return;
+    view.append($("div", { class: "section-title", text: `要確認（自動で読み取れなかった投稿） ${list.length}件` }));
+    for (const r of list) {
+      view.append($("div", { class: "row" },
+        $("div", { class: "grow" },
+          $("div", { class: "name", text: "@" + (r.author || "不明") }),
+          $("div", { class: "sub", text: r.created_at ? fmtDate(new Date(r.created_at)) + " の投稿" : "" })),
+        extLink(r.url, "開く", "btn small"),
+        $("button", { class: "btn small", text: "済", "aria-label": "確認済みにする",
+          onclick: () => { prefs.dismissed[r.post_id] = Date.now(); save(); render(); } })));
+    }
+  }
+
+  function appliedEntries() {
+    const byId = new Map(data.items.map((i) => [i.id, i]));
+    const now = Date.now();
+    return Object.entries(prefs.status)
+      .filter(([, v]) => v.s === "applied")
+      .map(([id, v]) => {
+        const live = byId.get(id);
+        const item = Object.assign({ id }, v.snap || {}, live || {});
+        const ref = toDate(item.announce_date ? item.announce_date + "T23:59:00+09:00" : item.apply_end);
+        return { item, at: v.at, closedLongAgo: ref ? now - ref > 7 * 86400000 : false };
+      })
+      .sort((a, b) => (a.item.announce_date || a.item.apply_end || "~").localeCompare(b.item.announce_date || b.item.apply_end || "~"));
+  }
+
+  function renderApplied() {
+    const entries = appliedEntries();
+    if (!entries.length) {
+      view.append($("div", { class: "empty" }, $("strong", { text: "応募済みの抽選はまだありません" }), "「応募した」を押すとここに記録されます。"));
+      return;
+    }
+    view.append($("p", { class: "note", text: "当選発表が近い順に並んでいます。記録はこのスマホの中だけに保存されます。" }));
+    for (const { item } of entries) {
+      const announce = item.announce_date ? `当選発表 ${fmtDate(new Date(item.announce_date + "T00:00:00+09:00"), false)}` : "当選発表日は不明";
+      const end = toDate(item.apply_end);
+      view.append($("div", { class: "row" },
+        $("div", { class: "grow" },
+          $("div", { class: "name", text: item.product || "（商品名なし）" }),
+          $("div", { class: "sub", text: `${item.retailer || "店舗不明"} ・ ${announce}` + (end ? ` ・ 締切 ${fmtDate(end)}` : "") })),
+        extLink(item.apply_url || item.detail_url || item.source, "開く", "btn small"),
+        $("button", { class: "btn small", text: "取消", "aria-label": "応募済みを取り消す",
+          onclick: () => { setStatus(item, null); render(); } })));
+    }
+  }
+
+  function renderCandidates() {
+    const list = cands.candidates || [];
+    const repo = data.meta?.repo;
+    view.append($("p", { class: "note", text: "監視していないのに抽選情報をよく流しているアカウントです（発見モードで集計）。良さそうなら監視リストに追加してください。" }));
+    if (repo) view.append($("p", { class: "note" }, extLink(`https://github.com/${repo}/edit/main/config/accounts.yml`, "監視リスト（accounts.yml）を編集する")));
+    if (!list.length) {
+      view.append($("div", { class: "empty" }, $("strong", { text: "候補はまだありません" }), "発見モードが動くと、ここに候補が並びます。"));
+      return;
+    }
+    for (const c of list) {
+      view.append($("div", { class: "row" },
+        $("div", { class: "hits", text: c.hits }, $("small", { text: "件" })),
+        $("div", { class: "grow" },
+          $("div", { class: "name", text: `${c.name || ""} @${c.handle}` }),
+          $("div", { class: "sub", text: `フォロワー ${compact(c.followers || 0)}` + (c.description ? ` ・ ${c.description}` : "") })),
+        extLink(`https://x.com/${encodeURIComponent(c.handle)}`, "見る", "btn small"),
+        $("button", { class: "btn small", text: "コピー", "aria-label": `@${c.handle} をコピー`,
+          onclick: async () => {
+            try { await navigator.clipboard.writeText(c.handle); toast(`@${c.handle} をコピーしました`); }
+            catch { toast(c.handle); }
+          } })));
+    }
+  }
+
+  // ------------------------------------------------------------ 設定シート
+  const sheet = document.getElementById("settings");
+  function openSettings() {
+    const body = document.getElementById("settingsBody");
+    const meta = data.meta || {};
+    const run = meta.last_run || {};
+    const xu = meta.x_usage_today || {};
+    const au = meta.ai_usage_today || {};
+    body.replaceChildren();
+
+    const toggle = $("input", { type: "checkbox", class: "switch", id: "optSkipped" });
+    toggle.checked = !!prefs.showSkipped;
+    toggle.addEventListener("change", () => { prefs.showSkipped = toggle.checked; save(); render(); });
+    body.append($("div", { class: "group" },
+      $("label", { class: "item", for: "optSkipped" }, $("span", { class: "grow", text: "スキップした抽選も表示する" }), toggle)));
+
+    const muted = Object.entries(prefs.muted);
+    body.append($("div", { class: "group-title", text: `非表示にした商品（${muted.length}）` }));
+    const mg = $("div", { class: "group" });
+    if (!muted.length) mg.append($("div", { class: "item" }, $("span", { class: "grow val", text: "ありません" })));
+    for (const [key, name] of muted) {
+      mg.append($("div", { class: "item" }, $("span", { class: "grow", text: name }),
+        $("button", { class: "btn small", text: "戻す", onclick: () => { delete prefs.muted[key]; save(); render(); openSettings(); } })));
+    }
+    body.append(mg);
+
+    body.append($("div", { class: "group-title", text: "応募記録のバックアップ（機種変更のときに）" }));
+    body.append($("div", { class: "group" }, $("div", { class: "item" },
+      $("button", { class: "btn small", text: "書き出す", onclick: exportPrefs }),
+      $("button", { class: "btn small", text: "読み込む", onclick: () => document.getElementById("importFile").click() }),
+      $("span", { class: "grow val", text: `${Object.keys(prefs.status).length}件の記録` }))));
+
+    const rows = [
+      ["最終更新", meta.generated_at ? fmtDate(new Date(meta.generated_at)) : "—"],
+      ["前回の取得", `${run.fetched ?? 0}件（除外 ${run.dropped ?? 0} / ルール ${run.rule ?? 0} / AI ${run.ai_posts ?? 0}）`],
+      ["前回の新着", `${run.new_items ?? 0}件`],
+      ["今日のX取得数", `${xu.posts ?? 0}件 / ${xu.requests ?? 0}回`],
+      ["今日のAI呼び出し", `${au.calls ?? 0}回（入力 ${compact(au.input_tokens || 0)} / 出力 ${compact(au.output_tokens || 0)} トークン）`],
+      ["読み取りモデル", meta.model || "—"],
+    ];
+    body.append($("div", { class: "group-title", text: "収集の状況" }));
+    body.append($("div", { class: "group" }, rows.map(([k, v]) =>
+      $("div", { class: "item" }, $("span", { class: "grow", text: k }), $("span", { class: "val", text: v })))));
+
+    const accounts = meta.accounts || [];
+    body.append($("div", { class: "group-title", text: `監視アカウント（${accounts.length}）` }));
+    body.append($("div", { class: "group" }, accounts.length ? accounts.map((h) =>
+      $("div", { class: "item" }, $("span", { class: "grow", text: "@" + h }), extLink(`https://x.com/${encodeURIComponent(h)}`, "見る"))) :
+      $("div", { class: "item" }, $("span", { class: "grow val", text: "未設定" }))));
+    if (typeof sheet.showModal === "function") sheet.showModal(); else sheet.setAttribute("open", "");
+  }
+
+  function exportPrefs() {
+    const blob = new Blob([JSON.stringify({ app: "xlot", version: 1, exported_at: new Date().toISOString(), prefs }, null, 1)], { type: "application/json" });
+    const a = $("a", { href: URL.createObjectURL(blob), download: `抽選ウォッチ_記録_${new Date().toISOString().slice(0, 10)}.json` });
+    document.body.append(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+  }
+  document.getElementById("importFile").addEventListener("change", async (e) => {
+    const file = e.target.files?.[0];
+    e.target.value = "";
+    if (!file) return;
+    try {
+      const parsed = JSON.parse(await file.text());
+      const p = parsed.prefs || parsed;
+      if (typeof p !== "object" || typeof p.status !== "object") throw new Error("形式が違います");
+      prefs = Object.assign(defaults(), p);
+      save(); render(); openSettings();
+      toast("記録を読み込みました");
+    } catch (err) {
+      toast("読み込めませんでした: " + err.message);
+    }
+  });
+
+  // ------------------------------------------------------------ トースト
+  let toastTimer;
+  function toast(text, actionLabel, action) {
+    const el = document.getElementById("toast");
+    const btn = document.getElementById("toastAction");
+    document.getElementById("toastText").textContent = text;
+    btn.hidden = !actionLabel;
+    btn.textContent = actionLabel || "";
+    btn.onclick = () => { hideToast(); action && action(); };
+    el.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(hideToast, actionLabel ? 8000 : 3500);
+  }
+  function hideToast() { document.getElementById("toast").classList.remove("show"); }
+
+  // 応募ページから戻ってきたら「応募しましたか？」と聞く
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState !== "visible" || !prefs.pending) return;
+    const item = data.items.find((i) => i.id === prefs.pending);
+    prefs.pending = null; save();
+    if (!item || statusOf(item.id) === "applied") return;
+    toast(`${item.retailer || "この抽選"}に応募しましたか？`, "応募した", () => { setStatus(item, "applied"); render(); });
+  });
+
+  // ------------------------------------------------------------ イベント
+  document.querySelectorAll(".nav button").forEach((b) => b.addEventListener("click", () => {
+    prefs.tab = b.dataset.tab; save(); render(); window.scrollTo({ top: 0 });
+  }));
+  document.getElementById("btnReload").addEventListener("click", refresh);
+  document.getElementById("btnSettings").addEventListener("click", openSettings);
+  document.getElementById("btnCloseSettings").addEventListener("click", () => sheet.close());
+  sheet.addEventListener("click", (e) => { if (e.target === sheet) sheet.close(); });
+  document.getElementById("toastClose").addEventListener("click", hideToast);
+  setInterval(() => { if (!sheet.open) render(); }, 60000);  // 残り時間の表示を1分ごとに更新
+
+  refresh();
+})();
+</script>
+</body>
+</html>

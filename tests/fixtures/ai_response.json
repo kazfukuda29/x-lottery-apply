@@ -1,0 +1,104 @@
+{
+ "1990000000000000001": [
+  {
+   "product": "ポケモンカードゲーム MEGA 拡張パック『ネオンストーム』BOX",
+   "retailer": "ヨドバシ.com",
+   "genre": "tcg",
+   "apply_start": "",
+   "apply_end": "2026-11-26T23:59",
+   "apply_url_index": -1,
+   "detail_url_index": 0,
+   "requirements": [
+    "ゴールドポイントカード会員"
+   ],
+   "announce_date": "2026-11-28",
+   "same_as_item_id": ""
+  },
+  {
+   "product": "ポケモンカードゲーム MEGA 拡張パック『ネオンストーム』BOX",
+   "retailer": "ビックカメラ",
+   "genre": "tcg",
+   "apply_start": "",
+   "apply_end": "2026-11-25T10:00",
+   "apply_url_index": -1,
+   "detail_url_index": 0,
+   "requirements": [
+    "アプリ会員"
+   ],
+   "announce_date": "",
+   "same_as_item_id": ""
+  },
+  {
+   "product": "ポケモンカードゲーム MEGA 拡張パック『ネオンストーム』BOX",
+   "retailer": "ジョーシン",
+   "genre": "tcg",
+   "apply_start": "",
+   "apply_end": "2026-11-24T23:59",
+   "apply_url_index": -1,
+   "detail_url_index": 0,
+   "requirements": [],
+   "announce_date": "",
+   "same_as_item_id": ""
+  }
+ ],
+ "1990000000000000005": [
+  {
+   "product": "Nintendo Switch 2 本体（日本語・国内専用）",
+   "retailer": "マイニンテンドーストア",
+   "genre": "game",
+   "apply_start": "",
+   "apply_end": "2026-11-27T11:00",
+   "apply_url_index": -1,
+   "detail_url_index": -1,
+   "requirements": [
+    "Nintendo Switch Online加入"
+   ],
+   "announce_date": "",
+   "same_as_item_id": ""
+  },
+  {
+   "product": "PlayStation 5 Pro",
+   "retailer": "ソニーストア",
+   "genre": "game",
+   "apply_start": "",
+   "apply_end": "2026-11-25T23:59",
+   "apply_url_index": -1,
+   "detail_url_index": -1,
+   "requirements": [
+    "My Sony ID"
+   ],
+   "announce_date": "2026-11-28",
+   "same_as_item_id": ""
+  }
+ ],
+ "1990000000000000008": [
+  {
+   "product": "ローソン×人気アニメ コラボ限定フィギュア",
+   "retailer": "HMV&BOOKS online",
+   "genre": "goods",
+   "apply_start": "",
+   "apply_end": "2026-11-28T23:59",
+   "apply_url_index": 0,
+   "detail_url_index": -1,
+   "requirements": [
+    "店頭受取"
+   ],
+   "announce_date": "",
+   "same_as_item_id": ""
+  }
+ ],
+ "1990000000000000010": [
+  {
+   "product": "ポケモンカードゲーム MEGA 拡張パック『ネオンストーム』BOX",
+   "retailer": "ヨドバシカメラ",
+   "genre": "tcg",
+   "apply_start": "",
+   "apply_end": "2026-11-26T23:59",
+   "apply_url_index": -1,
+   "detail_url_index": -1,
+   "requirements": [],
+   "announce_date": "",
+   "same_as_item_id": ""
+  }
+ ]
+}

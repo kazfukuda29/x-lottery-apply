@@ -1,0 +1,46 @@
+# 動作設定。数字を変えるだけで挙動を調整できます。
+
+x:
+  # 1回の検索で取得する最大件数（10〜100）
+  max_results_per_query: 50
+  # 1日に取得する投稿の上限（費用の安全装置。超えたらその日は取得しない）
+  daily_post_budget: 300
+  # 検索クエリの最大文字数（長すぎるとアカウントを複数クエリに分割）
+  query_max_chars: 512
+  # 初回（since_idがないとき）にさかのぼる時間
+  first_run_lookback_hours: 24
+
+claude:
+  # 使うモデル。GitHubの Variables に CLAUDE_MODEL を設定すると、そちらが優先されます。
+  model: claude-opus-5-5
+  effort: low
+  # 1回のリクエストにまとめる投稿数
+  max_posts_per_request: 12
+  # 1投稿あたり添付する画像の上限 / 1リクエストあたりの上限
+  max_images_per_post: 2
+  max_images_per_request: 8
+  # 1日のAI呼び出し回数の上限（費用の安全装置）
+  max_calls_per_day: 40
+
+discover:
+  # 発見モード：監視していないアカウントの候補を集める（1日1回）
+  enabled: true
+  # この日付まで実行（YYYY-MM-DD）。空にすると無期限
+  until: "2026-12-08"
+  max_results: 50
+
+notify:
+  # 締切がこの時間以内に迫った抽選を通知（0で無効）
+  closing_soon_hours: 3
+  # 毎朝のダイジェストを送る時刻（日本時間・時）
+  digest_hour: 7
+  # まとめアカウントがこの日数投稿しなければ警告
+  stale_days: 3
+
+items:
+  # 締切（または当選発表日）を過ぎてから保持する日数
+  keep_days_after_close: 3
+  # 締切が読み取れなかったアイテムを保持する日数
+  keep_days_undated: 10
+  # 「要確認」投稿を保持する日数
+  keep_days_review: 3

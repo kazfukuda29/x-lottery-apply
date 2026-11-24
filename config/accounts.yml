@@ -1,0 +1,46 @@
+# 監視するXアカウント（@は不要）
+#   type:   aggregator（抽選情報まとめ） / retailer（小売店） / maker（メーカー）
+#   genres: tcg / game / hobby / goods（ジャンルが読み取れなかったときの補助）
+#   filter: true にすると「抽選・応募…」を含む投稿だけ取得（課金を抑える。既定 true）
+#
+# 2026-11-24 に各アカウントの実際の投稿を確認して選定。
+# ハンドル名が変わると取得できなくなります（毎朝のダイジェストで「投稿がない」と警告されたら確認してください）。
+accounts:
+  - handle: crashseq
+    note: >-
+      たぬき🔔トレカ抽選速報。TCGの網羅性が最も高い（1週間で約245件）。
+      朝・夕・夜の定時まとめで、1投稿に数十〜100件超。地方の店頭抽選も多い
+    type: aggregator
+    genres: [tcg]
+  - handle: pokecayoyaku
+    note: >-
+      ポケモンカード抽選予約速報。1投稿1抽選で「応募期間／当選発表／応募ページ」が整っている。
+      イオン・ヨーカドー・ジョーシン・セブンネット等の大手と通販に強い
+    type: aggregator
+    genres: [tcg]
+  - handle: premium_kakaku
+    note: >-
+      プレミア価格人気商品。「応募：〜〆 当選：〜 購入：〜」の整った形。
+      ポケカ・ドラゴンボールカード・ちいかわ等のグッズも扱う（広告 #PR は除外）
+    type: aggregator
+    genres: [tcg, goods]
+  - handle: SelectInfoDeals
+    note: >-
+      厳選info。毎晩23時ごろにジャンル別の抽選まとめを3本（ポケカ／ワンピ／DB・遊戯王・ベイブレード・フィギュア）。
+      プレバン・タカラトミーモール・イオンスタイル等。日中の投稿はほぼ広告（#PR は除外）
+    type: aggregator
+    genres: [tcg, hobby, goods]
+  - handle: phu_dp
+    note: >-
+      にしもと＠ガンプラ。プレバンのガンプラ抽選、ガンダムベースの整理券抽選を受付期間つきで投稿
+    type: aggregator
+    genres: [hobby]
+
+# 追加候補（調査で見つかったもの。必要に応じて上に移してください）
+#   puramodiary      プラモ・ダイアリー。予約開始・店頭の様子が中心で、抽選情報は少なかった（2026-11 確認）
+#   cardchusen_com   トレカ抽選・再販情報まとめ。約30分ごとに投稿（費用が増える）。店舗一覧は自サイト側
+#   PokeGetInfoMain  ポケゲトちゃんねる。詳細は画像
+#   tcg_info_navi    TCG抽選・再販ナビ（東海寄り）
+#   toreca_entry     トレカ抽選・予約・再販情報（小規模店が中心）
+#   kaho_memo_       カホメモ。シール・キャラグッズ
+#   Yodobashi_X      ヨドバシ公式（type: retailer）。福袋抽選などゲーム機の抽選も

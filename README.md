@@ -1,0 +1,135 @@
+# 抽選ウォッチ（X抽選販売ウォッチャー）
+
+Xで流れる「商品の抽選販売」の告知を自動で集め、スマホで見やすい一覧ページにまとめます。
+応募そのものは自分で行います（ボタン1つで応募ページが開きます）。
+
+```
+GitHub Actions（2時間ごと）
+  ├─ X公式API：監視アカウントの投稿だけを取得（since_idで重複取得なし）
+  ├─ ルール判定：懸賞・終了告知を除外、単純な告知は無料で読み取り
+  ├─ Claude：複数店舗入りのまとめ投稿や画像の投稿を、店ごとに分解して読み取り
+  ├─ 統合：同じ抽選のリマインド・重複を1件に、同じ商品は1枚のカードに
+  ├─ ntfy：新着・締切間近・毎朝のダイジェストをスマホに通知
+  └─ GitHub Pages：一覧ページ（スマホ向け）を更新
+```
+
+- 応募済み・スキップ・非表示の記録は**スマホのブラウザ内だけ**に保存します（公開リポジトリには載りません）。
+- 公開ページには投稿本文を載せず、読み取った事実（商品・店・締切・条件・URL）と元投稿へのリンクだけを載せます。
+
+## 費用の目安
+
+監視アカウント5つの場合の目安です（2026-11-24 に各アカウントの実際の投稿量を見て見積もり）。
+
+| 項目 | 目安 | 備考 |
+|---|---|---|
+| X API | 月$5〜7 | 1日40〜50件。返ってきた投稿1件ごとに課金（約$0.005/件とされるが、**Developer Consoleの表示が正**）。広告（#PR）と当選発表まとめはX側で除外して課金しない |
+| 発見モード（最初の2週間） | 計$3〜5 | 1日50件まで |
+| Claude API（Opus 5.5） | 月$20〜30 | 大半は @crashseq の大型まとめ（1投稿に数十〜100件超の抽選）を店ごとに分解する出力の費用 |
+| Claude API（Haiku 5.5） | 月$1前後 | 同じ処理をHaikuで行った場合 |
+| GitHub / ntfy | 無料 | 公開リポジトリの場合 |
+
+「応募：〜〆 当選：〜 購入：〜」のような整った1件ずつの告知はルールで読み取るためAI費用はかかりません。AIに回るのは主に複数店舗のまとめ投稿です。
+
+安全装置として、1日の取得上限（`daily_post_budget`）とAI呼び出し上限（`max_calls_per_day`）を `config/settings.yml` に設定しています。X・Anthropic双方のコンソールでも**利用上限（spend limit）を必ず設定**してください。
+
+---
+
+## セットアップ
+
+### 1. GitHubにリポジトリを作ってアップロード
+1. GitHubで**公開（Public）リポジトリ**を新規作成（例：`x-lottery-apply`）。README等は追加しない。
+2. このフォルダ（コミット済み）で次を実行（`<ユーザー名>` は自分のもの）：
+   ```powershell
+   git remote add origin https://github.com/<ユーザー名>/x-lottery-apply.git
+   git push -u origin main
+   ```
+3. リポジトリの **Settings → Pages → Build and deployment → Source** を **GitHub Actions** にする。
+
+### 2. X API（Bearer Token）
+1. [X Developer Console](https://developer.x.com/) でアプリを作成。
+2. **Bearer Token** をコピー（他人に見せない）。
+3. クレジットを購入し、**利用上限**を設定。
+
+### 3. Claude API（APIキー）
+1. [Claude Console](https://platform.claude.com/) でAPIキーを発行。
+2. クレジットを購入し、**月の利用上限**を設定。
+
+### 4. ntfy（スマホ通知）
+1. スマホに **ntfy** アプリを入れる（iOS / Android）。
+2. 「+」で購読。トピック名は**推測されにくいランダムな文字列**にする（例：`chusen-7f3k9q2m8x`）。ntfy.shのトピックは名前を知っていれば誰でも読めるため。
+
+### 5. GitHubに鍵を登録
+リポジトリの **Settings → Secrets and variables → Actions**
+
+**Secrets**（New repository secret）
+
+| 名前 | 値 |
+|---|---|
+| `X_BEARER_TOKEN` | XのBearer Token |
+| `ANTHROPIC_API_KEY` | ClaudeのAPIキー |
+| `NTFY_TOPIC` | ntfyのトピック名 |
+
+**Variables**（任意）
+
+| 名前 | 値 |
+|---|---|
+| `CLAUDE_MODEL` | 読み取りに使うモデル。未設定なら `claude-opus-5-5` |
+| `COMPARE_MODEL` | 比較用モデル（例：`claude-haiku-5-5`）。設定中は同じ投稿を両方で読み取り、一致率を `data/compare_report.json` に記録 |
+| `SITE_URL` | 一覧ページのURL。未設定なら `https://<ユーザー名>.github.io/<リポジトリ名>/` |
+
+### 6. 監視アカウントを確認
+`config/accounts.yml` に、実際の投稿を確認して選んだまとめアカウント5つを登録済みです（選んだ理由もファイル内に記載）。追加候補もファイル内にメモしてあります（GitHubの画面上でも編集できます）。
+
+### 7. 初回実行
+**Actions → collect → Run workflow** で手動実行。完了後：
+- Actionsのログに「取得 ◯件 / 除外 ◯ / …」と出ていること
+- X・Anthropicのコンソールで実際の課金額
+- ntfyに通知が届くこと
+- スマホで一覧ページが開けること → **共有 → ホーム画面に追加**でアプリのように使えます
+
+以降は日本時間 7〜23時の2時間ごとに自動で動きます。
+
+---
+
+## 使い方（スマホ）
+
+- **受付中**：締切が近い順。商品ごとのカードに、店ごとの抽選が並びます。
+  - **応募ページへ** → 応募 → ページに戻ると「応募しましたか？」と聞かれるので **応募した** をタップ
+  - 興味のない抽選は **スキップ**、商品ごと消したいときは **非表示**
+  - 一番下の「要確認」は自動で読み取れなかった投稿です。開いて自分で確認してください。
+- **応募済み**：当選発表日が近い順。
+- **候補アカウント**：発見モードで見つかった、抽選情報をよく流すアカウント。良さそうなら `accounts.yml` に追加。
+- **設定（歯車）**：スキップの表示切替、非表示の解除、記録の書き出し／読み込み（機種変更用）、収集状況。
+
+## 調整のしかた
+
+| やりたいこと | 場所 |
+|---|---|
+| 監視アカウントの追加・削除 | `config/accounts.yml` |
+| 実行間隔 | `.github/workflows/collect.yml` の `cron` |
+| 取得上限・AI上限・通知のタイミング・発見モードの期限 | `config/settings.yml` |
+| 除外語・ジャンル判定の語 | `config/keywords.yml` |
+| 店名の表記ゆれ・公式ドメイン | `config/retailers.yml` |
+| AIモデルの切り替え | GitHub Variables の `CLAUDE_MODEL` |
+
+### Opus 5.5 と Haiku 5.5 の比較（2週間後の目安）
+1. Variables に `COMPARE_MODEL = claude-haiku-5-5` を設定して数日動かす。
+2. `data/compare_report.json` の `agreement`（店と締切の一致率）と `diffs` を確認。
+3. 差が小さければ `CLAUDE_MODEL = claude-haiku-5-5` に切り替え、`COMPARE_MODEL` を削除。
+
+## 手元での動作確認（課金なし）
+
+```powershell
+python -m venv .venv
+.venv\Scripts\python -m pip install -r requirements.txt
+.venv\Scripts\python -m pytest
+.venv\Scripts\python -m collector.main --dry-run
+.venv\Scripts\python -m collector.main --mode build --dry-run
+.venv\Scripts\python -m http.server 8765 --directory _site
+```
+`--dry-run` は `tests/fixtures` の架空の投稿で動き、API呼び出しも通知もしません。結果は `.dryrun/` に出ます。
+
+## 注意
+- フォロー・リポストや外部サイトへの応募を**自動で行う機能はありません**（Xの自動化ルールや各サイトの規約違反、凍結リスクを避けるため）。
+- 読み取りは自動のため、締切や条件が間違っている可能性があります。応募前に必ず応募ページで確認してください。
+- 公開リポジトリのスケジュール実行は、60日間リポジトリに動きがないと停止されることがあります（このシステムは毎回データをコミットするため通常は止まりません）。
