@@ -42,6 +42,15 @@ def test_dry_run_end_to_end(tmp_path):
     assert again["meta"]["last_run"]["fetched"] == 0
     assert len(again["items"]) == len(items["items"])
 
+    # 登録済みで受取方法が不明な「〜店」は、次の実行で店頭扱いになり外れる
+    stored = json.loads((data / "items.json").read_text(encoding="utf-8"))
+    stored["items"][0]["retailer"], stored["items"][0]["channel"] = "MINT吉祥寺店", "unknown"
+    (data / "items.json").write_text(json.dumps(stored, ensure_ascii=False), encoding="utf-8")
+    assert main(["--dry-run", "--data-dir", str(data)]) == 0
+    third = json.loads((data / "items.json").read_text(encoding="utf-8"))
+    assert "MINT吉祥寺店" not in {i["retailer"] for i in third["items"]}
+    assert len(third["items"]) == len(items["items"]) - 1
+
     cands = json.loads((data / "candidates.json").read_text(encoding="utf-8"))
     assert [c["handle"] for c in cands["candidates"]] == ["game_chusen_demo"]
 

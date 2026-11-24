@@ -159,6 +159,18 @@ def test_channel_detection(engine):
     assert engine.channel_of("", "Amazon", hint="unknown") == "online"
 
 
+def test_branch_store_name_counts_as_store_when_unknown(engine):
+    # 「〜店」で終わる実店舗の名前で、受取方法が書かれていなければ店頭扱い
+    assert engine.channel_of("", "MINT吉祥寺店") == "store"
+    assert engine.channel_of("", "JUMP SHOP各店") == "store"
+    assert engine.channel_of("", "ときわ書房本八幡スクエア店", hint="unknown") == "store"
+    # ネットと判断できるもの・通販の名前は変えない
+    assert engine.channel_of("", "カードボックス船橋駅前店", hint="online") == "online"
+    assert engine.channel_of(normalize("※配送のみ"), "MINT吉祥寺店") == "online"
+    assert engine.channel_of("", "Luruna Card通販") == "unknown"
+    assert engine.channel_of("", "ビックカメラ") == "unknown"
+
+
 def test_store_pickup_post_is_marked_store(engine):
     text = ("【抽選受付中‼️】ポケカ🔥 ヤマダデンキで 「MEGA 30th CELEBRATION カードセット（9種セット）」の抽選販売受付中！ "
             "応募：11/25(水)23:59〆 ※店頭受取")

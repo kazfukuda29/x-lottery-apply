@@ -67,6 +67,10 @@ store_markers:
   - 入店抽選
   - 入店予約
   - 整理券
+# 受取方法が書かれていないとき、店名がこれで終われば実店舗の抽選とみなす（例：MINT吉祥寺店、JUMP SHOP各店）。
+# 店名に online_markers の語（通販・オンラインなど）を含むものは除く
+store_name_suffixes:
+  - 店
 online_markers:
   - 通販
   - オンライン

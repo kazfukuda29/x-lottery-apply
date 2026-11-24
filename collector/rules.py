@@ -363,7 +363,16 @@ class RuleEngine:
             return "online"
         if retailer in self.retailers.online_only:
             return "online"
+        if retailer and self.is_branch_name(retailer):
+            return "store"
         return "unknown"
+
+    def is_branch_name(self, retailer: str) -> bool:
+        """「MINT吉祥寺店」「JUMP SHOP各店」のような実店舗の名前か（通販・オンラインを含む名前は除く）。"""
+        name = normalize(retailer).strip()
+        if not name or self._any("online_markers", name):
+            return False
+        return any(name.endswith(normalize(s)) for s in self.kw.get("store_name_suffixes") or [])
 
     def classify(self, post: dict, now: datetime) -> RuleResult:
         text = post.get("text", "")

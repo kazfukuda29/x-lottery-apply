@@ -198,8 +198,12 @@ class Runner:
         if ai_posts:
             new_items += self.run_ai(ai_posts)
 
+        # 受取方法が不明なものは店名で判定し直す（判定のルールを変えたときに、登録済みの分にも効くように）
+        for i in self.store.items:
+            if i.get("channel", "unknown") == "unknown":
+                i["channel"] = self.engine.channel_of("", i.get("retailer") or "")
         # 後から「店頭受取」とわかったものなど、対象外になったアイテムを外す
-        excluded = {i["id"] for i in self.store.items if i.get("channel", "unknown") not in self.channels}
+        excluded ={i["id"] for i in self.store.items if i.get("channel", "unknown") not in self.channels}
         if excluded:
             self.store.items = [i for i in self.store.items if i["id"] not in excluded]
             new_items = [i for i in new_items if i["id"] not in excluded]
