@@ -431,6 +431,36 @@
    "updated_at": "2026-11-24T22:46+09:00"
   },
   {
+   "id": "ib3005187c5",
+   "product": "ビックカメラ 2027年福箱",
+   "product_key": "ビックカメラ2027年福箱",
+   "genre": "other",
+   "channel": "online",
+   "retailer": "ビックカメラ",
+   "apply_start": null,
+   "apply_end": "2026-11-25T20:59+09:00",
+   "apply_url": "https://www.biccamera.com/bc/c/sale/special/fukubako/index.html",
+   "detail_url": null,
+   "requirements": [
+    "購入履歴"
+   ],
+   "announce_date": "2026-12-03",
+   "sources": [
+    {
+     "post_id": "2125479418093260977",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2125479418093260977",
+     "created_at": "2026-11-25T15:39+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-25T16:47+09:00",
+   "updated_at": "2026-11-25T16:47+09:00"
+  },
+  {
    "id": "i8a56839fc1",
    "product": "ポケモンカードゲーム 30th CELEBRATION カードセット 9種コンプセット",
    "product_key": "ポケモンカードゲーム30thcelebrationカードセット9種コンプセット",
@@ -725,9 +755,11 @@
    "retailer": "ドラゴンスター",
    "apply_start": null,
    "apply_end": "2026-11-26T23:59+09:00",
-   "apply_url": null,
+   "apply_url": "https://dorasuta.membercard.jp/lottery",
    "detail_url": "https://dorasuta.membercard.jp/lottery-entry?ekey=QTNxVWFvN0VBZWtWaFJwMzJOUnhFUT09",
-   "requirements": [],
+   "requirements": [
+    "会員登録"
+   ],
    "announce_date": "2026-11-27",
    "sources": [
     {
@@ -737,12 +769,20 @@
      "created_at": "2026-11-24T22:30+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125410620698997038",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2125410620698997038",
+     "created_at": "2026-11-25T11:05+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
-   "extracted_by": "rule",
+   "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-25T16:47+09:00"
   },
   {
    "id": "i9ef4832478",
@@ -845,12 +885,20 @@
      "created_at": "2026-11-25T08:10+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125409136632590423",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2125409136632590423",
+     "created_at": "2026-11-25T11:00+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-25T08:25+09:00"
+   "updated_at": "2026-11-25T16:47+09:00"
   },
   {
    "id": "i4959150f12",
@@ -893,12 +941,20 @@
      "created_at": "2026-11-25T08:10+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125409136632590423",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2125409136632590423",
+     "created_at": "2026-11-25T11:00+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-25T08:25+09:00"
+   "updated_at": "2026-11-25T16:47+09:00"
   },
   {
    "id": "i8ad660d9c9",
@@ -1070,7 +1126,8 @@
    "apply_url": "https://pokemon.fukufukutoreka.com/lottery/31",
    "detail_url": null,
    "requirements": [
-    "購入履歴"
+    "購入履歴",
+    "会員登録"
    ],
    "announce_date": null,
    "sources": [
@@ -1097,12 +1154,50 @@
      "created_at": "2026-11-25T08:00+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125440597880426955",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2125440597880426955",
+     "created_at": "2026-11-25T13:05+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-25T08:25+09:00"
+   "updated_at": "2026-11-25T16:47+09:00"
+  },
+  {
+   "id": "i6bceb76e05",
+   "product": "ピカピカボックス2027",
+   "product_key": "ピカピカボックス2027",
+   "genre": "other",
+   "channel": "online",
+   "retailer": "ポケモンセンターオンライン",
+   "apply_start": null,
+   "apply_end": "2026-11-30T16:59+09:00",
+   "apply_url": "https://www.pokemoncenter-online.com/lottery/apply.html",
+   "detail_url": null,
+   "requirements": [
+    "クレジットカード"
+   ],
+   "announce_date": "2026-12-09",
+   "sources": [
+    {
+     "post_id": "2125481264061047026",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2125481264061047026",
+     "created_at": "2026-11-25T15:46+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "rule",
+   "first_seen": "2026-11-25T16:47+09:00",
+   "updated_at": "2026-11-25T16:47+09:00"
   },
   {
    "id": "i6d9432eccb",
@@ -1174,6 +1269,36 @@
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
    "updated_at": "2026-11-25T08:25+09:00"
+  },
+  {
+   "id": "i8a7b8d01c9",
+   "product": "2027年 夢のお年玉箱",
+   "product_key": "2027年夢のお年玉箱",
+   "genre": "other",
+   "channel": "online",
+   "retailer": "ヨドバシカメラ",
+   "apply_start": null,
+   "apply_end": "2026-11-30T23:59+09:00",
+   "apply_url": "https://limited.yodobashi.com/",
+   "detail_url": null,
+   "requirements": [
+    "会員登録"
+   ],
+   "announce_date": "2026-12-02",
+   "sources": [
+    {
+     "post_id": "2125479141327917256",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2125479141327917256",
+     "created_at": "2026-11-25T15:38+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-25T16:47+09:00",
+   "updated_at": "2026-11-25T16:47+09:00"
   },
   {
    "id": "ie14fc07a70",
@@ -1288,6 +1413,68 @@
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
    "updated_at": "2026-11-24T22:46+09:00"
+  },
+  {
+   "id": "i3975a71ab5",
+   "product": "ポケモンカードゲーム スペシャルセット①（6BOXセット）",
+   "product_key": "ポケモンカードゲームスペシャルセット16boxセット",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "エディオン",
+   "apply_start": null,
+   "apply_end": "2026-12-20T23:59+09:00",
+   "apply_url": "https://edion-cp.com/edionnet01031",
+   "detail_url": null,
+   "requirements": [
+    "会員登録",
+    "購入履歴"
+   ],
+   "announce_date": "2026-12-25",
+   "sources": [
+    {
+     "post_id": "2125483806006415782",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2125483806006415782",
+     "created_at": "2026-11-25T15:56+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-25T16:47+09:00",
+   "updated_at": "2026-11-25T16:47+09:00"
+  },
+  {
+   "id": "i7383cfa697",
+   "product": "ポケモンカードゲーム 福袋（30th CELEBRATION・ストームエメラルダ・インフェルノXなど詰め合わせ）",
+   "product_key": "ポケモンカードゲーム福袋30thcelebrationストームエメラルダインフェルノxなど詰め合わせ",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "エディオン",
+   "apply_start": "2026-11-25T10:00+09:00",
+   "apply_end": "2026-12-20T23:59+09:00",
+   "apply_url": "https://edion-cp.com/edionnet010312",
+   "detail_url": null,
+   "requirements": [
+    "会員登録",
+    "購入履歴"
+   ],
+   "announce_date": "2026-12-25",
+   "sources": [
+    {
+     "post_id": "2125425332685865136",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2125425332685865136",
+     "created_at": "2026-11-25T12:04+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-25T16:47+09:00",
+   "updated_at": "2026-11-25T16:47+09:00"
   },
   {
    "id": "i5c285341a9",
@@ -1913,30 +2100,30 @@
  ],
  "review": [],
  "meta": {
-  "generated_at": "2026-11-25T08:25+09:00",
+  "generated_at": "2026-11-25T16:47+09:00",
   "site_url": "https://kazfukuda29.github.io/x-lottery-apply/",
   "repo": "kazfukuda29/x-lottery-apply",
   "model": "claude-opus-5-5",
   "last_run": {
-   "fetched": 42,
-   "dropped": 9,
+   "fetched": 20,
+   "dropped": 3,
    "rule": 1,
-   "ai_posts": 32,
+   "ai_posts": 16,
    "ai_failed": 0,
    "store_skipped": 0,
-   "new_items": 10
+   "new_items": 5
   },
   "errors": [],
   "x_usage_today": {
    "date": "2026-11-25",
-   "posts": 109,
-   "requests": 3
+   "posts": 129,
+   "requests": 4
   },
   "ai_usage_today": {
    "date": "2026-11-25",
-   "calls": 4,
-   "input_tokens": 37313,
-   "output_tokens": 5807
+   "calls": 6,
+   "input_tokens": 53418,
+   "output_tokens": 7465
   },
   "accounts": [
    "crashseq",
@@ -1952,16 +2139,16 @@
     "only": 8
    },
    "premium_kakaku": {
-    "items": 3,
-    "only": 3
+    "items": 9,
+    "only": 6
    },
    "SelectInfoDeals": {
     "items": 39,
     "only": 30
    },
    "stock_alertv2": {
-    "items": 8,
-    "only": 4
+    "items": 11,
+    "only": 5
    },
    "p_bandai": {
     "items": 0,
@@ -1976,7 +2163,7 @@
    "window_days": 14,
    "days_observed": 1,
    "target": 0.95,
-   "total": 50,
+   "total": 55,
    "accounts": {
     "crashseq": {
      "online": 14,
@@ -1984,9 +2171,9 @@
      "posts_per_day": 4.0
     },
     "premium_kakaku": {
-     "online": 3,
-     "only": 3,
-     "posts_per_day": 13.0
+     "online": 9,
+     "only": 6,
+     "posts_per_day": 22.0
     },
     "SelectInfoDeals": {
      "online": 39,
@@ -1994,9 +2181,9 @@
      "posts_per_day": 4.0
     },
     "stock_alertv2": {
-     "online": 7,
-     "only": 3,
-     "posts_per_day": 34.0
+     "online": 10,
+     "only": 4,
+     "posts_per_day": 44.0
     },
     "p_bandai": {
      "online": 0,
@@ -2006,42 +2193,42 @@
     "datto_TCG": {
      "online": 1,
      "only": 0,
-     "posts_per_day": 4.0
+     "posts_per_day": 5.0
     }
    },
    "cover": [
     {
      "handle": "SelectInfoDeals",
      "adds": 39,
-     "coverage": 0.78
+     "coverage": 0.709
+    },
+    {
+     "handle": "premium_kakaku",
+     "adds": 7,
+     "coverage": 0.836
     },
     {
      "handle": "crashseq",
      "adds": 5,
-     "coverage": 0.88
-    },
-    {
-     "handle": "premium_kakaku",
-     "adds": 3,
-     "coverage": 0.94
+     "coverage": 0.927
     },
     {
      "handle": "stock_alertv2",
-     "adds": 3,
+     "adds": 4,
      "coverage": 1.0
     }
    ],
    "keep": [
     "SelectInfoDeals",
-    "crashseq",
     "premium_kakaku",
+    "crashseq",
     "stock_alertv2"
    ],
    "drop": [
     "p_bandai",
     "datto_TCG"
    ],
-   "evaluated_at": "2026-11-25T08:25+09:00"
+   "evaluated_at": "2026-11-25T16:47+09:00"
   }
  }
 }

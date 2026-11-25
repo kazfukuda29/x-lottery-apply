@@ -2,10 +2,10 @@
  "fetched": {
   "2026-11-25": {
    "crashseq": 4,
-   "stock_alertv2": 34,
-   "premium_kakaku": 13,
+   "stock_alertv2": 44,
+   "premium_kakaku": 22,
    "selectinfodeals": 4,
-   "datto_tcg": 4
+   "datto_tcg": 5
   }
  },
  "items": {
@@ -153,7 +153,8 @@
   },
   "iebeb290c63": {
    "authors": [
-    "premium_kakaku"
+    "premium_kakaku",
+    "stock_alertv2"
    ],
    "first_seen": "2026-11-24T22:46+09:00",
    "apply_end": "2026-11-26T23:59+09:00",
@@ -178,6 +179,7 @@
   "iee524cf242": {
    "authors": [
     "crashseq",
+    "premium_kakaku",
     "selectinfodeals",
     "stock_alertv2"
    ],
@@ -188,6 +190,7 @@
   "i4959150f12": {
    "authors": [
     "crashseq",
+    "premium_kakaku",
     "selectinfodeals",
     "stock_alertv2"
    ],
@@ -206,7 +209,8 @@
   "i79e3e98254": {
    "authors": [
     "crashseq",
-    "selectinfodeals"
+    "selectinfodeals",
+    "stock_alertv2"
    ],
    "first_seen": "2026-11-24T22:46+09:00",
    "apply_end": "2026-11-29T23:59+09:00",
@@ -422,6 +426,46 @@
    "first_seen": "2026-11-25T08:25+09:00",
    "apply_end": null,
    "label": "トレカプラザ55通販｜UNION ARENA ブースターパック D.Gray-man【UA58BT】 BOX"
+  },
+  "i6bceb76e05": {
+   "authors": [
+    "premium_kakaku"
+   ],
+   "first_seen": "2026-11-25T16:47+09:00",
+   "apply_end": "2026-11-30T16:59+09:00",
+   "label": "ポケモンセンターオンライン｜ピカピカボックス2027"
+  },
+  "i7383cfa697": {
+   "authors": [
+    "stock_alertv2"
+   ],
+   "first_seen": "2026-11-25T16:47+09:00",
+   "apply_end": "2026-12-20T23:59+09:00",
+   "label": "エディオン｜ポケモンカードゲーム 福袋（30th CELEBRATION・ストームエメラルダ・インフェルノXなど詰め合わ"
+  },
+  "i8a7b8d01c9": {
+   "authors": [
+    "premium_kakaku"
+   ],
+   "first_seen": "2026-11-25T16:47+09:00",
+   "apply_end": "2026-11-30T23:59+09:00",
+   "label": "ヨドバシカメラ｜2027年 夢のお年玉箱"
+  },
+  "ib3005187c5": {
+   "authors": [
+    "premium_kakaku"
+   ],
+   "first_seen": "2026-11-25T16:47+09:00",
+   "apply_end": "2026-11-25T20:59+09:00",
+   "label": "ビックカメラ｜ビックカメラ 2027年福箱"
+  },
+  "i3975a71ab5": {
+   "authors": [
+    "premium_kakaku"
+   ],
+   "first_seen": "2026-11-25T16:47+09:00",
+   "apply_end": "2026-12-20T23:59+09:00",
+   "label": "エディオン｜ポケモンカードゲーム スペシャルセット①（6BOXセット）"
   }
  },
  "started": "2026-11-25T08:25+09:00"
