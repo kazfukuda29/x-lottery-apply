@@ -1,26 +1,70 @@
 {
  "candidates": [
   {
-   "handle": "medakadesu41",
-   "name": "めだか @マック ハッピーセット ちいかわ しまむら スタバ ゴンチャ 大好き！",
-   "hits": 9,
-   "first_seen": "2026-11-24T22:46+09:00",
-   "last_seen": "2026-11-25T08:25+09:00",
-   "sample_url": "https://x.com/medakadesu41/status/2125282549245022688",
-   "followers": 165,
-   "description": "所得制限嫌い。RTしたりします。\nAmazonアソシエイト参加中。無言フォロー失礼します。怪しい垢ごめんなさい。",
-   "online_hits": 6
-  },
-  {
    "handle": "koalakoalakko11",
    "name": "コアラっこ",
-   "hits": 8,
+   "hits": 14,
    "first_seen": "2026-11-24T22:46+09:00",
-   "last_seen": "2026-11-25T08:25+09:00",
-   "sample_url": "https://x.com/koalakoalakko11/status/2125293873916522499",
-   "followers": 235,
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/koalakoalakko11/status/2125580764222042243",
+   "followers": 233,
    "description": "無言フォロー失礼します💦スポーツ観戦好き！Amazonアソシエイトプログラム参加中です。怪しい人はごめんなさい🙇",
-   "online_hits": 6
+   "online_hits": 12
+  },
+  {
+   "handle": "medakadesu41",
+   "name": "めだか @マック ハッピーセット ちいかわ しまむら スタバ ゴンチャ 大好き！",
+   "hits": 14,
+   "first_seen": "2026-11-24T22:46+09:00",
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/medakadesu41/status/2125584539032678486",
+   "followers": 165,
+   "description": "所得制限嫌い。RTしたりします。\nAmazonアソシエイト参加中。無言フォロー失礼します。怪しい垢ごめんなさい。",
+   "online_hits": 11
+  },
+  {
+   "handle": "tenks_01",
+   "name": "てんてん ｜ホビー最新情報",
+   "hits": 7,
+   "first_seen": "2026-11-24T22:46+09:00",
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/tenks_01/status/2125581742102986784",
+   "followers": 12010,
+   "description": "情報を探す手間を少なくする情報アカウント！\n\nできる限り簡潔に分かりやすくまとめます！\n\nポケモン、ONE PIECE、ちいかわ、ドラクエなど、アニメ・ゲーム・",
+   "online_hits": 2
+  },
+  {
+   "handle": "chang_tingyao",
+   "name": "ポケカ抽選ボード｜ポケカ・ワンピ・NARUTO 抽選まとめ",
+   "hits": 7,
+   "first_seen": "2026-11-24T22:46+09:00",
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/chang_tingyao/status/2125620847046000702",
+   "followers": 1510,
+   "description": "ポケカ抽選を締切順に・毎日更新(フォローお願いします)\nポケカ・ワンピカードの抽選を締切順にまとめています📅\nNARUTOカードゲームは体験会の応募と発売情報を",
+   "online_hits": 2
+  },
+  {
+   "handle": "AkiPokemonLife",
+   "name": "あき【トレカLIFE】",
+   "hits": 5,
+   "first_seen": "2026-11-24T22:46+09:00",
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/AkiPokemonLife/status/2125603574394896767",
+   "followers": 13463,
+   "description": "ポケモン/遊戯王/ワンピース/ドラゴンボールなどトレカ情報取り扱い💹\nYouTubeも是非チャンネル登録も是非💻\n🎁 メルカリ招待コード【XDJQSU】登録で5",
+   "online_hits": 2
+  },
+  {
+   "handle": "Chura_bo",
+   "name": "美らぼ〜@トレカ情報局",
+   "hits": 3,
+   "first_seen": "2026-11-24T22:46+09:00",
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/Chura_bo/status/2125580323279036724",
+   "followers": 1141,
+   "description": "🌺美らぼ〜（ちゅらぼ〜）です！\n沖縄を中心にポケカ・ワンピカード・トレカ全般の抽選・再販情報を発信📢\n全国の注目情報もお届け✨\nトレカ収集や開封結果もマイペース",
+   "online_hits": 2
   },
   {
    "handle": "tensenaka",
@@ -34,36 +78,14 @@
    "description": "ポケモンカード専門で発信中。新弾の当たり考察・相場速報、BOX/オリパ開封レポート、スタンダードのデッキ考察を投稿。PTCGL配信も準備中。おすすめの購入先はプ"
   },
   {
-   "handle": "tenks_01",
-   "name": "てんてん ｜ホビー最新情報",
-   "hits": 6,
-   "first_seen": "2026-11-24T22:46+09:00",
-   "last_seen": "2026-11-25T08:25+09:00",
-   "sample_url": "https://x.com/tenks_01/status/2125351534112518509",
-   "followers": 11930,
-   "description": "情報を探す手間を少なくする情報アカウント！\n\nできる限り簡潔に分かりやすくまとめます！\n\nポケモン、ONE PIECE、ちいかわ、ドラクエなど、アニメ・ゲーム・",
-   "online_hits": 1
-  },
-  {
-   "handle": "AkiPokemonLife",
-   "name": "あき【トレカLIFE】",
-   "hits": 4,
-   "first_seen": "2026-11-24T22:46+09:00",
-   "last_seen": "2026-11-25T08:25+09:00",
-   "sample_url": "https://x.com/AkiPokemonLife/status/2125333641899520294",
-   "followers": 13449,
-   "description": "ポケモン/遊戯王/ワンピース/ドラゴンボールなどトレカ情報取り扱い💹\nYouTubeも是非チャンネル登録も是非💻\n🎁 メルカリ招待コード【XDJQSU】登録で5",
-   "online_hits": 1
-  },
-  {
-   "handle": "chang_tingyao",
-   "name": "ポケカ抽選ボード｜ポケカ・ワンピ・NARUTO 抽選まとめ",
+   "handle": "tcgradar777",
+   "name": "【公式】トレカ抽選レーダー",
    "hits": 3,
    "first_seen": "2026-11-24T22:46+09:00",
-   "last_seen": "2026-11-25T08:25+09:00",
-   "sample_url": "https://x.com/chang_tingyao/status/2125321641383071852",
-   "followers": 1492,
-   "description": "ポケカ抽選を締切順に・毎日更新(フォローお願いします)\nポケカ・ワンピカードの抽選を締切順にまとめています📅\nNARUTOカードゲームは体験会の応募と発売情報を",
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/tcgradar777/status/2125609385674297687",
+   "followers": 91,
+   "description": "ポケカ・ワンピース・遊戯王などトレカの抽選販売情報を自動でお届け🎴\n新しい抽選が見つかり次第ポスト📢 締切が近い順の一覧・締切前の通知は下記サイトにて確認🔥（登",
    "online_hits": 1
   },
   {
@@ -100,6 +122,17 @@
    "online_hits": 1
   },
   {
+   "handle": "sango_from35",
+   "name": "TORETODO｜トレカ抽選まとめ＆管理｜さんご",
+   "hits": 2,
+   "first_seen": "2026-11-25T08:25+09:00",
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/sango_from35/status/2125581865239347236",
+   "followers": 4403,
+   "description": "トレカ抽選情報をまとめてチェック＆管理！\n🔻登録無料🔻\nhttps://t.co/qDNkukrtgm\n\n◆ポケカ・遊戯王・ワンピース・ドラゴンボール対応！\n◆",
+   "online_hits": 1
+  },
+  {
    "handle": "Ekz22Lb",
    "name": "ポケカ再販・抽選情報｜トレチャン",
    "hits": 2,
@@ -109,6 +142,28 @@
    "followers": 423,
    "description": "ポケカの再販・抽選情報を毎日まとめて投稿🔔\n📅毎朝7時｜今日の再販・抽選まとめ\n🏪コンビニ再販（セブン・ローソン・ファミマ）\n⏰締切・当選発表・受付開始をすぐお",
    "online_hits": 1
+  },
+  {
+   "handle": "Nchan_000",
+   "name": "Nちゃん♡雷エネルギー⚡️",
+   "hits": 2,
+   "first_seen": "2026-11-26T03:32+09:00",
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/Nchan_000/status/2125589052984603010",
+   "followers": 390,
+   "description": "⚡️ポケカ抽選・トレカ抽選・物販ネタを毎日発信｜当選/落選アンケートも実施｜転売ネタも少しだけ｜フォロー＆通知ONで見逃さない(ᵔᴥᵔ)",
+   "online_hits": 1
+  },
+  {
+   "handle": "pokemonGamebase",
+   "name": "ポケモンカード攻略＠Gamebase",
+   "hits": 2,
+   "first_seen": "2026-11-26T03:32+09:00",
+   "online_hits": 1,
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/pokemonGamebase/status/2125622612869128537",
+   "followers": 77,
+   "description": "ポケカ攻略サイト「Gamebase」公式\n🎯抽選・予約情報を毎日更新\n📊30th・最新弾の相場まとめ\n🃏無料ツール：開封シミュ／デッキ構築／一人回し／事故率計算"
   },
   {
    "handle": "toreka_sakamoto",
@@ -133,6 +188,17 @@
    "description": "【網羅率No.1】トレカの抽選速報ならトレゲト📣\n大手だけでなく、ネットやSNSの細かい情報まで\n徹底的にまとめています✨️\nフォロー＆通知ONで締切を見流さな"
   },
   {
+   "handle": "pokecasukkyanen",
+   "name": "ポケカ抽選予約速報を関西人のワイが速報するで📣",
+   "hits": 1,
+   "first_seen": "2026-11-26T03:32+09:00",
+   "online_hits": 1,
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/pokecasukkyanen/status/2125608348796219437",
+   "followers": 7913,
+   "description": "🔥「ポケカ買われへん！」をなくしたい🔥\n抽選・予約・再販・先着情報を見つけ次第速報⚡️\n🎯BOX抽選｜予約開始｜再販・入荷情報\n🔔通知ON推奨！一緒に定価GET"
+  },
+  {
    "handle": "card_shop_alpha",
    "name": "Card Shop ALPHA",
    "hits": 1,
@@ -144,6 +210,17 @@
    "description": "🔥オリパ|トレカニュース|プレゼント企画🎁\n📲ガチャサイトがアプリになりました‼️\n\n💎ALPHAのオンラインオリパ💎\n🎰Web https://t.co/28"
   },
   {
+   "handle": "tcg_lottery_cal",
+   "name": "ポケカレ！｜トレカ抽選販売カレンダー",
+   "hits": 1,
+   "first_seen": "2026-11-26T03:32+09:00",
+   "online_hits": 1,
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/tcg_lottery_cal/status/2125602465919995977",
+   "followers": 1474,
+   "description": "トレカに関する情報をまとめてます⛳️\n\nポケカやワンピカ等、TCGの抽選販売をまとめてるカレンダーサイトを運営中📅 \n掲載数日本一🇯🇵\n締切が近い順にわかる❗️"
+  },
+  {
    "handle": "toreca_entry",
    "name": "トレカ抽選・予約・再販情報@トレカエントリー",
    "hits": 1,
@@ -153,6 +230,17 @@
    "sample_url": "https://x.com/toreca_entry/status/2125348814169215148",
    "followers": 1231,
    "description": "【🔥毎日更新🔥】ポケカの抽選情報を毎日お届け！\n30周年記念BOX👑などの注目BOXから大人気スターターパックまで！\n📅予約開始情報や🎯抽選状況をお知らせします"
+  },
+  {
+   "handle": "pinapofsfs",
+   "name": "ぱいなぽ＠フォロバ100｜フォロバ99｜トミカ・ホットウィール好き車好き",
+   "hits": 1,
+   "first_seen": "2026-11-26T03:32+09:00",
+   "online_hits": 1,
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/pinapofsfs/status/2125610460200218699",
+   "followers": 418,
+   "description": "車と漫画とコーラが好き。欲求には忠実に生きようと思う。プラレールも気になってるけど、手を出したらお財布が終わりそう。Amazonアソシエイトに参加"
   },
   {
    "handle": "hakka_nn",
@@ -188,6 +276,28 @@
    "description": "✨美容とトレンド大好き女子✨\nAmazon・楽天で【話題のコスメ💄美容家電💆‍♀️ダイエットグッズ】を中心に紹介中！\n最新ランキング・限定特典・セール情報を毎日"
   },
   {
+   "handle": "PickUpYouIWantU",
+   "name": "ポケカ速報レーダー",
+   "hits": 1,
+   "first_seen": "2026-11-26T03:32+09:00",
+   "online_hits": 1,
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/PickUpYouIWantU/status/2125578964580303356",
+   "followers": 98,
+   "description": "ポケカの抽選受付開始・当選発表・新商品・再入荷情報を自動でお知らせ📡\n\n応募チャンスや入荷情報を見逃さないための情報通知アカウントです。\n\n※情報は各公式サイト"
+  },
+  {
+   "handle": "melteln",
+   "name": "めろーん@ポケカとフレンダに夢中",
+   "hits": 1,
+   "first_seen": "2026-11-26T03:32+09:00",
+   "online_hits": 1,
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/melteln/status/2125634367276060736",
+   "followers": 76,
+   "description": "ライトなポケモンオタク。ゲームはフリー、カードはコレクター勢です。嫁はブースター。HGSSが忘れられない老害アラサー。あとはイラスト描いたり描かなかったり。 A"
+  },
+  {
    "handle": "trend_diar67661",
    "name": "あやの | Trend Diary",
    "hits": 1,
@@ -210,14 +320,35 @@
    "description": "楽天で見つけた可愛いものを紹介してます🛒💕\nちいかわ・サンリオ・たまごっち・シール系多め✨\n在庫復活や予約情報もゆるっと共有します🌷\n※PRを含みます"
   },
   {
+   "handle": "sedorikaidoki",
+   "name": "セドリかいどき",
+   "hits": 1,
+   "first_seen": "2026-11-26T03:32+09:00",
+   "online_hits": 1,
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/sedorikaidoki/status/2125608270777999816",
+   "followers": 0,
+   "description": ""
+  },
+  {
    "handle": "chusen_toreka",
    "name": "🍑ピーチ@トレカ抽選速報🦩",
-   "hits": 4,
+   "hits": 6,
    "first_seen": "2026-11-24T22:46+09:00",
-   "last_seen": "2026-11-24T22:46+09:00",
-   "sample_url": "https://x.com/chusen_toreka/status/2125193965469311413",
-   "followers": 3931,
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/chusen_toreka/status/2125590335820636319",
+   "followers": 3980,
    "description": "#ポケカ｜#ワンピ｜#抽選｜#ブルバ100｜【募】PR\nトレカの抽選・予約・再販情報を毎日速報でお届け🗣️\n◤応募を逃したくない人は🩷いいね🔖ブックマーク！🛎️"
+  },
+  {
+   "handle": "dyCqWHrpC0EUevN",
+   "name": "🐤在庫復活❗️発見ピヨちゃん💡💰情報発信します💰",
+   "hits": 4,
+   "first_seen": "2026-11-26T03:32+09:00",
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/dyCqWHrpC0EUevN/status/2125622556581568918",
+   "followers": 1081,
+   "description": "💡発見するのが大〜好きなピヨちゃんです💡　　　　　　　\nもしかしたら、そのうちあなたが欲しかった商品が見つかるかも⁉️\nサクッと買って早くお目当ての商品をGET"
   },
   {
    "handle": "TCG_LP_Navi",
@@ -260,14 +391,14 @@
    "description": "ポケカ / ワンピカード / トレカ全般の情報⚡️\n▫️ 再販・入荷のリアルタイム速報\n▫️ 新弾・予約・抽選開始アラート\n▫️ 相場動向＆シングルカード情報\n"
   },
   {
-   "handle": "tcgradar777",
-   "name": "【公式】トレカ抽選レーダー",
+   "handle": "Tekabo_BOX",
+   "name": "【テカボ】あなた専用の定価BOX抽選通知｜配送といける店舗のみ",
    "hits": 2,
    "first_seen": "2026-11-24T22:46+09:00",
-   "last_seen": "2026-11-25T08:25+09:00",
-   "sample_url": "https://x.com/tcgradar777/status/2125365085430505749",
-   "followers": 90,
-   "description": "ポケカ・ワンピース・遊戯王などトレカの抽選販売情報を自動でお届け🎴\n新しい抽選が見つかり次第ポスト📢 締切が近い順の一覧・締切前の通知は下記サイトにて確認🔥（登"
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/Tekabo_BOX/status/2125588063384399972",
+   "followers": 75,
+   "description": "今までにない、あなた専用のポケカ抽選通知。配送と行ける店だけ。応募管理・発表リマインド・来店案内まで。当選保証なし。定価BOXの取り方・相場感も発信します。取り"
   },
   {
    "handle": "Choco_Mint_Go",
@@ -278,6 +409,16 @@
    "sample_url": "https://x.com/Choco_Mint_Go/status/2125204048378724637",
    "followers": 34,
    "description": "トレカ好き。トレカの抽選、締切で負けないためのアカウント🔔 ポケモン／ワンピース／ドラゴンボールの抽選・再販速報＋締切リマインド（3時間前・1時間前）。"
+  },
+  {
+   "handle": "origeto_jp",
+   "name": "オリゲト🔔ポケカ抽選・締切アラート",
+   "hits": 2,
+   "first_seen": "2026-11-25T08:25+09:00",
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/origeto_jp/status/2125648238287954273",
+   "followers": 32,
+   "description": "応募し忘れゼロへ🔔 ポケカの抽選開始・締切直前・再販情報を毎日お届け｜30周年関連は最優先で速報｜外れた日の救済オリパ情報はプロフィールのリンクから｜※PR含む"
   },
   {
    "handle": "Yasuqota",
@@ -298,6 +439,16 @@
    "sample_url": "https://x.com/ds_ecommerce/status/2125212864537297281",
    "followers": 61497,
    "description": "トレカ専門店ドラゴンスターの運営する通信販売です📦\n\n🔶取扱トレカ\nマジック/ポケカ/DM/VG/ワンピ/ホロカ/ユニアリ/ロルカナ/デジカ/遊戯王/YGRD/"
+  },
+  {
+   "handle": "gamestylejp",
+   "name": "トレカスタイル@MEGA×MEGAパレード予約情報",
+   "hits": 1,
+   "first_seen": "2026-11-26T03:32+09:00",
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/gamestylejp/status/2125615996304322917",
+   "followers": 40654,
+   "description": "トレーディングカードの最新情報を発信しているアカウントです。主にポケモンカードの再販情報と予約情報に力を入れてポストしています。再販情報の情報提供をリプでお待ち"
   },
   {
    "handle": "ario_bepop",
@@ -350,14 +501,14 @@
    "description": "【網羅率No.1】ポケカの抽選速報ならトレゲト📣\n大手だけでなく、ネットやSNSの細かい情報まで\n徹底的にまとめています✨️\nフォロー＆通知ONで締切を見流さな"
   },
   {
-   "handle": "sango_from35",
-   "name": "TORETODO｜トレカ抽選まとめ＆管理｜さんご",
+   "handle": "BANIRA_kirie",
+   "name": "ばにら🫠",
    "hits": 1,
-   "first_seen": "2026-11-25T08:25+09:00",
-   "last_seen": "2026-11-25T08:25+09:00",
-   "sample_url": "https://x.com/sango_from35/status/2125359044697428439",
-   "followers": 4403,
-   "description": "トレカ抽選情報をまとめてチェック＆管理！\n🔻登録無料🔻\nhttps://t.co/qDNkukrtgm\n\n◆ポケカ・遊戯王・ワンピース・ドラゴンボール対応！\n◆"
+   "first_seen": "2026-11-26T03:32+09:00",
+   "last_seen": "2026-11-26T03:32+09:00",
+   "sample_url": "https://x.com/BANIRA_kirie/status/2125597666629558724",
+   "followers": 1882,
+   "description": "ガンプラ作ってます 進捗ない時はRP多めになりがち 雑多垢→@I_Skream_82La"
   },
   {
    "handle": "meari_ichinose",
@@ -378,146 +529,6 @@
    "sample_url": "https://x.com/Iverson_sukides/status/2125220652747804906",
    "followers": 1424,
    "description": "中国グッズ代購はリーにお任せ📦\n1️⃣🎁 エイステ・鬼滅などグッズ代購\n2️⃣🛍️ 淘宝・小紅書の買付代行\n3️⃣🎮 ヴァロモバ・BLEACHなどゲーム課金\n4"
-  },
-  {
-   "handle": "Chura_bo",
-   "name": "美らぼ〜@トレカ情報局",
-   "hits": 1,
-   "first_seen": "2026-11-24T22:46+09:00",
-   "last_seen": "2026-11-24T22:46+09:00",
-   "sample_url": "https://x.com/Chura_bo/status/2125223561963134976",
-   "followers": 1142,
-   "description": "🌺美らぼ〜（ちゅらぼ〜）です！\n沖縄を中心にポケカ・ワンピカード・トレカ全般の抽選・再販情報を発信📢\n全国の注目情報もお届け✨\nトレカ収集や開封結果もマイペース"
-  },
-  {
-   "handle": "recycleshopv",
-   "name": "リサイクルショップV 長岡店 (新潟県)",
-   "hits": 1,
-   "first_seen": "2026-11-24T22:46+09:00",
-   "last_seen": "2026-11-24T22:46+09:00",
-   "sample_url": "https://x.com/recycleshopv/status/2125215417753022505",
-   "followers": 1086,
-   "description": "遊戯王専用デュエルスペース(32席)  \n 遊戯王/ゲーム/ 漫画/ 攻略本/フィギュア\n月曜定休、平日12時〜20時、土日祝11時〜20時  \nポケカ旧裏在庫"
-  },
-  {
-   "handle": "ss7ev",
-   "name": "かわちゃん ˚✩∗*ﾟ⋆｡˚✩☪︎⋆｡˚✩‧",
-   "hits": 1,
-   "first_seen": "2026-11-25T08:25+09:00",
-   "last_seen": "2026-11-25T08:25+09:00",
-   "sample_url": "https://x.com/ss7ev/status/2125352808358801572",
-   "followers": 1070,
-   "description": "家族と仲間の為に! 😂 #防災介助士 #防災士 #NACK5 #御朱印巡り #川口市"
-  },
-  {
-   "handle": "TCG_datebank",
-   "name": "トレカデータバンク　ポケカ予約抽選情報",
-   "hits": 1,
-   "first_seen": "2026-11-25T08:25+09:00",
-   "last_seen": "2026-11-25T08:25+09:00",
-   "sample_url": "https://x.com/TCG_datebank/status/2125356289333055900",
-   "followers": 894,
-   "description": "ポケカを中心にトレカの最新情報を発信🔥\n📢 予約・抽選・再販情報\n💰 買取・販売相場\n🚨 入荷・販売速報\n📈 相場データ・注目カード\n\n「知らなかった」をなくす"
-  },
-  {
-   "handle": "yakka_0321",
-   "name": "yakka",
-   "hits": 1,
-   "first_seen": "2026-11-24T22:46+09:00",
-   "last_seen": "2026-11-24T22:46+09:00",
-   "sample_url": "https://x.com/yakka_0321/status/2125193330544054712",
-   "followers": 848,
-   "description": "玩具メーカーで働くゲームが好きな人🎮みんなでハローマックに行こうよ🦁"
-  },
-  {
-   "handle": "pocketkyuura",
-   "name": "ポケカアプリ開発中_pockkyuura",
-   "hits": 1,
-   "first_seen": "2026-11-24T22:46+09:00",
-   "last_seen": "2026-11-24T22:46+09:00",
-   "sample_url": "https://x.com/pocketkyuura/status/2125222865947774997",
-   "followers": 441,
-   "description": "ポケカ/TCG抽選管理アプリ(2026.6/17~)と、ポケカの収集さがすアプリを個人開発しています。\n\n🎴 応募期限・当落・購入/受取予定をまとめて管理\n\n古"
-  },
-  {
-   "handle": "otk_juhu",
-   "name": "お金の情報💰️",
-   "hits": 1,
-   "first_seen": "2026-11-24T22:46+09:00",
-   "last_seen": "2026-11-24T22:46+09:00",
-   "sample_url": "https://x.com/otk_juhu/status/2125217422663893000",
-   "followers": 348,
-   "description": "・30代後半/公務員(事務職)🖋️\n・資産形成5年目/投資信託/ETF💴\n・NISAでオルカン・S&P500へ長期投資中です🤓\n・グルメ・イベント・エンタメ関連"
-  },
-  {
-   "handle": "KYmodery",
-   "name": "K・Y・モデラー",
-   "hits": 1,
-   "first_seen": "2026-11-24T22:46+09:00",
-   "last_seen": "2026-11-24T22:46+09:00",
-   "sample_url": "https://x.com/KYmodery/status/2125211044838830565",
-   "followers": 213,
-   "description": "主にガンプラの事を、綴っております🙇\nモデラーと名乗っているものの、パチ組が主に自由気ままに、平和にガンプラを楽しむおじさんです🥴無言フォロー大歓迎、無言フォロ"
-  },
-  {
-   "handle": "choco573",
-   "name": "choco57",
-   "hits": 1,
-   "first_seen": "2026-11-24T22:46+09:00",
-   "last_seen": "2026-11-24T22:46+09:00",
-   "sample_url": "https://x.com/choco573/status/2125197580187644271",
-   "followers": 140,
-   "description": "猫と可愛いものが好きです。以前の相互4桁のアカウントは削除して再作成です。あまりフォローされないようにアカウント名、アイコン、自己紹介を違うものにしていましたが"
-  },
-  {
-   "handle": "shirube_works",
-   "name": "福袋しるべ｜福袋2027の予約日",
-   "hits": 1,
-   "first_seen": "2026-11-24T22:46+09:00",
-   "last_seen": "2026-11-24T22:46+09:00",
-   "sample_url": "https://x.com/shirube_works/status/2125202502887055450",
-   "followers": 137,
-   "description": "📌福袋2027の予約開始と抽選の締切をお知らせ\n📌締切は前日の夜と当日の朝に流します\n📌スタバ・ポケモン・ディズニーなど人気152ブランド\n📌日付と価格は公式の"
-  },
-  {
-   "handle": "Tekabo_BOX",
-   "name": "【テカボ】あなた専用の定価BOX抽選通知｜配送といける店舗のみ",
-   "hits": 1,
-   "first_seen": "2026-11-24T22:46+09:00",
-   "last_seen": "2026-11-24T22:46+09:00",
-   "sample_url": "https://x.com/Tekabo_BOX/status/2125208561617924200",
-   "followers": 75,
-   "description": "今までにない、あなた専用のポケカ抽選通知。配送と行ける店だけ。応募管理・発表リマインド・来店案内まで。当選保証なし。定価BOXの取り方・相場感も発信します。取り"
-  },
-  {
-   "handle": "paynomichi",
-   "name": "ペイの道",
-   "hits": 1,
-   "first_seen": "2026-11-24T22:46+09:00",
-   "last_seen": "2026-11-24T22:46+09:00",
-   "sample_url": "https://x.com/paynomichi/status/2125214793435099240",
-   "followers": 39,
-   "description": "キャッシュレス・ポイ活などのお得な情報を発信していこうと思います。"
-  },
-  {
-   "handle": "origeto_jp",
-   "name": "オリゲト🔔ポケカ抽選・締切アラート",
-   "hits": 1,
-   "first_seen": "2026-11-25T08:25+09:00",
-   "last_seen": "2026-11-25T08:25+09:00",
-   "sample_url": "https://x.com/origeto_jp/status/2125298609994219774",
-   "followers": 32,
-   "description": "応募し忘れゼロへ🔔 ポケカの抽選開始・締切直前・再販情報を毎日お届け｜30周年関連は最優先で速報｜外れた日の救済オリパ情報はプロフィールのリンクから｜※PR含む"
-  },
-  {
-   "handle": "crown0304",
-   "name": "🌸U.K.🌸",
-   "hits": 1,
-   "first_seen": "2026-11-25T08:25+09:00",
-   "last_seen": "2026-11-25T08:25+09:00",
-   "sample_url": "https://x.com/crown0304/status/2125351369334997145",
-   "followers": 29,
-   "description": "フォロバします🙇 食べ物とお得情報を毎日投稿中。 Amazonのアソシエイトとして適格販売により収入を得ています"
   }
  ],
  "counted_post_ids": [
@@ -617,7 +628,54 @@
   "2125367418868695371",
   "2125367544194449528",
   "2125367609562734746",
-  "2125369371279216862"
+  "2125369371279216862",
+  "2125578964580303356",
+  "2125580323279036724",
+  "2125580627038933297",
+  "2125580666008113153",
+  "2125580764222042243",
+  "2125581742102986784",
+  "2125581865239347236",
+  "2125583339591721343",
+  "2125584539032678486",
+  "2125587048329535994",
+  "2125588063384399972",
+  "2125589052984603010",
+  "2125590335820636319",
+  "2125593170633523619",
+  "2125595864034844987",
+  "2125597666629558724",
+  "2125599638908510426",
+  "2125602465919995977",
+  "2125603574394896767",
+  "2125604926860747150",
+  "2125605175347830925",
+  "2125608270777999816",
+  "2125608348796219437",
+  "2125609080517779469",
+  "2125609385674297687",
+  "2125610460200218699",
+  "2125610460359614969",
+  "2125614989788737974",
+  "2125615996304322917",
+  "2125617346517803188",
+  "2125620847046000702",
+  "2125622556581568918",
+  "2125622612869128537",
+  "2125625559443255592",
+  "2125626558316511577",
+  "2125627651910156606",
+  "2125628022002958752",
+  "2125628189636710549",
+  "2125630089161502881",
+  "2125634367276060736",
+  "2125640659013140959",
+  "2125645188576248068",
+  "2125646616132493658",
+  "2125648238287954273",
+  "2125652771323998406",
+  "2125654921135714395",
+  "2125655758201094261"
  ],
- "updated_at": "2026-11-25T08:25+09:00"
+ "updated_at": "2026-11-26T03:32+09:00"
 }

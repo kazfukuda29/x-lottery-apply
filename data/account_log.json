@@ -6,6 +6,13 @@
    "premium_kakaku": 22,
    "selectinfodeals": 4,
    "datto_tcg": 5
+  },
+  "2026-11-26": {
+   "premium_kakaku": 7,
+   "stock_alertv2": 11,
+   "selectinfodeals": 5,
+   "datto_tcg": 2,
+   "crashseq": 2
   }
  },
  "items": {
@@ -381,6 +388,7 @@
   },
   "i5b709323c4": {
    "authors": [
+    "selectinfodeals",
     "stock_alertv2"
    ],
    "first_seen": "2026-11-25T08:25+09:00",
@@ -429,14 +437,18 @@
   },
   "i6bceb76e05": {
    "authors": [
-    "premium_kakaku"
+    "datto_tcg",
+    "premium_kakaku",
+    "selectinfodeals",
+    "stock_alertv2"
    ],
    "first_seen": "2026-11-25T16:47+09:00",
-   "apply_end": "2026-11-30T16:59+09:00",
+   "apply_end": "2026-11-30T23:59+09:00",
    "label": "ポケモンセンターオンライン｜ピカピカボックス2027"
   },
   "i7383cfa697": {
    "authors": [
+    "selectinfodeals",
     "stock_alertv2"
    ],
    "first_seen": "2026-11-25T16:47+09:00",
@@ -461,11 +473,52 @@
   },
   "i3975a71ab5": {
    "authors": [
-    "premium_kakaku"
+    "premium_kakaku",
+    "selectinfodeals"
    ],
    "first_seen": "2026-11-25T16:47+09:00",
    "apply_end": "2026-12-20T23:59+09:00",
    "label": "エディオン｜ポケモンカードゲーム スペシャルセット①（6BOXセット）"
+  },
+  "ife11ad5161": {
+   "authors": [
+    "premium_kakaku"
+   ],
+   "first_seen": "2026-11-26T03:32+09:00",
+   "apply_end": "2026-11-27T23:59+09:00",
+   "label": "ドラゴンスター｜ポケモンカードゲーム 福袋（30th CELEBRATION・ストームエメラルダ・インフェルノXなど詰め"
+  },
+  "i3be453298a": {
+   "authors": [
+    "premium_kakaku"
+   ],
+   "first_seen": "2026-11-26T03:32+09:00",
+   "apply_end": "2026-11-27T23:59+09:00",
+   "label": "ドラゴンスター｜REACH THE GOD"
+  },
+  "i16f5dc661d": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-26T03:32+09:00",
+   "apply_end": "2026-11-27T21:00+09:00",
+   "label": "プラネットポケット｜プラポケ福袋2027 ポケモンカード"
+  },
+  "i7f54051b9e": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-26T03:32+09:00",
+   "apply_end": "2026-11-27T21:00+09:00",
+   "label": "プラネットポケット｜プラポケ福袋2027 ワンピースカード"
+  },
+  "i7f2c20050a": {
+   "authors": [
+    "premium_kakaku"
+   ],
+   "first_seen": "2026-11-26T03:32+09:00",
+   "apply_end": "2026-12-20T23:59+09:00",
+   "label": "エディオン｜ベイブレードX ランダムブースター山盛りセット 福袋"
   }
  },
  "started": "2026-11-25T08:25+09:00"

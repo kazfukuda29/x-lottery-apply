@@ -704,7 +704,8 @@
    "requirements": [
     "フォロー",
     "購入履歴",
-    "レビュー"
+    "レビュー",
+    "Xフォロー"
    ],
    "announce_date": "2026-11-27",
    "sources": [
@@ -739,12 +740,20 @@
      "created_at": "2026-11-25T08:00+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596494938149349",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596494938149349",
+     "created_at": "2026-11-25T23:24+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-25T08:25+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "iebeb290c63",
@@ -777,12 +786,20 @@
      "created_at": "2026-11-25T11:05+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125637986683617534",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2125637986683617534",
+     "created_at": "2026-11-26T02:09+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-25T16:47+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "i9ef4832478",
@@ -807,12 +824,20 @@
      "created_at": "2026-11-24T22:34+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125597293093282075",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125597293093282075",
+     "created_at": "2026-11-25T23:27+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "i46ee35dc86",
@@ -837,12 +862,20 @@
      "created_at": "2026-11-24T22:34+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125597293093282075",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125597293093282075",
+     "created_at": "2026-11-25T23:27+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "iee524cf242",
@@ -854,7 +887,7 @@
    "apply_start": "2026-11-25T11:00+09:00",
    "apply_end": "2026-11-26T23:59+09:00",
    "apply_url": "https://aeonretail.com/Page/k-lottery_sale_02.aspx",
-   "detail_url": null,
+   "detail_url": "https://x.com/premium_kakaku/status/2125409136632590423",
    "requirements": [
     "会員登録",
     "クレジットカード",
@@ -893,12 +926,28 @@
      "created_at": "2026-11-25T11:00+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596786480083211",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596786480083211",
+     "created_at": "2026-11-25T23:25+09:00",
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "post_id": "2125637986683617534",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2125637986683617534",
+     "created_at": "2026-11-26T02:09+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-25T16:47+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "i4959150f12",
@@ -910,7 +959,7 @@
    "apply_start": "2026-11-25T11:00+09:00",
    "apply_end": "2026-11-26T23:59+09:00",
    "apply_url": "https://aeonretail.com/Page/k-lottery_sale_02.aspx",
-   "detail_url": null,
+   "detail_url": "https://x.com/premium_kakaku/status/2125409136632590423",
    "requirements": [
     "会員登録",
     "クレジットカード",
@@ -949,12 +998,28 @@
      "created_at": "2026-11-25T11:00+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596786480083211",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596786480083211",
+     "created_at": "2026-11-25T23:25+09:00",
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "post_id": "2125637986683617534",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2125637986683617534",
+     "created_at": "2026-11-26T02:09+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-25T16:47+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "i8ad660d9c9",
@@ -997,7 +1062,9 @@
    "apply_end": "2026-11-27T10:00+09:00",
    "apply_url": "https://www.toreca-port.com/items/166900843",
    "detail_url": null,
-   "requirements": [],
+   "requirements": [
+    "会員登録"
+   ],
    "announce_date": "2026-11-27",
    "sources": [
     {
@@ -1007,12 +1074,83 @@
      "created_at": "2026-11-25T03:48+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596494938149349",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596494938149349",
+     "created_at": "2026-11-25T23:24+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-25T08:25+09:00",
-   "updated_at": "2026-11-25T08:25+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
+  },
+  {
+   "id": "i16f5dc661d",
+   "product": "プラポケ福袋2027 ポケモンカード",
+   "product_key": "プラポケ福袋2027ポケモンカード",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "プラネットポケット",
+   "apply_start": null,
+   "apply_end": "2026-11-27T21:00+09:00",
+   "apply_url": "https://docs.google.com/forms/d/e/1FAIpQLSfO6ETho880CTfwGJFnHHNjdxnAtCUBVJX0t6QFmYlYjdfXGQ/viewform",
+   "detail_url": null,
+   "requirements": [
+    "会員登録",
+    "購入履歴",
+    "クレジットカード"
+   ],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2125596499791016087",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596499791016087",
+     "created_at": "2026-11-25T23:24+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-26T03:32+09:00",
+   "updated_at": "2026-11-26T03:32+09:00"
+  },
+  {
+   "id": "i7f54051b9e",
+   "product": "プラポケ福袋2027 ワンピースカード",
+   "product_key": "プラポケ福袋2027ワンピースカード",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "プラネットポケット",
+   "apply_start": null,
+   "apply_end": "2026-11-27T21:00+09:00",
+   "apply_url": "https://docs.google.com/forms/d/e/1FAIpQLSfO6ETho880CTfwGJFnHHNjdxnAtCUBVJX0t6QFmYlYjdfXGQ/viewform",
+   "detail_url": null,
+   "requirements": [
+    "会員登録",
+    "購入履歴"
+   ],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2125596786480083211",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596786480083211",
+     "created_at": "2026-11-25T23:25+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-26T03:32+09:00",
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "id7b2b6a809",
@@ -1047,12 +1185,48 @@
      "created_at": "2026-11-24T22:33+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596499791016087",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596499791016087",
+     "created_at": "2026-11-25T23:24+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
+  },
+  {
+   "id": "i3be453298a",
+   "product": "REACH THE GOD",
+   "product_key": "reachthegod",
+   "genre": "other",
+   "channel": "online",
+   "retailer": "ドラゴンスター",
+   "apply_start": null,
+   "apply_end": "2026-11-27T23:59+09:00",
+   "apply_url": null,
+   "detail_url": "https://dorasuta.membercard.jp/lottery",
+   "requirements": [],
+   "announce_date": "2026-11-29",
+   "sources": [
+    {
+     "post_id": "2125589015139369169",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2125589015139369169",
+     "created_at": "2026-11-25T22:54+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "rule",
+   "first_seen": "2026-11-26T03:32+09:00",
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "i28aa6b5063",
@@ -1083,6 +1257,34 @@
    "extracted_by": "ai",
    "first_seen": "2026-11-25T08:25+09:00",
    "updated_at": "2026-11-25T08:25+09:00"
+  },
+  {
+   "id": "ife11ad5161",
+   "product": "ポケモンカードゲーム 福袋（30th CELEBRATION・ストームエメラルダ・インフェルノXなど詰め合わせ）",
+   "product_key": "ポケモンカードゲーム福袋30thcelebrationストームエメラルダインフェルノxなど詰め合わせ",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "ドラゴンスター",
+   "apply_start": null,
+   "apply_end": "2026-11-27T23:59+09:00",
+   "apply_url": null,
+   "detail_url": "https://dorasuta.membercard.jp/lottery",
+   "requirements": [],
+   "announce_date": "2026-11-29",
+   "sources": [
+    {
+     "post_id": "2125588243311972654",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2125588243311972654",
+     "created_at": "2026-11-25T22:51+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "rule",
+   "first_seen": "2026-11-26T03:32+09:00",
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "i2e381225bd",
@@ -1162,42 +1364,20 @@
      "created_at": "2026-11-25T13:05+09:00",
      "likes": 0,
      "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-25T16:47+09:00"
-  },
-  {
-   "id": "i6bceb76e05",
-   "product": "ピカピカボックス2027",
-   "product_key": "ピカピカボックス2027",
-   "genre": "other",
-   "channel": "online",
-   "retailer": "ポケモンセンターオンライン",
-   "apply_start": null,
-   "apply_end": "2026-11-30T16:59+09:00",
-   "apply_url": "https://www.pokemoncenter-online.com/lottery/apply.html",
-   "detail_url": null,
-   "requirements": [
-    "クレジットカード"
-   ],
-   "announce_date": "2026-12-09",
-   "sources": [
+    },
     {
-     "post_id": "2125481264061047026",
-     "author": "premium_kakaku",
-     "url": "https://x.com/premium_kakaku/status/2125481264061047026",
-     "created_at": "2026-11-25T15:46+09:00",
+     "post_id": "2125596499791016087",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596499791016087",
+     "created_at": "2026-11-25T23:24+09:00",
      "likes": 0,
      "reposts": 0
     }
    ],
    "buzz": 0,
-   "extracted_by": "rule",
-   "first_seen": "2026-11-25T16:47+09:00",
-   "updated_at": "2026-11-25T16:47+09:00"
+   "extracted_by": "ai",
+   "first_seen": "2026-11-24T22:46+09:00",
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "i6d9432eccb",
@@ -1263,12 +1443,28 @@
      "created_at": "2026-11-25T08:00+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125571585709060444",
+     "author": "datto_TCG",
+     "url": "https://x.com/datto_TCG/status/2125571585709060444",
+     "created_at": "2026-11-25T21:45+09:00",
+     "likes": 1,
+     "reposts": 0
+    },
+    {
+     "post_id": "2125596499791016087",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596499791016087",
+     "created_at": "2026-11-25T23:24+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-25T08:25+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "i8a7b8d01c9",
@@ -1299,6 +1495,78 @@
    "extracted_by": "ai",
    "first_seen": "2026-11-25T16:47+09:00",
    "updated_at": "2026-11-25T16:47+09:00"
+  },
+  {
+   "id": "i6bceb76e05",
+   "product": "ピカピカボックス2027",
+   "product_key": "ピカピカボックス2027",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "ポケモンセンターオンライン",
+   "apply_start": "2026-11-25T00:00+09:00",
+   "apply_end": "2026-11-30T23:59+09:00",
+   "apply_url": "https://www.pokemoncenter-online.com/lottery/apply.html",
+   "detail_url": "https://datto-inc.co.jp/tcg/?utm_source=x&utm_medium=social&utm_campaign=night",
+   "requirements": [
+    "クレジットカード",
+    "会員登録",
+    "電話番号認証"
+   ],
+   "announce_date": "2026-12-09",
+   "sources": [
+    {
+     "post_id": "2125481264061047026",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2125481264061047026",
+     "created_at": "2026-11-25T15:46+09:00",
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "post_id": "2125548743185547504",
+     "author": "datto_TCG",
+     "url": "https://x.com/datto_TCG/status/2125548743185547504",
+     "created_at": "2026-11-25T20:14+09:00",
+     "likes": 2,
+     "reposts": 0
+    },
+    {
+     "post_id": "2125571585709060444",
+     "author": "datto_TCG",
+     "url": "https://x.com/datto_TCG/status/2125571585709060444",
+     "created_at": "2026-11-25T21:45+09:00",
+     "likes": 1,
+     "reposts": 0
+    },
+    {
+     "post_id": "2125578631053488304",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2125578631053488304",
+     "created_at": "2026-11-25T22:13+09:00",
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "post_id": "2125593108650049997",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125593108650049997",
+     "created_at": "2026-11-25T23:11+09:00",
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "post_id": "2125596499791016087",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596499791016087",
+     "created_at": "2026-11-25T23:24+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 2,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-25T16:47+09:00",
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "ie14fc07a70",
@@ -1339,12 +1607,20 @@
      "created_at": "2026-11-25T08:00+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596499791016087",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596499791016087",
+     "created_at": "2026-11-25T23:24+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-25T08:25+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "i758cf42ca1",
@@ -1377,12 +1653,20 @@
      "created_at": "2026-11-24T22:33+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596499791016087",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596499791016087",
+     "created_at": "2026-11-25T23:24+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "ib5d3e0e632",
@@ -1415,19 +1699,51 @@
    "updated_at": "2026-11-24T22:46+09:00"
   },
   {
+   "id": "i7f2c20050a",
+   "product": "ベイブレードX ランダムブースター山盛りセット 福袋",
+   "product_key": "ベイブレードxランダムブースター山盛りセット福袋",
+   "genre": "hobby",
+   "channel": "online",
+   "retailer": "エディオン",
+   "apply_start": null,
+   "apply_end": "2026-12-20T23:59+09:00",
+   "apply_url": "https://edion-cp.com/edionnet010314",
+   "detail_url": null,
+   "requirements": [
+    "会員登録",
+    "購入履歴"
+   ],
+   "announce_date": "2026-12-25",
+   "sources": [
+    {
+     "post_id": "2125605786982416722",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2125605786982416722",
+     "created_at": "2026-11-26T00:01+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-26T03:32+09:00",
+   "updated_at": "2026-11-26T03:32+09:00"
+  },
+  {
    "id": "i3975a71ab5",
    "product": "ポケモンカードゲーム スペシャルセット①（6BOXセット）",
    "product_key": "ポケモンカードゲームスペシャルセット16boxセット",
    "genre": "tcg",
    "channel": "online",
    "retailer": "エディオン",
-   "apply_start": null,
+   "apply_start": "2026-11-25T10:00+09:00",
    "apply_end": "2026-12-20T23:59+09:00",
    "apply_url": "https://edion-cp.com/edionnet01031",
    "detail_url": null,
    "requirements": [
     "会員登録",
-    "購入履歴"
+    "購入履歴",
+    "SMS認証"
    ],
    "announce_date": "2026-12-25",
    "sources": [
@@ -1438,12 +1754,20 @@
      "created_at": "2026-11-25T15:56+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596499791016087",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596499791016087",
+     "created_at": "2026-11-25T23:24+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-25T16:47+09:00",
-   "updated_at": "2026-11-25T16:47+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "i7383cfa697",
@@ -1458,7 +1782,8 @@
    "detail_url": null,
    "requirements": [
     "会員登録",
-    "購入履歴"
+    "購入履歴",
+    "SMS認証"
    ],
    "announce_date": "2026-12-25",
    "sources": [
@@ -1469,12 +1794,20 @@
      "created_at": "2026-11-25T12:04+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596499791016087",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596499791016087",
+     "created_at": "2026-11-25T23:24+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-25T16:47+09:00",
-   "updated_at": "2026-11-25T16:47+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "i5c285341a9",
@@ -1563,12 +1896,20 @@
      "created_at": "2026-11-24T22:34+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125597293093282075",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125597293093282075",
+     "created_at": "2026-11-25T23:27+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "icd1a06b5e1",
@@ -1602,12 +1943,20 @@
      "created_at": "2026-11-24T22:33+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596499791016087",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596499791016087",
+     "created_at": "2026-11-25T23:24+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "i821e83d945",
@@ -1668,12 +2017,20 @@
      "created_at": "2026-11-24T22:33+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596499791016087",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596499791016087",
+     "created_at": "2026-11-25T23:24+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "idb6854821b",
@@ -1734,12 +2091,20 @@
      "created_at": "2026-11-24T22:34+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596786480083211",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596786480083211",
+     "created_at": "2026-11-25T23:25+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "i4756704112",
@@ -1772,12 +2137,20 @@
      "created_at": "2026-11-24T22:34+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596786480083211",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596786480083211",
+     "created_at": "2026-11-25T23:25+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "i2d6b5db1b6",
@@ -1810,12 +2183,20 @@
      "created_at": "2026-11-24T22:34+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596786480083211",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596786480083211",
+     "created_at": "2026-11-25T23:25+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "id46c7ccb57",
@@ -1848,12 +2229,20 @@
      "created_at": "2026-11-24T22:34+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596786480083211",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596786480083211",
+     "created_at": "2026-11-25T23:25+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "ifbeefa5494",
@@ -1886,12 +2275,20 @@
      "created_at": "2026-11-24T22:34+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596786480083211",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596786480083211",
+     "created_at": "2026-11-25T23:25+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "i54d51f09b0",
@@ -1924,12 +2321,20 @@
      "created_at": "2026-11-24T22:34+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596786480083211",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596786480083211",
+     "created_at": "2026-11-25T23:25+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "i7b2d5c06f7",
@@ -1992,12 +2397,20 @@
      "created_at": "2026-11-24T22:34+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596786480083211",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596786480083211",
+     "created_at": "2026-11-25T23:25+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "icac25789b0",
@@ -2022,12 +2435,20 @@
      "created_at": "2026-11-24T22:34+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596786480083211",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596786480083211",
+     "created_at": "2026-11-25T23:25+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "i73eca1d0fd",
@@ -2052,12 +2473,20 @@
      "created_at": "2026-11-24T22:34+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596786480083211",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596786480083211",
+     "created_at": "2026-11-25T23:25+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 0,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   },
   {
    "id": "i59033e8d67",
@@ -2090,24 +2519,32 @@
      "created_at": "2026-11-24T22:34+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125596786480083211",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125596786480083211",
+     "created_at": "2026-11-25T23:25+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
+   "updated_at": "2026-11-26T03:32+09:00"
   }
  ],
  "review": [],
  "meta": {
-  "generated_at": "2026-11-25T16:47+09:00",
+  "generated_at": "2026-11-26T03:32+09:00",
   "site_url": "https://kazfukuda29.github.io/x-lottery-apply/",
   "repo": "kazfukuda29/x-lottery-apply",
   "model": "claude-opus-5-5",
   "last_run": {
-   "fetched": 20,
-   "dropped": 3,
-   "rule": 1,
+   "fetched": 27,
+   "dropped": 8,
+   "rule": 3,
    "ai_posts": 16,
    "ai_failed": 0,
    "store_skipped": 0,
@@ -2115,15 +2552,15 @@
   },
   "errors": [],
   "x_usage_today": {
-   "date": "2026-11-25",
-   "posts": 129,
-   "requests": 4
+   "date": "2026-11-26",
+   "posts": 77,
+   "requests": 2
   },
   "ai_usage_today": {
-   "date": "2026-11-25",
-   "calls": 6,
-   "input_tokens": 53418,
-   "output_tokens": 7465
+   "date": "2026-11-26",
+   "calls": 5,
+   "input_tokens": 59553,
+   "output_tokens": 7884
   },
   "accounts": [
    "crashseq",
@@ -2139,23 +2576,23 @@
     "only": 8
    },
    "premium_kakaku": {
-    "items": 9,
-    "only": 6
+    "items": 12,
+    "only": 7
    },
    "SelectInfoDeals": {
-    "items": 39,
-    "only": 30
+    "items": 45,
+    "only": 32
    },
    "stock_alertv2": {
-    "items": 11,
-    "only": 5
+    "items": 12,
+    "only": 3
    },
    "p_bandai": {
     "items": 0,
     "only": 0
    },
    "datto_TCG": {
-    "items": 1,
+    "items": 2,
     "only": 0
    }
   },
@@ -2163,27 +2600,27 @@
    "window_days": 14,
    "days_observed": 1,
    "target": 0.95,
-   "total": 55,
+   "total": 60,
    "accounts": {
     "crashseq": {
      "online": 14,
      "only": 5,
-     "posts_per_day": 4.0
+     "posts_per_day": 3.0
     },
     "premium_kakaku": {
-     "online": 9,
-     "only": 6,
-     "posts_per_day": 22.0
+     "online": 12,
+     "only": 7,
+     "posts_per_day": 14.5
     },
     "SelectInfoDeals": {
-     "online": 39,
-     "only": 30,
-     "posts_per_day": 4.0
+     "online": 45,
+     "only": 32,
+     "posts_per_day": 4.5
     },
     "stock_alertv2": {
-     "online": 10,
-     "only": 4,
-     "posts_per_day": 44.0
+     "online": 11,
+     "only": 2,
+     "posts_per_day": 27.5
     },
     "p_bandai": {
      "online": 0,
@@ -2191,44 +2628,44 @@
      "posts_per_day": 0.0
     },
     "datto_TCG": {
-     "online": 1,
+     "online": 2,
      "only": 0,
-     "posts_per_day": 5.0
+     "posts_per_day": 3.5
     }
    },
    "cover": [
     {
      "handle": "SelectInfoDeals",
-     "adds": 39,
-     "coverage": 0.709
+     "adds": 45,
+     "coverage": 0.75
     },
     {
      "handle": "premium_kakaku",
-     "adds": 7,
-     "coverage": 0.836
+     "adds": 8,
+     "coverage": 0.883
     },
     {
      "handle": "crashseq",
      "adds": 5,
-     "coverage": 0.927
+     "coverage": 0.967
     },
     {
      "handle": "stock_alertv2",
-     "adds": 4,
+     "adds": 2,
      "coverage": 1.0
     }
    ],
    "keep": [
     "SelectInfoDeals",
     "premium_kakaku",
-    "crashseq",
-    "stock_alertv2"
+    "crashseq"
    ],
    "drop": [
+    "stock_alertv2",
     "p_bandai",
     "datto_TCG"
    ],
-   "evaluated_at": "2026-11-25T16:47+09:00"
+   "evaluated_at": "2026-11-26T03:32+09:00"
   }
  }
 }
