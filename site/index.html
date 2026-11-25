@@ -159,10 +159,19 @@
   .due.applied { background: var(--ok-soft); color: var(--ok); }
   .store-sub { font-size: 12px; color: var(--muted); margin-top: 2px; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; }
   .req { font-size: 11px; border: 1px solid var(--line); border-radius: 6px; padding: 0 6px; color: var(--text); }
-  .chan { font-size: 11px; font-weight: 700; border-radius: 6px; padding: 0 6px; }
-  .chan.online { background: var(--ok-soft); color: var(--ok); }
-  .chan.unknown { background: var(--surface-2); color: var(--muted); }
+  /* 受取方法。ネットで応募して配送で受け取るものは塗りつぶしで目立たせ、不明なものは点線にする */
+  .chan {
+    flex: none; display: inline-flex; align-items: center; gap: 3px; white-space: nowrap;
+    font-size: 12px; font-weight: 800; border-radius: 6px; padding: 2px 7px; border: 1px solid transparent;
+  }
+  .chan svg { width: 15px; height: 15px; }
+  .chan.online { background: var(--ok); color: var(--surface); }
+  .chan.unknown { background: transparent; color: var(--muted); border: 1px dashed currentColor; font-weight: 600; }
   .chan.store { background: var(--soon-soft); color: var(--soon); }
+  .chip.ship { display: inline-flex; align-items: center; gap: 4px; color: var(--ok); border-color: var(--ok); font-weight: 700; }
+  .chip.ship svg { width: 16px; height: 16px; }
+  .chip.ship[aria-pressed="true"] { background: var(--ok); color: var(--surface); border-color: var(--ok); }
+  .chip-sep { flex: none; width: 1px; background: var(--line); margin: 4px 2px; }
   .actions { display: flex; gap: 6px; margin-top: 8px; align-items: stretch; }
   .actions .btn.small { flex: none; min-height: 40px; padding: 0 10px; }
   .btn {
@@ -301,7 +310,10 @@
 
   // ------------------------------------------------------------ 保存（このスマホの中だけ）
   const defaults = () => ({ status: {}, muted: {}, dismissed: {}, showSkipped: false, showUnknown: true, genre: "all", tab: "open", pending: null });
-  const CHANNEL = { online: ["online", "ネット"], unknown: ["unknown", "受取方法は要確認"], store: ["store", "店頭"] };
+  const CHANNEL = { online: ["online", "ネット・配送"], unknown: ["unknown", "受取 要確認"], store: ["store", "店頭"] };
+  const TRUCK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 6h11v10H2z"/><path d="M13 9h4l3 3v4h-7"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="16.5" cy="17.5" r="1.8"/></svg>';
+  // 決まった中身のアイコンだけを作る（投稿由来の文字列は入れない）
+  const icon = (markup) => { const t = document.createElement("template"); t.innerHTML = markup; return t.content.firstChild; };
   let prefs = load();
   function load() {
     try { return Object.assign(defaults(), JSON.parse(localStorage.getItem(STORE_KEY) || "{}")); }
@@ -470,6 +482,12 @@
     const box = document.getElementById("genres");
     box.replaceChildren();
     const all = visibleOpenItems("all");
+    // ワンタッチで「ネットで応募して配送で受け取る抽選」だけにする（設定画面の「受取方法が書かれていない抽選も表示する」と同じ設定）
+    box.append($("button", {
+      class: "chip ship", "aria-pressed": String(prefs.showUnknown === false),
+      onclick: () => { prefs.showUnknown = prefs.showUnknown === false; save(); render(); },
+    }, icon(TRUCK), "ネット配送のみ", $("span", { class: "n", text: all.filter((i) => i.channel === "online").length })),
+    $("span", { class: "chip-sep", "aria-hidden": "true" }));
     for (const [g, label] of GENRES) {
       const n = g === "all" ? all.length : all.filter((i) => (i.genre || "other") === g).length;
       if (g !== "all" && !n && prefs.genre !== g) continue;
@@ -500,7 +518,7 @@
     if (!items.length) {
       view.append($("div", { class: "empty" },
         $("strong", { text: data.items.length ? "表示できる抽選はありません" : "まだ抽選情報がありません" }),
-        data.items.length ? "ジャンルの絞り込みや、スキップ・非表示の設定を確認してください。" : "収集が動くと、ここに受付中の抽選が並びます。"));
+        data.items.length ? "ジャンルや「ネット配送のみ」の絞り込み、スキップ・非表示の設定を確認してください。" : "収集が動くと、ここに受付中の抽選が並びます。"));
     }
     if (items.length) view.append(dueSummary(items));
     let current = null;
@@ -557,11 +575,13 @@
     const s = statusOf(item.id);
     const due = dueBadge(item);
     const li = $("li", { class: "store" + (s === "skipped" ? " is-skipped" : "") + (due.cls && due.cls !== "upcoming" ? ` ${due.cls}` : "") });
+    const [chCls, chLabel] = CHANNEL[item.channel] || CHANNEL.unknown;
     li.append($("div", { class: "store-top" },
       $("span", { class: "shop", text: item.retailer || "店舗不明" }),
       $("span", { class: `due ${due.cls}`, text: due.label })));
-    const [chCls, chLabel] = CHANNEL[item.channel] || CHANNEL.unknown;
-    const sub = $("div", { class: "store-sub" }, $("span", { class: `chan ${chCls}`, text: chLabel }), $("span", { text: due.sub }));
+    const sub = $("div", { class: "store-sub" },
+      $("span", { class: `chan ${chCls}` }, chCls === "online" ? icon(TRUCK) : null, chLabel),
+      $("span", { text: due.sub }));
     for (const r of item.requirements || []) sub.append($("span", { class: "req", text: r }));
     if (item.announce_date) sub.append($("span", { text: `当選発表 ${fmtDate(new Date(item.announce_date + "T00:00:00+09:00"), false)}` }));
     li.append(sub);
