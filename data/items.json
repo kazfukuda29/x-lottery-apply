@@ -794,12 +794,20 @@
      "created_at": "2026-11-26T02:09+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125728739988324585",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2125728739988324585",
+     "created_at": "2026-11-26T08:10+09:00",
+     "likes": 1,
+     "reposts": 0
     }
    ],
-   "buzz": 0,
+   "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-26T03:32+09:00"
+   "updated_at": "2026-11-26T13:02+09:00"
   },
   {
    "id": "i9ef4832478",
@@ -942,12 +950,20 @@
      "created_at": "2026-11-26T02:09+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125728739988324585",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2125728739988324585",
+     "created_at": "2026-11-26T08:10+09:00",
+     "likes": 1,
+     "reposts": 0
     }
    ],
-   "buzz": 0,
+   "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-26T03:32+09:00"
+   "updated_at": "2026-11-26T13:02+09:00"
   },
   {
    "id": "i4959150f12",
@@ -1014,12 +1030,20 @@
      "created_at": "2026-11-26T02:09+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2125728739988324585",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2125728739988324585",
+     "created_at": "2026-11-26T08:10+09:00",
+     "likes": 1,
+     "reposts": 0
     }
    ],
-   "buzz": 0,
+   "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-26T03:32+09:00"
+   "updated_at": "2026-11-26T13:02+09:00"
   },
   {
    "id": "i8ad660d9c9",
@@ -1697,6 +1721,62 @@
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
    "updated_at": "2026-11-24T22:46+09:00"
+  },
+  {
+   "id": "i2df1d69239",
+   "product": "UNION ARENA ブースターパック D.Gray-man【UA58BT】 BOX",
+   "product_key": "unionarenaブースターパックdgraymanua58btbox",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "プレミアムバンダイ",
+   "apply_start": null,
+   "apply_end": "2026-12-02T23:00+09:00",
+   "apply_url": "https://p-bandai.jp/item/item-1000261475/?utm_source=tw&utm_medium=tw&utm_campaign=new",
+   "detail_url": null,
+   "requirements": [],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2125775328459338067",
+     "author": "p_bandai",
+     "url": "https://x.com/p_bandai/status/2125775328459338067",
+     "created_at": "2026-11-26T11:15+09:00",
+     "likes": 76,
+     "reposts": 26
+    }
+   ],
+   "buzz": 102,
+   "extracted_by": "rule",
+   "first_seen": "2026-11-26T13:02+09:00",
+   "updated_at": "2026-11-26T13:02+09:00"
+  },
+  {
+   "id": "i8813abc8f6",
+   "product": "UNION ARENA ブースターパック 〈物語〉シリーズ Vol.2【EX18BT】 BOX",
+   "product_key": "unionarenaブースターパック物語シリーズvol2ex18btbox",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "プレミアムバンダイ",
+   "apply_start": null,
+   "apply_end": "2026-12-02T23:00+09:00",
+   "apply_url": null,
+   "detail_url": "https://p-bn.jp/su/131d73ymbs2/",
+   "requirements": [],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2125779106864538022",
+     "author": "p_bandai",
+     "url": "https://x.com/p_bandai/status/2125779106864538022",
+     "created_at": "2026-11-26T11:30+09:00",
+     "likes": 29,
+     "reposts": 4
+    }
+   ],
+   "buzz": 33,
+   "extracted_by": "rule",
+   "first_seen": "2026-11-26T13:02+09:00",
+   "updated_at": "2026-11-26T13:02+09:00"
   },
   {
    "id": "i7f2c20050a",
@@ -2537,30 +2617,30 @@
  ],
  "review": [],
  "meta": {
-  "generated_at": "2026-11-26T03:32+09:00",
+  "generated_at": "2026-11-26T13:02+09:00",
   "site_url": "https://kazfukuda29.github.io/x-lottery-apply/",
   "repo": "kazfukuda29/x-lottery-apply",
   "model": "claude-opus-5-5",
   "last_run": {
-   "fetched": 27,
-   "dropped": 8,
-   "rule": 3,
-   "ai_posts": 16,
+   "fetched": 9,
+   "dropped": 5,
+   "rule": 2,
+   "ai_posts": 2,
    "ai_failed": 0,
    "store_skipped": 0,
-   "new_items": 5
+   "new_items": 2
   },
   "errors": [],
   "x_usage_today": {
    "date": "2026-11-26",
-   "posts": 77,
-   "requests": 2
+   "posts": 86,
+   "requests": 3
   },
   "ai_usage_today": {
    "date": "2026-11-26",
-   "calls": 5,
-   "input_tokens": 59553,
-   "output_tokens": 7884
+   "calls": 6,
+   "input_tokens": 68070,
+   "output_tokens": 8638
   },
   "accounts": [
    "crashseq",
@@ -2572,7 +2652,7 @@
   ],
   "account_stats": {
    "crashseq": {
-    "items": 17,
+    "items": 18,
     "only": 8
    },
    "premium_kakaku": {
@@ -2588,8 +2668,8 @@
     "only": 3
    },
    "p_bandai": {
-    "items": 0,
-    "only": 0
+    "items": 2,
+    "only": 2
    },
    "datto_TCG": {
     "items": 2,
@@ -2598,19 +2678,19 @@
   },
   "account_eval": {
    "window_days": 14,
-   "days_observed": 1,
+   "days_observed": 2,
    "target": 0.95,
-   "total": 60,
+   "total": 62,
    "accounts": {
     "crashseq": {
-     "online": 14,
+     "online": 15,
      "only": 5,
-     "posts_per_day": 3.0
+     "posts_per_day": 4.5
     },
     "premium_kakaku": {
      "online": 12,
      "only": 7,
-     "posts_per_day": 14.5
+     "posts_per_day": 16.5
     },
     "SelectInfoDeals": {
      "online": 45,
@@ -2623,9 +2703,9 @@
      "posts_per_day": 27.5
     },
     "p_bandai": {
-     "online": 0,
-     "only": 0,
-     "posts_per_day": 0.0
+     "online": 2,
+     "only": 2,
+     "posts_per_day": 1.0
     },
     "datto_TCG": {
      "online": 2,
@@ -2637,17 +2717,22 @@
     {
      "handle": "SelectInfoDeals",
      "adds": 45,
-     "coverage": 0.75
+     "coverage": 0.726
     },
     {
      "handle": "premium_kakaku",
      "adds": 8,
-     "coverage": 0.883
+     "coverage": 0.855
     },
     {
      "handle": "crashseq",
      "adds": 5,
-     "coverage": 0.967
+     "coverage": 0.935
+    },
+    {
+     "handle": "p_bandai",
+     "adds": 2,
+     "coverage": 0.968
     },
     {
      "handle": "stock_alertv2",
@@ -2658,14 +2743,14 @@
    "keep": [
     "SelectInfoDeals",
     "premium_kakaku",
-    "crashseq"
+    "crashseq",
+    "p_bandai"
    ],
    "drop": [
     "stock_alertv2",
-    "p_bandai",
     "datto_TCG"
    ],
-   "evaluated_at": "2026-11-26T03:32+09:00"
+   "evaluated_at": "2026-11-26T13:02+09:00"
   }
  }
 }

@@ -8,11 +8,12 @@
    "datto_tcg": 5
   },
   "2026-11-26": {
-   "premium_kakaku": 7,
+   "premium_kakaku": 11,
    "stock_alertv2": 11,
    "selectinfodeals": 5,
    "datto_tcg": 2,
-   "crashseq": 2
+   "crashseq": 5,
+   "p_bandai": 2
   }
  },
  "items": {
@@ -160,6 +161,7 @@
   },
   "iebeb290c63": {
    "authors": [
+    "crashseq",
     "premium_kakaku",
     "stock_alertv2"
    ],
@@ -519,6 +521,22 @@
    "first_seen": "2026-11-26T03:32+09:00",
    "apply_end": "2026-12-20T23:59+09:00",
    "label": "エディオン｜ベイブレードX ランダムブースター山盛りセット 福袋"
+  },
+  "i2df1d69239": {
+   "authors": [
+    "p_bandai"
+   ],
+   "first_seen": "2026-11-26T13:02+09:00",
+   "apply_end": "2026-12-02T23:00+09:00",
+   "label": "プレミアムバンダイ｜UNION ARENA ブースターパック D.Gray-man【UA58BT】 BOX"
+  },
+  "i8813abc8f6": {
+   "authors": [
+    "p_bandai"
+   ],
+   "first_seen": "2026-11-26T13:02+09:00",
+   "apply_end": "2026-12-02T23:00+09:00",
+   "label": "プレミアムバンダイ｜UNION ARENA ブースターパック 〈物語〉シリーズ Vol.2【EX18BT】 BOX"
   }
  },
  "started": "2026-11-25T08:25+09:00"
