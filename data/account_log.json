@@ -14,6 +14,13 @@
    "datto_tcg": 2,
    "crashseq": 5,
    "p_bandai": 2
+  },
+  "2026-11-27": {
+   "stock_alertv2": 20,
+   "premium_kakaku": 4,
+   "selectinfodeals": 5,
+   "datto_tcg": 1,
+   "crashseq": 2
   }
  },
  "items": {
@@ -63,7 +70,7 @@
    ],
    "first_seen": "2026-11-24T22:46+09:00",
    "apply_end": "2026-11-24T23:59+09:00",
-   "label": "ホビビ通販部｜ポケモンカードゲーム スターターセットex ニャオハ＆マスカーニャex"
+   "label": "ホビビ通販部｜ポケモンカードゲーム MEGA スターターセットex「ニャオハ＆マスカーニャex」"
   },
   "i5fb1571ea1": {
    "authors": [
@@ -79,7 +86,7 @@
    ],
    "first_seen": "2026-11-24T22:46+09:00",
    "apply_end": "2026-11-24T23:59+09:00",
-   "label": "ホビビ通販部｜ポケモンカードゲーム 拡張パック「30th CELEBRATION」"
+   "label": "ホビビ通販部｜ポケモンカードゲーム 拡張パック「30th CELEBRATION」 BOX"
   },
   "i07b05412ad": {
    "authors": [
@@ -87,7 +94,7 @@
    ],
    "first_seen": "2026-11-24T22:46+09:00",
    "apply_end": "2026-11-24T23:59+09:00",
-   "label": "ホビビ通販部｜ポケモンカードゲーム 拡張パック「メガシンフォニア」"
+   "label": "ホビビ通販部｜ポケモンカードゲーム 拡張パック「メガシンフォニア」 BOX"
   },
   "iafa15fd3ad": {
    "authors": [
@@ -95,7 +102,7 @@
    ],
    "first_seen": "2026-11-24T22:46+09:00",
    "apply_end": "2026-11-24T23:59+09:00",
-   "label": "ホビビ通販部｜ポケモンカードゲーム 拡張パック「メガブレイブ」"
+   "label": "ホビビ通販部｜ポケモンカードゲーム 拡張パック「メガブレイブ」 BOX"
   },
   "i2016dbcbe9": {
    "authors": [
@@ -258,7 +265,7 @@
    ],
    "first_seen": "2026-11-24T22:46+09:00",
    "apply_end": "2026-12-01T23:59+09:00",
-   "label": "トレコロ｜ポケモンカードゲーム 拡張パック「30th CELEBRATION」"
+   "label": "トレコロ｜ポケモンカードゲーム 拡張パック「30th CELEBRATION」 BOX"
   },
   "i1a4a15e2dc": {
    "authors": [
@@ -492,7 +499,8 @@
   },
   "i3be453298a": {
    "authors": [
-    "premium_kakaku"
+    "premium_kakaku",
+    "stock_alertv2"
    ],
    "first_seen": "2026-11-26T03:32+09:00",
    "apply_end": "2026-11-27T23:59+09:00",
@@ -524,7 +532,9 @@
   },
   "i2df1d69239": {
    "authors": [
-    "p_bandai"
+    "p_bandai",
+    "premium_kakaku",
+    "selectinfodeals"
    ],
    "first_seen": "2026-11-26T13:02+09:00",
    "apply_end": "2026-12-02T23:00+09:00",
@@ -532,11 +542,262 @@
   },
   "i8813abc8f6": {
    "authors": [
-    "p_bandai"
+    "p_bandai",
+    "premium_kakaku",
+    "selectinfodeals"
    ],
    "first_seen": "2026-11-26T13:02+09:00",
    "apply_end": "2026-12-02T23:00+09:00",
    "label": "プレミアムバンダイ｜UNION ARENA ブースターパック 〈物語〉シリーズ Vol.2【EX18BT】 BOX"
+  },
+  "ic9af0bca8b": {
+   "authors": [
+    "selectinfodeals",
+    "stock_alertv2"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": "2026-12-02T23:59+09:00",
+   "label": "ガンギ HOBBYSHOP｜ワンピースカードゲーム ブースターパック「500年後の未来」【OP-07】 BOX"
+  },
+  "i5e040eec75": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": "2026-11-27T23:59+09:00",
+   "label": "ドラゴンスター｜ポケモンカードゲーム 拡張パック「ストームエメラルダ」 BOX"
+  },
+  "i8e7755d6fa": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": "2026-11-29T23:59+09:00",
+   "label": "イオン｜ポケモンカードゲーム MEGA スターターセットex「イーブイex」"
+  },
+  "i0a7f2ffc76": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": "2026-11-29T23:59+09:00",
+   "label": "イオン｜ポケモンカードゲーム MEGA スターターセットex「ゾロア＆ゾロアークex」"
+  },
+  "i7941fc51ef": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": "2026-11-29T23:59+09:00",
+   "label": "イオン｜ポケモンカードゲーム MEGA スターターセットex「ニャオハ＆マスカーニャex」"
+  },
+  "ie2cf0c3191": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": "2026-12-20T23:59+09:00",
+   "label": "エディオン｜ポケモンカードゲーム 福袋 スペシャルセット②"
+  },
+  "i2e3890b171": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "ホビーサーチ｜ポケモンカードゲーム 拡張パック「30th CELEBRATION」 BOX"
+  },
+  "i7bfeaff018": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "ホビーサーチ｜ポケモンカードゲーム 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー"
+  },
+  "iaeed71df85": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "ホビーサーチ｜ポケモンカードゲーム スペシャルデッキセットMEGA メガオーダイル・メガカイリュー・メガゲンガー"
+  },
+  "if4555e02a5": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "ホビーサーチ｜ポケモンカードゲーム 拡張パック「ストームエメラルダ」 BOX"
+  },
+  "i5dcc022c5b": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "ホビーサーチ｜ポケモンカードゲーム 拡張パック「アビスアイ」 BOX"
+  },
+  "i602896f68e": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "ホビーサーチ｜ポケモンカードゲーム 拡張パック「メガブレイブ」 BOX"
+  },
+  "i698207c9fa": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "ホビーサーチ｜ポケモンカードゲーム 拡張パック「メガシンフォニア」 BOX"
+  },
+  "i0578647abc": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX"
+  },
+  "i888377a642": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ポケモンカードゲーム 拡張パック「30th CELEBRATION」 BOX"
+  },
+  "i47cd656020": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ポケモンカードゲーム 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー"
+  },
+  "ie48f2c380b": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ポケモンカードゲーム 拡張パック「ストームエメラルダ」 BOX"
+  },
+  "i3f4b0e0a01": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ポケモンカードゲーム プレミアムデッキセット エーフィ・ブラッキー"
+  },
+  "i1243822827": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ポケモンカードゲーム 拡張パック「アビスアイ」 BOX"
+  },
+  "i1870648648": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ポケモンカードゲーム スタートデッキ100 バトルコレクション"
+  },
+  "i60b235e941": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ポケモンカードゲーム 30th CELEBRATION カードセット ヒトカゲ・ゼニガメ・フシギダネ"
+  },
+  "i7ceedcdb2e": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ポケモンカードゲーム 30th CELEBRATION カードセット チコリータ・ヒノアラシ・ワニノコ"
+  },
+  "ie09698df2d": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ポケモンカードゲーム 30th CELEBRATION カードセット キモリ・アチャモ・ミズゴロウ"
+  },
+  "i09ba224c55": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ポケモンカードゲーム 30th CELEBRATION カードセット ナエトル・ヒコザル・ポッチャマ"
+  },
+  "ib61b193180": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ポケモンカードゲーム 30th CELEBRATION カードセット ツタージャ・ポカブ・ミジュマル"
+  },
+  "i6ed43a563a": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ポケモンカードゲーム 30th CELEBRATION カードセット ハリマロン・フォッコ・ケロマツ"
+  },
+  "if79356c4c1": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ポケモンカードゲーム 30th CELEBRATION カードセット モクロー・ニャビー・アシマリ"
+  },
+  "idcaf17d274": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ポケモンカードゲーム 30th CELEBRATION カードセット サルノリ・ヒバニー・メッソン"
+  },
+  "i30b4f99b2c": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "Amazon｜ポケモンカードゲーム 30th CELEBRATION カードセット ニャオハ・ホゲータ・クワッス"
+  },
+  "i073a921cd7": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": "2026-11-29T23:59+09:00",
+   "label": "イオン｜ドラゴンボールスーパーカードゲーム フュージョンワールド ブースターパック「BRIGHTNESS OF HOPE"
+  },
+  "i43adffe94e": {
+   "authors": [
+    "selectinfodeals"
+   ],
+   "first_seen": "2026-11-27T01:39+09:00",
+   "apply_end": null,
+   "label": "ドラゴンスター｜ドラゴンボールスーパーカードゲーム フュージョンワールド 新弾"
   }
  },
  "started": "2026-11-25T08:25+09:00"
