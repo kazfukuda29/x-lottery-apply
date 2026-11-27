@@ -29,96 +29,6 @@
    "updated_at": "2026-11-24T22:46+09:00"
   },
   {
-   "id": "i7e281202af",
-   "product": "UNION ARENA ブースターパック シュタインズ・ゲート BOX",
-   "product_key": "unionarenaブースターパックシュタインズゲートbox",
-   "genre": "tcg",
-   "channel": "online",
-   "retailer": "ホビビ通販部",
-   "apply_start": null,
-   "apply_end": "2026-11-24T23:59+09:00",
-   "apply_url": "https://docs.google.com/forms/d/e/1FAIpQLSdk4rZQucSd84wiobgpWyu9M7SGq-21LuSaCPBxdX_8K_DuEw/viewform",
-   "detail_url": null,
-   "requirements": [
-    "購入履歴"
-   ],
-   "announce_date": null,
-   "sources": [
-    {
-     "post_id": "2125221483643556135",
-     "author": "SelectInfoDeals",
-     "url": "https://x.com/SelectInfoDeals/status/2125221483643556135",
-     "created_at": "2026-11-24T22:34+09:00",
-     "likes": 0,
-     "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
-  },
-  {
-   "id": "i68e6a1fe68",
-   "product": "ガンダムカードゲーム ブースターパック Freedom Ascension[GD05] BOX",
-   "product_key": "ガンダムカードゲームブースターパックfreedomascensiongd05box",
-   "genre": "tcg",
-   "channel": "online",
-   "retailer": "ホビビ通販部",
-   "apply_start": null,
-   "apply_end": "2026-11-24T23:59+09:00",
-   "apply_url": "https://docs.google.com/forms/d/e/1FAIpQLSdk4rZQucSd84wiobgpWyu9M7SGq-21LuSaCPBxdX_8K_DuEw/viewform",
-   "detail_url": null,
-   "requirements": [
-    "購入履歴"
-   ],
-   "announce_date": null,
-   "sources": [
-    {
-     "post_id": "2125221483643556135",
-     "author": "SelectInfoDeals",
-     "url": "https://x.com/SelectInfoDeals/status/2125221483643556135",
-     "created_at": "2026-11-24T22:34+09:00",
-     "likes": 0,
-     "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
-  },
-  {
-   "id": "i14403a6576",
-   "product": "ドラゴンボールスーパーカードゲーム フュージョンワールド STORY BOOSTER 01 BOX",
-   "product_key": "ドラゴンボールスーパーカードゲームフュージョンワールドstorybooster01box",
-   "genre": "tcg",
-   "channel": "online",
-   "retailer": "ホビビ通販部",
-   "apply_start": null,
-   "apply_end": "2026-11-24T23:59+09:00",
-   "apply_url": "https://docs.google.com/forms/d/e/1FAIpQLSdk4rZQucSd84wiobgpWyu9M7SGq-21LuSaCPBxdX_8K_DuEw/viewform",
-   "detail_url": null,
-   "requirements": [
-    "購入履歴"
-   ],
-   "announce_date": null,
-   "sources": [
-    {
-     "post_id": "2125221483643556135",
-     "author": "SelectInfoDeals",
-     "url": "https://x.com/SelectInfoDeals/status/2125221483643556135",
-     "created_at": "2026-11-24T22:34+09:00",
-     "likes": 0,
-     "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
-  },
-  {
    "id": "ibf7dd54f53",
    "product": "ポケモンカードゲーム 30th CELEBRATION カードセット 9種コンプセット",
    "product_key": "ポケモンカードゲーム30thcelebrationカードセット9種コンプセット",
@@ -239,34 +149,6 @@
    "updated_at": "2026-11-24T22:46+09:00"
   },
   {
-   "id": "id6fdb06080",
-   "product": "ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX",
-   "product_key": "ポケモンカードゲーム拡張パックハドウシーカーbox",
-   "genre": "tcg",
-   "channel": "unknown",
-   "retailer": "カーデリア池袋",
-   "apply_start": null,
-   "apply_end": "2026-11-24T23:59+09:00",
-   "apply_url": "https://docs.google.com/forms/d/e/1FAIpQLSdNbXeOxmCkcuXPkPG-HrGJ1uHS-lL44T38p8iJ-GIuSTYQpQ/viewform",
-   "detail_url": null,
-   "requirements": [],
-   "announce_date": null,
-   "sources": [
-    {
-     "post_id": "2125152446343504234",
-     "author": "crashseq",
-     "url": "https://x.com/crashseq/status/2125152446343504234",
-     "created_at": "2026-11-24T18:00+09:00",
-     "likes": 0,
-     "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
-  },
-  {
    "id": "i07b05412ad",
    "product": "ポケモンカードゲーム 拡張パック「メガシンフォニア」 BOX",
    "product_key": "ポケモンカードゲーム拡張パックメガシンフォニアbox",
@@ -317,64 +199,6 @@
      "author": "SelectInfoDeals",
      "url": "https://x.com/SelectInfoDeals/status/2125221230341173687",
      "created_at": "2026-11-24T22:33+09:00",
-     "likes": 0,
-     "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
-  },
-  {
-   "id": "i2016dbcbe9",
-   "product": "ワンピースカードゲーム ブースターパック「世界最強の戦士」【OP-17】（キャンセル分再抽選）",
-   "product_key": "ワンピースカードゲームブースターパック世界最強の戦士op17キャンセル分再抽選",
-   "genre": "tcg",
-   "channel": "online",
-   "retailer": "ホビビ通販部",
-   "apply_start": null,
-   "apply_end": "2026-11-24T23:59+09:00",
-   "apply_url": "https://docs.google.com/forms/d/e/1FAIpQLSdk4rZQucSd84wiobgpWyu9M7SGq-21LuSaCPBxdX_8K_DuEw/viewform",
-   "detail_url": null,
-   "requirements": [
-    "購入履歴"
-   ],
-   "announce_date": null,
-   "sources": [
-    {
-     "post_id": "2125221422217969731",
-     "author": "SelectInfoDeals",
-     "url": "https://x.com/SelectInfoDeals/status/2125221422217969731",
-     "created_at": "2026-11-24T22:34+09:00",
-     "likes": 0,
-     "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-24T22:46+09:00"
-  },
-  {
-   "id": "i6622c33ed1",
-   "product": "ワンピースカードゲーム 神の支配",
-   "product_key": "ワンピースカードゲーム神の支配",
-   "genre": "tcg",
-   "channel": "unknown",
-   "retailer": "古本市場",
-   "apply_start": null,
-   "apply_end": "2026-11-24T23:59+09:00",
-   "apply_url": "https://livepocket.jp/e/ybn5s",
-   "detail_url": null,
-   "requirements": [],
-   "announce_date": null,
-   "sources": [
-    {
-     "post_id": "2125152446343504234",
-     "author": "crashseq",
-     "url": "https://x.com/crashseq/status/2125152446343504234",
-     "created_at": "2026-11-24T18:00+09:00",
      "likes": 0,
      "reposts": 0
     }
@@ -4179,30 +4003,30 @@
  ],
  "review": [],
  "meta": {
-  "generated_at": "2026-11-27T22:44+09:00",
+  "generated_at": "2026-11-28T07:34+09:00",
   "site_url": "https://kazfukuda29.github.io/x-lottery-apply/",
   "repo": "kazfukuda29/x-lottery-apply",
   "model": "claude-opus-5-5",
   "last_run": {
-   "fetched": 29,
-   "dropped": 10,
-   "rule": 1,
-   "ai_posts": 18,
+   "fetched": 2,
+   "dropped": 0,
+   "rule": 0,
+   "ai_posts": 2,
    "ai_failed": 0,
    "store_skipped": 0,
-   "new_items": 7
+   "new_items": 0
   },
   "errors": [],
   "x_usage_today": {
-   "date": "2026-11-27",
-   "posts": 128,
-   "requests": 4
+   "date": "2026-11-28",
+   "posts": 52,
+   "requests": 2
   },
   "ai_usage_today": {
-   "date": "2026-11-27",
-   "calls": 8,
-   "input_tokens": 86039,
-   "output_tokens": 15892
+   "date": "2026-11-28",
+   "calls": 1,
+   "input_tokens": 8322,
+   "output_tokens": 49
   },
   "accounts": [
    "crashseq",
@@ -4214,16 +4038,16 @@
   ],
   "account_stats": {
    "crashseq": {
-    "items": 18,
-    "only": 8
+    "items": 16,
+    "only": 6
    },
    "premium_kakaku": {
     "items": 27,
     "only": 6
    },
    "SelectInfoDeals": {
-    "items": 78,
-    "only": 50
+    "items": 74,
+    "only": 46
    },
    "stock_alertv2": {
     "items": 24,
@@ -4247,32 +4071,32 @@
     "crashseq": {
      "online": 15,
      "only": 5,
-     "posts_per_day": 5.0
+     "posts_per_day": 3.8
     },
     "premium_kakaku": {
      "online": 27,
      "only": 6,
-     "posts_per_day": 15.7
+     "posts_per_day": 12.0
     },
     "SelectInfoDeals": {
      "online": 78,
      "only": 50,
-     "posts_per_day": 5.0
+     "posts_per_day": 3.8
     },
     "stock_alertv2": {
      "online": 23,
      "only": 8,
-     "posts_per_day": 34.3
+     "posts_per_day": 26.0
     },
     "p_bandai": {
      "online": 4,
      "only": 2,
-     "posts_per_day": 1.3
+     "posts_per_day": 1.0
     },
     "datto_TCG": {
      "online": 2,
      "only": 0,
-     "posts_per_day": 3.0
+     "posts_per_day": 2.2
     }
    },
    "cover": [
@@ -4312,7 +4136,7 @@
     "p_bandai",
     "datto_TCG"
    ],
-   "evaluated_at": "2026-11-27T22:44+09:00"
+   "evaluated_at": "2026-11-28T07:34+09:00"
   }
  }
 }

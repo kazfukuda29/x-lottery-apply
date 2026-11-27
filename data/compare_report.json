@@ -952,7 +952,13 @@
    "posts": 18,
    "same": 18,
    "diffs": []
+  },
+  {
+   "at": "2026-11-28T07:34+09:00",
+   "posts": 2,
+   "same": 2,
+   "diffs": []
   }
  ],
- "agreement": 0.792
+ "agreement": 0.795
 }
