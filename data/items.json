@@ -1296,12 +1296,20 @@
      "created_at": "2026-11-27T02:42+09:00",
      "likes": 0,
      "reposts": 1
+    },
+    {
+     "post_id": "2126197760840089912",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2126197760840089912",
+     "created_at": "2026-11-27T15:13+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-26T03:32+09:00",
-   "updated_at": "2026-11-27T12:59+09:00"
+   "updated_at": "2026-11-27T22:44+09:00"
   },
   {
    "id": "i5e040eec75",
@@ -1334,12 +1342,20 @@
      "created_at": "2026-11-27T02:42+09:00",
      "likes": 0,
      "reposts": 1
+    },
+    {
+     "post_id": "2126223969686811019",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2126223969686811019",
+     "created_at": "2026-11-27T16:57+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-27T01:39+09:00",
-   "updated_at": "2026-11-27T12:59+09:00"
+   "updated_at": "2026-11-27T22:44+09:00"
   },
   {
    "id": "i28aa6b5063",
@@ -1400,6 +1416,36 @@
    "updated_at": "2026-11-26T03:32+09:00"
   },
   {
+   "id": "iaa227f0848",
+   "product": "METAL BUILD ガンダムデュナメス【2次：2027年2月発送分】",
+   "product_key": "metalbuildガンダムデュナメス2次2027年2月発送分",
+   "genre": "hobby",
+   "channel": "online",
+   "retailer": "プレミアムバンダイ",
+   "apply_start": null,
+   "apply_end": "2026-11-29T23:00+09:00",
+   "apply_url": "https://p-bandai.jp/item/item-1000261493/",
+   "detail_url": null,
+   "requirements": [
+    "会員登録"
+   ],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2126181886808690762",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2126181886808690762",
+     "created_at": "2026-11-27T14:10+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-27T22:44+09:00",
+   "updated_at": "2026-11-27T22:44+09:00"
+  },
+  {
    "id": "i073a921cd7",
    "product": "ドラゴンボールスーパーカードゲーム フュージョンワールド ブースターパック「BRIGHTNESS OF HOPE」[FB11] 24パックセット",
    "product_key": "ドラゴンボールスーパーカードゲームフュージョンワールドブースターパックbrightnessofhopefb1124パックセット",
@@ -1437,6 +1483,45 @@
    "extracted_by": "ai",
    "first_seen": "2026-11-27T01:39+09:00",
    "updated_at": "2026-11-27T12:59+09:00"
+  },
+  {
+   "id": "i7bfeaff018",
+   "product": "ポケモンカードゲーム 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
+   "product_key": "ポケモンカードゲーム30thcelebrationプレミアムデッキセットエーフィブラッキー",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "ホビーサーチ",
+   "apply_start": "2026-11-27T17:00+09:00",
+   "apply_end": "2026-11-29T23:59+09:00",
+   "apply_url": "https://www.1999.co.jp/list/3352/7/1",
+   "detail_url": null,
+   "requirements": [
+    "会員登録",
+    "購入履歴"
+   ],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2125941851635257498",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125941851635257498",
+     "created_at": "2026-11-26T22:16+09:00",
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "post_id": "2126292525568979317",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2126292525568979317",
+     "created_at": "2026-11-27T21:30+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-27T01:39+09:00",
+   "updated_at": "2026-11-27T22:44+09:00"
   },
   {
    "id": "i8e7755d6fa",
@@ -1580,6 +1665,162 @@
    "updated_at": "2026-11-27T12:59+09:00"
   },
   {
+   "id": "iaeed71df85",
+   "product": "ポケモンカードゲーム スペシャルデッキセットMEGA メガオーダイル・メガカイリュー・メガゲンガー",
+   "product_key": "ポケモンカードゲームスペシャルデッキセットmegaメガオーダイルメガカイリューメガゲンガー",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "ホビーサーチ",
+   "apply_start": "2026-11-27T17:00+09:00",
+   "apply_end": "2026-11-29T23:59+09:00",
+   "apply_url": "https://www.1999.co.jp/list/3352/7/1",
+   "detail_url": null,
+   "requirements": [
+    "会員登録",
+    "購入履歴"
+   ],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2125941851635257498",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125941851635257498",
+     "created_at": "2026-11-26T22:16+09:00",
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "post_id": "2126292525568979317",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2126292525568979317",
+     "created_at": "2026-11-27T21:30+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-27T01:39+09:00",
+   "updated_at": "2026-11-27T22:44+09:00"
+  },
+  {
+   "id": "i2e3890b171",
+   "product": "ポケモンカードゲーム 拡張パック「30th CELEBRATION」 BOX",
+   "product_key": "ポケモンカードゲーム拡張パック30thcelebrationbox",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "ホビーサーチ",
+   "apply_start": "2026-11-27T17:00+09:00",
+   "apply_end": "2026-11-29T23:59+09:00",
+   "apply_url": "https://www.1999.co.jp/list/3352/7/1",
+   "detail_url": null,
+   "requirements": [
+    "会員登録",
+    "購入履歴"
+   ],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2125941851635257498",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125941851635257498",
+     "created_at": "2026-11-26T22:16+09:00",
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "post_id": "2126292525568979317",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2126292525568979317",
+     "created_at": "2026-11-27T21:30+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-27T01:39+09:00",
+   "updated_at": "2026-11-27T22:44+09:00"
+  },
+  {
+   "id": "i5dcc022c5b",
+   "product": "ポケモンカードゲーム 拡張パック「アビスアイ」 BOX",
+   "product_key": "ポケモンカードゲーム拡張パックアビスアイbox",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "ホビーサーチ",
+   "apply_start": "2026-11-27T17:00+09:00",
+   "apply_end": "2026-11-29T23:59+09:00",
+   "apply_url": "https://www.1999.co.jp/list/3352/7/1",
+   "detail_url": null,
+   "requirements": [
+    "会員登録",
+    "購入履歴"
+   ],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2125941851635257498",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125941851635257498",
+     "created_at": "2026-11-26T22:16+09:00",
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "post_id": "2126292525568979317",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2126292525568979317",
+     "created_at": "2026-11-27T21:30+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-27T01:39+09:00",
+   "updated_at": "2026-11-27T22:44+09:00"
+  },
+  {
+   "id": "if4555e02a5",
+   "product": "ポケモンカードゲーム 拡張パック「ストームエメラルダ」 BOX",
+   "product_key": "ポケモンカードゲーム拡張パックストームエメラルダbox",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "ホビーサーチ",
+   "apply_start": "2026-11-27T17:00+09:00",
+   "apply_end": "2026-11-29T23:59+09:00",
+   "apply_url": "https://www.1999.co.jp/list/3352/7/1",
+   "detail_url": null,
+   "requirements": [
+    "会員登録",
+    "購入履歴"
+   ],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2125941851635257498",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125941851635257498",
+     "created_at": "2026-11-26T22:16+09:00",
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "post_id": "2126292525568979317",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2126292525568979317",
+     "created_at": "2026-11-27T21:30+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-27T01:39+09:00",
+   "updated_at": "2026-11-27T22:44+09:00"
+  },
+  {
    "id": "i2e381225bd",
    "product": "ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX",
    "product_key": "ポケモンカードゲーム拡張パックハドウシーカーbox",
@@ -1608,6 +1849,84 @@
    "extracted_by": "rule",
    "first_seen": "2026-11-25T08:25+09:00",
    "updated_at": "2026-11-25T08:25+09:00"
+  },
+  {
+   "id": "i698207c9fa",
+   "product": "ポケモンカードゲーム 拡張パック「メガシンフォニア」 BOX",
+   "product_key": "ポケモンカードゲーム拡張パックメガシンフォニアbox",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "ホビーサーチ",
+   "apply_start": "2026-11-27T17:00+09:00",
+   "apply_end": "2026-11-29T23:59+09:00",
+   "apply_url": "https://www.1999.co.jp/list/3352/7/1",
+   "detail_url": null,
+   "requirements": [
+    "会員登録",
+    "購入履歴"
+   ],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2125941851635257498",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125941851635257498",
+     "created_at": "2026-11-26T22:16+09:00",
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "post_id": "2126292525568979317",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2126292525568979317",
+     "created_at": "2026-11-27T21:30+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-27T01:39+09:00",
+   "updated_at": "2026-11-27T22:44+09:00"
+  },
+  {
+   "id": "i602896f68e",
+   "product": "ポケモンカードゲーム 拡張パック「メガブレイブ」 BOX",
+   "product_key": "ポケモンカードゲーム拡張パックメガブレイブbox",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "ホビーサーチ",
+   "apply_start": "2026-11-27T17:00+09:00",
+   "apply_end": "2026-11-29T23:59+09:00",
+   "apply_url": "https://www.1999.co.jp/list/3352/7/1",
+   "detail_url": null,
+   "requirements": [
+    "会員登録",
+    "購入履歴"
+   ],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2125941851635257498",
+     "author": "SelectInfoDeals",
+     "url": "https://x.com/SelectInfoDeals/status/2125941851635257498",
+     "created_at": "2026-11-26T22:16+09:00",
+     "likes": 0,
+     "reposts": 0
+    },
+    {
+     "post_id": "2126292525568979317",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2126292525568979317",
+     "created_at": "2026-11-27T21:30+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-27T01:39+09:00",
+   "updated_at": "2026-11-27T22:44+09:00"
   },
   {
    "id": "i79e3e98254",
@@ -1698,14 +2017,6 @@
    "announce_date": "2026-12-04",
    "sources": [
     {
-     "post_id": "2125001453509177756",
-     "author": "crashseq",
-     "url": "https://x.com/crashseq/status/2125001453509177756",
-     "created_at": "2026-11-24T08:00+09:00",
-     "likes": 0,
-     "reposts": 0
-    },
-    {
      "post_id": "2125221236162904459",
      "author": "SelectInfoDeals",
      "url": "https://x.com/SelectInfoDeals/status/2125221236162904459",
@@ -1760,12 +2071,20 @@
      "created_at": "2026-11-26T22:16+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126209414923207019",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2126209414923207019",
+     "created_at": "2026-11-27T16:00+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
    "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
+   "updated_at": "2026-11-27T22:44+09:00"
   },
   {
    "id": "id9eda025f3",
@@ -2185,6 +2504,159 @@
    "updated_at": "2026-11-27T01:39+09:00"
   },
   {
+   "id": "idab3281539",
+   "product": "ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX",
+   "product_key": "ポケモンカードゲーム拡張パックハドウシーカーbox",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "DMM通販",
+   "apply_start": null,
+   "apply_end": "2026-12-03T23:59+09:00",
+   "apply_url": "https://myca.dmm.com/campaign/k29-4t-8r",
+   "detail_url": null,
+   "requirements": [
+    "購入履歴"
+   ],
+   "announce_date": "2026-12-07",
+   "sources": [
+    {
+     "post_id": "2126225120469635228",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2126225120469635228",
+     "created_at": "2026-11-27T17:02+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-27T22:44+09:00",
+   "updated_at": "2026-11-27T22:44+09:00"
+  },
+  {
+   "id": "i7002bd1357",
+   "product": "S.H.Figuarts つば九郎【2次:2026年12月発送分】",
+   "product_key": "shfiguartsつば九郎2次2026年12月発送分",
+   "genre": "hobby",
+   "channel": "online",
+   "retailer": "プレミアムバンダイ",
+   "apply_start": "2026-11-27T16:00+09:00",
+   "apply_end": "2026-12-06T23:00+09:00",
+   "apply_url": "https://lnky.jp/znSnk30",
+   "detail_url": null,
+   "requirements": [
+    "会員登録"
+   ],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2126194359574139164",
+     "author": "p_bandai",
+     "url": "https://x.com/p_bandai/status/2126194359574139164",
+     "created_at": "2026-11-27T15:00+09:00",
+     "likes": 140,
+     "reposts": 57
+    }
+   ],
+   "buzz": 197,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-27T22:44+09:00",
+   "updated_at": "2026-11-27T22:44+09:00"
+  },
+  {
+   "id": "i55754653fe",
+   "product": "ポケモンカードゲーム 30th CELEBRATION FUTURISTIC BOX",
+   "product_key": "ポケモンカードゲーム30thcelebrationfuturisticbox",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "ポケモンセンターオンライン",
+   "apply_start": "2026-12-01T14:00+09:00",
+   "apply_end": "2026-12-07T16:59+09:00",
+   "apply_url": "https://www.pokemoncenter-online.com/news/?id=20261127",
+   "detail_url": null,
+   "requirements": [
+    "会員登録",
+    "本人確認"
+   ],
+   "announce_date": "2026-12-16",
+   "sources": [
+    {
+     "post_id": "2126200585917694290",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2126200585917694290",
+     "created_at": "2026-11-27T15:24+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-27T22:44+09:00",
+   "updated_at": "2026-11-27T22:44+09:00"
+  },
+  {
+   "id": "i58f92d0550",
+   "product": "ポケモンカードゲーム 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
+   "product_key": "ポケモンカードゲーム30thcelebrationプレミアムデッキセットエーフィブラッキー",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "ポケモンセンターオンライン",
+   "apply_start": "2026-12-01T14:00+09:00",
+   "apply_end": "2026-12-07T16:59+09:00",
+   "apply_url": "https://www.pokemoncenter-online.com/news/?id=20261127",
+   "detail_url": null,
+   "requirements": [
+    "会員登録",
+    "本人確認"
+   ],
+   "announce_date": "2026-12-16",
+   "sources": [
+    {
+     "post_id": "2126200585917694290",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2126200585917694290",
+     "created_at": "2026-11-27T15:24+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-27T22:44+09:00",
+   "updated_at": "2026-11-27T22:44+09:00"
+  },
+  {
+   "id": "i608b1004ec",
+   "product": "ポケモンカードゲーム 拡張パック「30th CELEBRATION」 BOX",
+   "product_key": "ポケモンカードゲーム拡張パック30thcelebrationbox",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "ポケモンセンターオンライン",
+   "apply_start": "2026-12-01T14:00+09:00",
+   "apply_end": "2026-12-07T16:59+09:00",
+   "apply_url": "https://www.pokemoncenter-online.com/news/?id=20261127",
+   "detail_url": null,
+   "requirements": [
+    "会員登録",
+    "本人確認"
+   ],
+   "announce_date": "2026-12-16",
+   "sources": [
+    {
+     "post_id": "2126200585917694290",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2126200585917694290",
+     "created_at": "2026-11-27T15:24+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-27T22:44+09:00",
+   "updated_at": "2026-11-27T22:44+09:00"
+  },
+  {
    "id": "i7f2c20050a",
    "product": "ベイブレードX ランダムブースター山盛りセット 福袋",
    "product_key": "ベイブレードxランダムブースター山盛りセット福袋",
@@ -2474,6 +2946,36 @@
    "extracted_by": "ai",
    "first_seen": "2026-11-27T01:39+09:00",
    "updated_at": "2026-11-27T01:39+09:00"
+  },
+  {
+   "id": "i07c8d98aa5",
+   "product": "ベイブレードX コバルトドレイク4-60F クリアVer.",
+   "product_key": "ベイブレードxコバルトドレイク460fクリアver",
+   "genre": "hobby",
+   "channel": "online",
+   "retailer": "タカラトミーモール",
+   "apply_start": "2026-11-01T00:00+09:00",
+   "apply_end": null,
+   "apply_url": "https://takaratomymall.jp/shop/g/g8202612953708/",
+   "detail_url": null,
+   "requirements": [
+    "プレミアムX会員"
+   ],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2126182954963783695",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2126182954963783695",
+     "created_at": "2026-11-27T14:14+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-27T22:44+09:00",
+   "updated_at": "2026-11-27T22:44+09:00"
   },
   {
    "id": "icd1a06b5e1",
@@ -2801,36 +3303,6 @@
    "updated_at": "2026-11-27T01:39+09:00"
   },
   {
-   "id": "i7bfeaff018",
-   "product": "ポケモンカードゲーム 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
-   "product_key": "ポケモンカードゲーム30thcelebrationプレミアムデッキセットエーフィブラッキー",
-   "genre": "tcg",
-   "channel": "online",
-   "retailer": "ホビーサーチ",
-   "apply_start": "2026-11-27T17:00+09:00",
-   "apply_end": null,
-   "apply_url": "https://www.1999.co.jp/list/3352/7/1",
-   "detail_url": null,
-   "requirements": [
-    "会員登録"
-   ],
-   "announce_date": null,
-   "sources": [
-    {
-     "post_id": "2125941851635257498",
-     "author": "SelectInfoDeals",
-     "url": "https://x.com/SelectInfoDeals/status/2125941851635257498",
-     "created_at": "2026-11-26T22:16+09:00",
-     "likes": 0,
-     "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-27T01:39+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
-  },
-  {
    "id": "i47cd656020",
    "product": "ポケモンカードゲーム 30th CELEBRATION プレミアムデッキセット エーフィ・ブラッキー",
    "product_key": "ポケモンカードゲーム30thcelebrationプレミアムデッキセットエーフィブラッキー",
@@ -2891,36 +3363,6 @@
    "updated_at": "2026-11-27T01:39+09:00"
   },
   {
-   "id": "iaeed71df85",
-   "product": "ポケモンカードゲーム スペシャルデッキセットMEGA メガオーダイル・メガカイリュー・メガゲンガー",
-   "product_key": "ポケモンカードゲームスペシャルデッキセットmegaメガオーダイルメガカイリューメガゲンガー",
-   "genre": "tcg",
-   "channel": "online",
-   "retailer": "ホビーサーチ",
-   "apply_start": "2026-11-27T17:00+09:00",
-   "apply_end": null,
-   "apply_url": "https://www.1999.co.jp/list/3352/7/1",
-   "detail_url": null,
-   "requirements": [
-    "会員登録"
-   ],
-   "announce_date": null,
-   "sources": [
-    {
-     "post_id": "2125941851635257498",
-     "author": "SelectInfoDeals",
-     "url": "https://x.com/SelectInfoDeals/status/2125941851635257498",
-     "created_at": "2026-11-26T22:16+09:00",
-     "likes": 0,
-     "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-27T01:39+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
-  },
-  {
    "id": "i3f4b0e0a01",
    "product": "ポケモンカードゲーム プレミアムデッキセット エーフィ・ブラッキー",
    "product_key": "ポケモンカードゲームプレミアムデッキセットエーフィブラッキー",
@@ -2951,36 +3393,6 @@
    "updated_at": "2026-11-27T01:39+09:00"
   },
   {
-   "id": "i2e3890b171",
-   "product": "ポケモンカードゲーム 拡張パック「30th CELEBRATION」 BOX",
-   "product_key": "ポケモンカードゲーム拡張パック30thcelebrationbox",
-   "genre": "tcg",
-   "channel": "online",
-   "retailer": "ホビーサーチ",
-   "apply_start": "2026-11-27T17:00+09:00",
-   "apply_end": null,
-   "apply_url": "https://www.1999.co.jp/list/3352/7/1",
-   "detail_url": null,
-   "requirements": [
-    "会員登録"
-   ],
-   "announce_date": null,
-   "sources": [
-    {
-     "post_id": "2125941851635257498",
-     "author": "SelectInfoDeals",
-     "url": "https://x.com/SelectInfoDeals/status/2125941851635257498",
-     "created_at": "2026-11-26T22:16+09:00",
-     "likes": 0,
-     "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-27T01:39+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
-  },
-  {
    "id": "i888377a642",
    "product": "ポケモンカードゲーム 拡張パック「30th CELEBRATION」 BOX",
    "product_key": "ポケモンカードゲーム拡張パック30thcelebrationbox",
@@ -2993,36 +3405,6 @@
    "detail_url": null,
    "requirements": [
     "招待制"
-   ],
-   "announce_date": null,
-   "sources": [
-    {
-     "post_id": "2125941851635257498",
-     "author": "SelectInfoDeals",
-     "url": "https://x.com/SelectInfoDeals/status/2125941851635257498",
-     "created_at": "2026-11-26T22:16+09:00",
-     "likes": 0,
-     "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-27T01:39+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
-  },
-  {
-   "id": "i5dcc022c5b",
-   "product": "ポケモンカードゲーム 拡張パック「アビスアイ」 BOX",
-   "product_key": "ポケモンカードゲーム拡張パックアビスアイbox",
-   "genre": "tcg",
-   "channel": "online",
-   "retailer": "ホビーサーチ",
-   "apply_start": "2026-11-27T17:00+09:00",
-   "apply_end": null,
-   "apply_url": "https://www.1999.co.jp/list/3352/7/1",
-   "detail_url": null,
-   "requirements": [
-    "会員登録"
    ],
    "announce_date": null,
    "sources": [
@@ -3097,36 +3479,6 @@
    "extracted_by": "ai",
    "first_seen": "2026-11-25T08:25+09:00",
    "updated_at": "2026-11-25T08:25+09:00"
-  },
-  {
-   "id": "if4555e02a5",
-   "product": "ポケモンカードゲーム 拡張パック「ストームエメラルダ」 BOX",
-   "product_key": "ポケモンカードゲーム拡張パックストームエメラルダbox",
-   "genre": "tcg",
-   "channel": "online",
-   "retailer": "ホビーサーチ",
-   "apply_start": "2026-11-27T17:00+09:00",
-   "apply_end": null,
-   "apply_url": "https://www.1999.co.jp/list/3352/7/1",
-   "detail_url": null,
-   "requirements": [
-    "会員登録"
-   ],
-   "announce_date": null,
-   "sources": [
-    {
-     "post_id": "2125941851635257498",
-     "author": "SelectInfoDeals",
-     "url": "https://x.com/SelectInfoDeals/status/2125941851635257498",
-     "created_at": "2026-11-26T22:16+09:00",
-     "likes": 0,
-     "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-27T01:39+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
   },
   {
    "id": "ie48f2c380b",
@@ -3253,66 +3605,6 @@
    "detail_url": null,
    "requirements": [
     "招待制"
-   ],
-   "announce_date": null,
-   "sources": [
-    {
-     "post_id": "2125941851635257498",
-     "author": "SelectInfoDeals",
-     "url": "https://x.com/SelectInfoDeals/status/2125941851635257498",
-     "created_at": "2026-11-26T22:16+09:00",
-     "likes": 0,
-     "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-27T01:39+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
-  },
-  {
-   "id": "i698207c9fa",
-   "product": "ポケモンカードゲーム 拡張パック「メガシンフォニア」 BOX",
-   "product_key": "ポケモンカードゲーム拡張パックメガシンフォニアbox",
-   "genre": "tcg",
-   "channel": "online",
-   "retailer": "ホビーサーチ",
-   "apply_start": "2026-11-27T17:00+09:00",
-   "apply_end": null,
-   "apply_url": "https://www.1999.co.jp/list/3352/7/1",
-   "detail_url": null,
-   "requirements": [
-    "会員登録"
-   ],
-   "announce_date": null,
-   "sources": [
-    {
-     "post_id": "2125941851635257498",
-     "author": "SelectInfoDeals",
-     "url": "https://x.com/SelectInfoDeals/status/2125941851635257498",
-     "created_at": "2026-11-26T22:16+09:00",
-     "likes": 0,
-     "reposts": 0
-    }
-   ],
-   "buzz": 0,
-   "extracted_by": "ai",
-   "first_seen": "2026-11-27T01:39+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
-  },
-  {
-   "id": "i602896f68e",
-   "product": "ポケモンカードゲーム 拡張パック「メガブレイブ」 BOX",
-   "product_key": "ポケモンカードゲーム拡張パックメガブレイブbox",
-   "genre": "tcg",
-   "channel": "online",
-   "retailer": "ホビーサーチ",
-   "apply_start": "2026-11-27T17:00+09:00",
-   "apply_end": null,
-   "apply_url": "https://www.1999.co.jp/list/3352/7/1",
-   "detail_url": null,
-   "requirements": [
-    "会員登録"
    ],
    "announce_date": null,
    "sources": [
@@ -3887,30 +4179,30 @@
  ],
  "review": [],
  "meta": {
-  "generated_at": "2026-11-27T12:59+09:00",
+  "generated_at": "2026-11-27T22:44+09:00",
   "site_url": "https://kazfukuda29.github.io/x-lottery-apply/",
   "repo": "kazfukuda29/x-lottery-apply",
   "model": "claude-opus-5-5",
   "last_run": {
-   "fetched": 17,
-   "dropped": 5,
-   "rule": 0,
-   "ai_posts": 12,
+   "fetched": 29,
+   "dropped": 10,
+   "rule": 1,
+   "ai_posts": 18,
    "ai_failed": 0,
    "store_skipped": 0,
-   "new_items": 1
+   "new_items": 7
   },
   "errors": [],
   "x_usage_today": {
    "date": "2026-11-27",
-   "posts": 99,
-   "requests": 3
+   "posts": 128,
+   "requests": 4
   },
   "ai_usage_today": {
    "date": "2026-11-27",
-   "calls": 6,
-   "input_tokens": 65124,
-   "output_tokens": 13090
+   "calls": 8,
+   "input_tokens": 86039,
+   "output_tokens": 15892
   },
   "accounts": [
    "crashseq",
@@ -3926,20 +4218,20 @@
     "only": 8
    },
    "premium_kakaku": {
-    "items": 19,
+    "items": 27,
     "only": 6
    },
    "SelectInfoDeals": {
     "items": 78,
-    "only": 57
+    "only": 50
    },
    "stock_alertv2": {
-    "items": 17,
-    "only": 3
+    "items": 24,
+    "only": 9
    },
    "p_bandai": {
-    "items": 3,
-    "only": 1
+    "items": 4,
+    "only": 2
    },
    "datto_TCG": {
     "items": 2,
@@ -3950,77 +4242,77 @@
    "window_days": 14,
    "days_observed": 3,
    "target": 0.95,
-   "total": 94,
+   "total": 101,
    "accounts": {
     "crashseq": {
      "online": 15,
      "only": 5,
-     "posts_per_day": 4.3
+     "posts_per_day": 5.0
     },
     "premium_kakaku": {
-     "online": 19,
+     "online": 27,
      "only": 6,
-     "posts_per_day": 14.0
+     "posts_per_day": 15.7
     },
     "SelectInfoDeals": {
      "online": 78,
-     "only": 57,
+     "only": 50,
      "posts_per_day": 5.0
     },
     "stock_alertv2": {
-     "online": 16,
-     "only": 2,
-     "posts_per_day": 27.7
+     "online": 23,
+     "only": 8,
+     "posts_per_day": 34.3
     },
     "p_bandai": {
-     "online": 3,
-     "only": 1,
-     "posts_per_day": 1.0
+     "online": 4,
+     "only": 2,
+     "posts_per_day": 1.3
     },
     "datto_TCG": {
      "online": 2,
      "only": 0,
-     "posts_per_day": 2.7
+     "posts_per_day": 3.0
     }
    },
    "cover": [
     {
      "handle": "SelectInfoDeals",
      "adds": 78,
-     "coverage": 0.83
+     "coverage": 0.772
+    },
+    {
+     "handle": "stock_alertv2",
+     "adds": 10,
+     "coverage": 0.871
     },
     {
      "handle": "premium_kakaku",
-     "adds": 8,
-     "coverage": 0.915
+     "adds": 6,
+     "coverage": 0.931
     },
     {
      "handle": "crashseq",
      "adds": 5,
-     "coverage": 0.968
-    },
-    {
-     "handle": "stock_alertv2",
-     "adds": 2,
-     "coverage": 0.989
+     "coverage": 0.98
     },
     {
      "handle": "p_bandai",
-     "adds": 1,
+     "adds": 2,
      "coverage": 1.0
     }
    ],
    "keep": [
     "SelectInfoDeals",
+    "stock_alertv2",
     "premium_kakaku",
     "crashseq"
    ],
    "drop": [
-    "stock_alertv2",
     "p_bandai",
     "datto_TCG"
    ],
-   "evaluated_at": "2026-11-27T12:59+09:00"
+   "evaluated_at": "2026-11-27T22:44+09:00"
   }
  }
 }
