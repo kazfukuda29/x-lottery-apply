@@ -1288,12 +1288,20 @@
      "created_at": "2026-11-26T16:31+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126008793373049129",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2126008793373049129",
+     "created_at": "2026-11-27T02:42+09:00",
+     "likes": 0,
+     "reposts": 1
     }
    ],
-   "buzz": 0,
+   "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-26T03:32+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
+   "updated_at": "2026-11-27T12:59+09:00"
   },
   {
    "id": "i5e040eec75",
@@ -1305,7 +1313,7 @@
    "apply_start": "2026-11-25T22:00+09:00",
    "apply_end": "2026-11-27T23:59+09:00",
    "apply_url": "https://dorasuta.membercard.jp/lottery",
-   "detail_url": null,
+   "detail_url": "https://x.com/premium_kakaku/status/2125588243311972654",
    "requirements": [
     "会員登録"
    ],
@@ -1318,12 +1326,20 @@
      "created_at": "2026-11-26T22:16+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126008793373049129",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2126008793373049129",
+     "created_at": "2026-11-27T02:42+09:00",
+     "likes": 0,
+     "reposts": 1
     }
    ],
-   "buzz": 0,
+   "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-27T01:39+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
+   "updated_at": "2026-11-27T12:59+09:00"
   },
   {
    "id": "i28aa6b5063",
@@ -1407,12 +1423,20 @@
      "created_at": "2026-11-26T22:19+09:00",
      "likes": 1,
      "reposts": 0
+    },
+    {
+     "post_id": "2126014397596508407",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2126014397596508407",
+     "created_at": "2026-11-27T03:05+09:00",
+     "likes": 0,
+     "reposts": 1
     }
    ],
    "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-27T01:39+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
+   "updated_at": "2026-11-27T12:59+09:00"
   },
   {
    "id": "i8e7755d6fa",
@@ -1438,12 +1462,28 @@
      "created_at": "2026-11-26T22:16+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126014397596508407",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2126014397596508407",
+     "created_at": "2026-11-27T03:05+09:00",
+     "likes": 0,
+     "reposts": 1
+    },
+    {
+     "post_id": "2126074546746970214",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2126074546746970214",
+     "created_at": "2026-11-27T07:04+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
-   "buzz": 0,
+   "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-27T01:39+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
+   "updated_at": "2026-11-27T12:59+09:00"
   },
   {
    "id": "i0a7f2ffc76",
@@ -1469,12 +1509,28 @@
      "created_at": "2026-11-26T22:16+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126014397596508407",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2126014397596508407",
+     "created_at": "2026-11-27T03:05+09:00",
+     "likes": 0,
+     "reposts": 1
+    },
+    {
+     "post_id": "2126074546746970214",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2126074546746970214",
+     "created_at": "2026-11-27T07:04+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
-   "buzz": 0,
+   "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-27T01:39+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
+   "updated_at": "2026-11-27T12:59+09:00"
   },
   {
    "id": "i7941fc51ef",
@@ -1500,12 +1556,28 @@
      "created_at": "2026-11-26T22:16+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126014397596508407",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2126014397596508407",
+     "created_at": "2026-11-27T03:05+09:00",
+     "likes": 0,
+     "reposts": 1
+    },
+    {
+     "post_id": "2126074546746970214",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2126074546746970214",
+     "created_at": "2026-11-27T07:04+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
-   "buzz": 0,
+   "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-27T01:39+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
+   "updated_at": "2026-11-27T12:59+09:00"
   },
   {
    "id": "i2e381225bd",
@@ -1694,6 +1766,36 @@
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
    "updated_at": "2026-11-27T01:39+09:00"
+  },
+  {
+   "id": "id9eda025f3",
+   "product": "TAMASHII NATION 2025 開催記念商品（METAL BUILD ゴッドガンダム(明鏡止水)など） 事後抽選販売",
+   "product_key": "tamashiination2025開催記念商品metalbuildゴッドガンダム明鏡止水など事後抽選販売",
+   "genre": "hobby",
+   "channel": "online",
+   "retailer": "プレミアムバンダイ",
+   "apply_start": "2026-11-27T10:00+09:00",
+   "apply_end": "2026-11-30T23:00+09:00",
+   "apply_url": "https://p-bandai.jp/tamashiiwebshouten/tamashiination2026/?utm_source=tw&utm_medium=tw&utm_campaign=new",
+   "detail_url": null,
+   "requirements": [
+    "会員登録"
+   ],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2126118859854000325",
+     "author": "p_bandai",
+     "url": "https://x.com/p_bandai/status/2126118859854000325",
+     "created_at": "2026-11-27T10:00+09:00",
+     "likes": 34,
+     "reposts": 11
+    }
+   ],
+   "buzz": 45,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-27T12:59+09:00",
+   "updated_at": "2026-11-27T12:59+09:00"
   },
   {
    "id": "i8a7b8d01c9",
@@ -3785,30 +3887,30 @@
  ],
  "review": [],
  "meta": {
-  "generated_at": "2026-11-27T01:39+09:00",
+  "generated_at": "2026-11-27T12:59+09:00",
   "site_url": "https://kazfukuda29.github.io/x-lottery-apply/",
   "repo": "kazfukuda29/x-lottery-apply",
   "model": "claude-opus-5-5",
   "last_run": {
-   "fetched": 32,
-   "dropped": 8,
+   "fetched": 17,
+   "dropped": 5,
    "rule": 0,
-   "ai_posts": 24,
+   "ai_posts": 12,
    "ai_failed": 0,
    "store_skipped": 0,
-   "new_items": 31
+   "new_items": 1
   },
   "errors": [],
   "x_usage_today": {
    "date": "2026-11-27",
-   "posts": 82,
-   "requests": 2
+   "posts": 99,
+   "requests": 3
   },
   "ai_usage_today": {
    "date": "2026-11-27",
-   "calls": 5,
-   "input_tokens": 52660,
-   "output_tokens": 11337
+   "calls": 6,
+   "input_tokens": 65124,
+   "output_tokens": 13090
   },
   "accounts": [
    "crashseq",
@@ -3824,20 +3926,20 @@
     "only": 8
    },
    "premium_kakaku": {
-    "items": 14,
+    "items": 19,
     "only": 6
    },
    "SelectInfoDeals": {
     "items": 78,
-    "only": 62
+    "only": 57
    },
    "stock_alertv2": {
-    "items": 14,
+    "items": 17,
     "only": 3
    },
    "p_bandai": {
-    "items": 2,
-    "only": 0
+    "items": 3,
+    "only": 1
    },
    "datto_TCG": {
     "items": 2,
@@ -3846,34 +3948,34 @@
   },
   "account_eval": {
    "window_days": 14,
-   "days_observed": 2,
+   "days_observed": 3,
    "target": 0.95,
-   "total": 93,
+   "total": 94,
    "accounts": {
     "crashseq": {
      "online": 15,
      "only": 5,
-     "posts_per_day": 3.7
+     "posts_per_day": 4.3
     },
     "premium_kakaku": {
-     "online": 14,
+     "online": 19,
      "only": 6,
-     "posts_per_day": 12.3
+     "posts_per_day": 14.0
     },
     "SelectInfoDeals": {
      "online": 78,
-     "only": 62,
-     "posts_per_day": 4.7
+     "only": 57,
+     "posts_per_day": 5.0
     },
     "stock_alertv2": {
-     "online": 13,
+     "online": 16,
      "only": 2,
-     "posts_per_day": 25.0
+     "posts_per_day": 27.7
     },
     "p_bandai": {
-     "online": 2,
-     "only": 0,
-     "posts_per_day": 0.7
+     "online": 3,
+     "only": 1,
+     "posts_per_day": 1.0
     },
     "datto_TCG": {
      "online": 2,
@@ -3885,21 +3987,26 @@
     {
      "handle": "SelectInfoDeals",
      "adds": 78,
-     "coverage": 0.839
+     "coverage": 0.83
     },
     {
      "handle": "premium_kakaku",
      "adds": 8,
-     "coverage": 0.925
+     "coverage": 0.915
     },
     {
      "handle": "crashseq",
      "adds": 5,
-     "coverage": 0.978
+     "coverage": 0.968
     },
     {
      "handle": "stock_alertv2",
      "adds": 2,
+     "coverage": 0.989
+    },
+    {
+     "handle": "p_bandai",
+     "adds": 1,
      "coverage": 1.0
     }
    ],
@@ -3913,7 +4020,7 @@
     "p_bandai",
     "datto_TCG"
    ],
-   "evaluated_at": "2026-11-27T01:39+09:00"
+   "evaluated_at": "2026-11-27T12:59+09:00"
   }
  }
 }
