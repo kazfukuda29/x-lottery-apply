@@ -1262,12 +1262,48 @@
      "created_at": "2026-11-27T14:10+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126541643230904593",
+     "author": "p_bandai",
+     "url": "https://x.com/p_bandai/status/2126541643230904593",
+     "created_at": "2026-11-28T14:00+09:00",
+     "likes": 74,
+     "reposts": 18
     }
    ],
-   "buzz": 0,
+   "buzz": 92,
    "extracted_by": "ai",
    "first_seen": "2026-11-27T22:44+09:00",
-   "updated_at": "2026-11-27T22:44+09:00"
+   "updated_at": "2026-11-28T16:05+09:00"
+  },
+  {
+   "id": "i2e01bfb792",
+   "product": "NIJISANJI 7 Colors Card Game",
+   "product_key": "nijisanji7colorscardgame",
+   "genre": "tcg",
+   "channel": "unknown",
+   "retailer": "にじさんじオフィシャルストア",
+   "apply_start": null,
+   "apply_end": "2026-11-29T23:59+09:00",
+   "apply_url": "https://livepocket.jp/e/7-eq7",
+   "detail_url": null,
+   "requirements": [],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2126451007244677467",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2126451007244677467",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 1,
+     "reposts": 0
+    }
+   ],
+   "buzz": 1,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-28T16:05+09:00",
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "i073a921cd7",
@@ -1321,7 +1357,8 @@
    "detail_url": null,
    "requirements": [
     "会員登録",
-    "購入履歴"
+    "購入履歴",
+    "1世帯1アカウント"
    ],
    "announce_date": null,
    "sources": [
@@ -1340,12 +1377,28 @@
      "created_at": "2026-11-27T21:30+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126451007244677467",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2126451007244677467",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 1,
+     "reposts": 0
+    },
+    {
+     "post_id": "2126567574993518615",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2126567574993518615",
+     "created_at": "2026-11-28T15:43+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
-   "buzz": 0,
+   "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-27T01:39+09:00",
-   "updated_at": "2026-11-27T22:44+09:00"
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "i8e7755d6fa",
@@ -1387,12 +1440,20 @@
      "created_at": "2026-11-27T07:04+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126451007244677467",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2126451007244677467",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 1,
+     "reposts": 0
     }
    ],
    "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-27T01:39+09:00",
-   "updated_at": "2026-11-27T12:59+09:00"
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "i0a7f2ffc76",
@@ -1434,12 +1495,20 @@
      "created_at": "2026-11-27T07:04+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126451007244677467",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2126451007244677467",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 1,
+     "reposts": 0
     }
    ],
    "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-27T01:39+09:00",
-   "updated_at": "2026-11-27T12:59+09:00"
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "i7941fc51ef",
@@ -1481,12 +1550,20 @@
      "created_at": "2026-11-27T07:04+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126451007244677467",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2126451007244677467",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 1,
+     "reposts": 0
     }
    ],
    "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-27T01:39+09:00",
-   "updated_at": "2026-11-27T12:59+09:00"
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "iaeed71df85",
@@ -1540,7 +1617,8 @@
    "detail_url": null,
    "requirements": [
     "会員登録",
-    "購入履歴"
+    "購入履歴",
+    "1世帯1アカウント"
    ],
    "announce_date": null,
    "sources": [
@@ -1559,12 +1637,28 @@
      "created_at": "2026-11-27T21:30+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126451007244677467",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2126451007244677467",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 1,
+     "reposts": 0
+    },
+    {
+     "post_id": "2126567574993518615",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2126567574993518615",
+     "created_at": "2026-11-28T15:43+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
-   "buzz": 0,
+   "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-27T01:39+09:00",
-   "updated_at": "2026-11-27T22:44+09:00"
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "i5dcc022c5b",
@@ -1673,6 +1767,37 @@
    "extracted_by": "rule",
    "first_seen": "2026-11-25T08:25+09:00",
    "updated_at": "2026-11-25T08:25+09:00"
+  },
+  {
+   "id": "i2e7fc541a8",
+   "product": "ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX",
+   "product_key": "ポケモンカードゲーム拡張パックハドウシーカーbox",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "ホビーサーチ",
+   "apply_start": null,
+   "apply_end": "2026-11-29T23:59+09:00",
+   "apply_url": "https://www.1999.co.jp/11412157",
+   "detail_url": null,
+   "requirements": [
+    "会員登録",
+    "1世帯1アカウント"
+   ],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2126567574993518615",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2126567574993518615",
+     "created_at": "2026-11-28T15:43+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-28T16:05+09:00",
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "i698207c9fa",
@@ -1816,12 +1941,20 @@
      "created_at": "2026-11-26T22:16+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126451007244677467",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2126451007244677467",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 1,
+     "reposts": 0
     }
    ],
-   "buzz": 0,
+   "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "i6d9432eccb",
@@ -1840,14 +1973,6 @@
    ],
    "announce_date": "2026-12-04",
    "sources": [
-    {
-     "post_id": "2125221236162904459",
-     "author": "SelectInfoDeals",
-     "url": "https://x.com/SelectInfoDeals/status/2125221236162904459",
-     "created_at": "2026-11-24T22:33+09:00",
-     "likes": 0,
-     "reposts": 0
-    },
     {
      "post_id": "2125073260010418425",
      "author": "datto_TCG",
@@ -1903,12 +2028,20 @@
      "created_at": "2026-11-27T16:00+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126451007244677467",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2126451007244677467",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 1,
+     "reposts": 0
     }
    ],
    "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-27T22:44+09:00"
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "id9eda025f3",
@@ -2043,12 +2176,20 @@
      "created_at": "2026-11-26T22:16+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126451007244677467",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2126451007244677467",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 1,
+     "reposts": 0
     }
    ],
    "buzz": 2,
    "extracted_by": "ai",
    "first_seen": "2026-11-25T16:47+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "ie14fc07a70",
@@ -2105,12 +2246,20 @@
      "created_at": "2026-11-26T22:16+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126451007244677467",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2126451007244677467",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 1,
+     "reposts": 0
     }
    ],
-   "buzz": 0,
+   "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "i758cf42ca1",
@@ -2165,6 +2314,37 @@
    "extracted_by": "ai",
    "first_seen": "2026-11-24T22:46+09:00",
    "updated_at": "2026-11-27T01:39+09:00"
+  },
+  {
+   "id": "iaf234910ff",
+   "product": "ポケモンカードゲーム 拡張パック「30th CELEBRATION」 BOX",
+   "product_key": "ポケモンカードゲーム拡張パック30thcelebrationbox",
+   "genre": "tcg",
+   "channel": "online",
+   "retailer": "トレカスタイル DANDAN BASE店",
+   "apply_start": null,
+   "apply_end": "2026-11-30T23:59+09:00",
+   "apply_url": "https://gamesearch.base.ec/items/166839254",
+   "detail_url": null,
+   "requirements": [
+    "購入履歴",
+    "クレジットカード"
+   ],
+   "announce_date": "2026-12-20",
+   "sources": [
+    {
+     "post_id": "2126569440305381799",
+     "author": "stock_alertv2",
+     "url": "https://x.com/stock_alertv2/status/2126569440305381799",
+     "created_at": "2026-11-28T15:50+09:00",
+     "likes": 0,
+     "reposts": 0
+    }
+   ],
+   "buzz": 0,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-28T16:05+09:00",
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "ib5d3e0e632",
@@ -2235,12 +2415,20 @@
      "created_at": "2026-11-26T22:19+09:00",
      "likes": 1,
      "reposts": 0
+    },
+    {
+     "post_id": "2126451007244677467",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2126451007244677467",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 1,
+     "reposts": 0
     }
    ],
    "buzz": 102,
    "extracted_by": "ai",
    "first_seen": "2026-11-26T13:02+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "i8813abc8f6",
@@ -2281,12 +2469,20 @@
      "created_at": "2026-11-26T22:19+09:00",
      "likes": 1,
      "reposts": 0
+    },
+    {
+     "post_id": "2126451007244677467",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2126451007244677467",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 1,
+     "reposts": 0
     }
    ],
    "buzz": 33,
    "extracted_by": "ai",
    "first_seen": "2026-11-26T13:02+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "ic9af0bca8b",
@@ -2328,6 +2524,34 @@
    "updated_at": "2026-11-27T01:39+09:00"
   },
   {
+   "id": "ia0b198d406",
+   "product": "ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX",
+   "product_key": "ポケモンカードゲーム拡張パックハドウシーカーbox",
+   "genre": "tcg",
+   "channel": "unknown",
+   "retailer": "ゲオ",
+   "apply_start": "2026-11-30T11:00+09:00",
+   "apply_end": "2026-12-03T17:59+09:00",
+   "apply_url": "https://livepocket.jp/e/7-eq7",
+   "detail_url": null,
+   "requirements": [],
+   "announce_date": null,
+   "sources": [
+    {
+     "post_id": "2126451007244677467",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2126451007244677467",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 1,
+     "reposts": 0
+    }
+   ],
+   "buzz": 1,
+   "extracted_by": "ai",
+   "first_seen": "2026-11-28T16:05+09:00",
+   "updated_at": "2026-11-28T16:05+09:00"
+  },
+  {
    "id": "idab3281539",
    "product": "ポケモンカードゲーム 拡張パック「ハドウシーカー」 BOX",
    "product_key": "ポケモンカードゲーム拡張パックハドウシーカーbox",
@@ -2350,12 +2574,28 @@
      "created_at": "2026-11-27T17:02+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126451007244677467",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2126451007244677467",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 1,
+     "reposts": 0
+    },
+    {
+     "post_id": "2126451008004034733",
+     "author": "premium_kakaku",
+     "url": "https://x.com/premium_kakaku/status/2126451008004034733",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 0,
+     "reposts": 0
     }
    ],
-   "buzz": 0,
+   "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-27T22:44+09:00",
-   "updated_at": "2026-11-27T22:44+09:00"
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "i7002bd1357",
@@ -2411,12 +2651,20 @@
      "created_at": "2026-11-27T15:24+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126451007244677467",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2126451007244677467",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 1,
+     "reposts": 0
     }
    ],
-   "buzz": 0,
+   "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-27T22:44+09:00",
-   "updated_at": "2026-11-27T22:44+09:00"
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "i58f92d0550",
@@ -2442,12 +2690,20 @@
      "created_at": "2026-11-27T15:24+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126451007244677467",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2126451007244677467",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 1,
+     "reposts": 0
     }
    ],
-   "buzz": 0,
+   "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-27T22:44+09:00",
-   "updated_at": "2026-11-27T22:44+09:00"
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "i608b1004ec",
@@ -2473,12 +2729,20 @@
      "created_at": "2026-11-27T15:24+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126451007244677467",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2126451007244677467",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 1,
+     "reposts": 0
     }
    ],
-   "buzz": 0,
+   "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-27T22:44+09:00",
-   "updated_at": "2026-11-27T22:44+09:00"
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "i7f2c20050a",
@@ -2552,12 +2816,20 @@
      "created_at": "2026-11-26T22:16+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126451007244677467",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2126451007244677467",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 1,
+     "reposts": 0
     }
    ],
-   "buzz": 0,
+   "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-25T16:47+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "i7383cfa697",
@@ -2624,12 +2896,20 @@
      "created_at": "2026-11-26T22:16+09:00",
      "likes": 0,
      "reposts": 0
+    },
+    {
+     "post_id": "2126451007244677467",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2126451007244677467",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 1,
+     "reposts": 0
     }
    ],
-   "buzz": 0,
+   "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-27T01:39+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "i5c285341a9",
@@ -2764,12 +3044,20 @@
      "created_at": "2026-11-26T22:19+09:00",
      "likes": 1,
      "reposts": 0
+    },
+    {
+     "post_id": "2126451007244677467",
+     "author": "crashseq",
+     "url": "https://x.com/crashseq/status/2126451007244677467",
+     "created_at": "2026-11-28T08:00+09:00",
+     "likes": 1,
+     "reposts": 0
     }
    ],
    "buzz": 1,
    "extracted_by": "ai",
    "first_seen": "2026-11-27T01:39+09:00",
-   "updated_at": "2026-11-27T01:39+09:00"
+   "updated_at": "2026-11-28T16:05+09:00"
   },
   {
    "id": "i07c8d98aa5",
@@ -4003,30 +4291,30 @@
  ],
  "review": [],
  "meta": {
-  "generated_at": "2026-11-28T07:34+09:00",
+  "generated_at": "2026-11-28T16:05+09:00",
   "site_url": "https://kazfukuda29.github.io/x-lottery-apply/",
   "repo": "kazfukuda29/x-lottery-apply",
   "model": "claude-opus-5-5",
   "last_run": {
-   "fetched": 2,
-   "dropped": 0,
+   "fetched": 29,
+   "dropped": 2,
    "rule": 0,
-   "ai_posts": 2,
+   "ai_posts": 27,
    "ai_failed": 0,
    "store_skipped": 0,
-   "new_items": 0
+   "new_items": 4
   },
   "errors": [],
   "x_usage_today": {
    "date": "2026-11-28",
-   "posts": 52,
-   "requests": 2
+   "posts": 81,
+   "requests": 3
   },
   "ai_usage_today": {
    "date": "2026-11-28",
-   "calls": 1,
-   "input_tokens": 8322,
-   "output_tokens": 49
+   "calls": 4,
+   "input_tokens": 46672,
+   "output_tokens": 6084
   },
   "accounts": [
    "crashseq",
@@ -4038,23 +4326,23 @@
   ],
   "account_stats": {
    "crashseq": {
-    "items": 16,
-    "only": 6
+    "items": 33,
+    "only": 8
    },
    "premium_kakaku": {
-    "items": 27,
+    "items": 28,
     "only": 6
    },
    "SelectInfoDeals": {
     "items": 74,
-    "only": 46
+    "only": 44
    },
    "stock_alertv2": {
-    "items": 24,
-    "only": 9
+    "items": 28,
+    "only": 6
    },
    "p_bandai": {
-    "items": 4,
+    "items": 5,
     "only": 2
    },
    "datto_TCG": {
@@ -4064,34 +4352,34 @@
   },
   "account_eval": {
    "window_days": 14,
-   "days_observed": 3,
+   "days_observed": 4,
    "target": 0.95,
-   "total": 101,
+   "total": 103,
    "accounts": {
     "crashseq": {
-     "online": 15,
+     "online": 30,
      "only": 5,
-     "posts_per_day": 3.8
+     "posts_per_day": 4.2
     },
     "premium_kakaku": {
-     "online": 27,
+     "online": 28,
      "only": 6,
-     "posts_per_day": 12.0
+     "posts_per_day": 12.8
     },
     "SelectInfoDeals": {
      "online": 78,
-     "only": 50,
+     "only": 48,
      "posts_per_day": 3.8
     },
     "stock_alertv2": {
-     "online": 23,
-     "only": 8,
-     "posts_per_day": 26.0
+     "online": 27,
+     "only": 5,
+     "posts_per_day": 31.2
     },
     "p_bandai": {
-     "online": 4,
+     "online": 5,
      "only": 2,
-     "posts_per_day": 1.0
+     "posts_per_day": 1.8
     },
     "datto_TCG": {
      "online": 2,
@@ -4103,22 +4391,22 @@
     {
      "handle": "SelectInfoDeals",
      "adds": 78,
-     "coverage": 0.772
+     "coverage": 0.757
     },
     {
      "handle": "stock_alertv2",
-     "adds": 10,
-     "coverage": 0.871
+     "adds": 12,
+     "coverage": 0.874
     },
     {
      "handle": "premium_kakaku",
      "adds": 6,
-     "coverage": 0.931
+     "coverage": 0.932
     },
     {
      "handle": "crashseq",
      "adds": 5,
-     "coverage": 0.98
+     "coverage": 0.981
     },
     {
      "handle": "p_bandai",
@@ -4136,7 +4424,7 @@
     "p_bandai",
     "datto_TCG"
    ],
-   "evaluated_at": "2026-11-28T07:34+09:00"
+   "evaluated_at": "2026-11-28T16:05+09:00"
   }
  }
 }
